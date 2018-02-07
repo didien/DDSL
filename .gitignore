@@ -1,0 +1,4 @@
+*.iws
+languages/SensorSimulationLanguage/source_gen/
+languages/SensorSimulationLanguage/source_gen.caches/
+languages/SensorSimulationLanguage/classes_gen/
