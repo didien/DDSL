@@ -117,16 +117,16 @@
     <node concept="3EZMnI" id="75cVuPqSa6_" role="2wV5jI">
       <node concept="l2Vlx" id="75cVuPqSa6C" role="2iSdaV" />
       <node concept="3F0A7n" id="75cVuPqSa6Z" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="3F0ifn" id="75cVuPqSa77" role="3EZMnx">
-        <property role="3F0ifm" value="collection has" />
-      </node>
-      <node concept="3F0A7n" id="75cVuPqSa7i" role="3EZMnx">
         <ref role="1NtTu8" to="7ew6:75cVuPqSa61" resolve="quantity" />
       </node>
+      <node concept="3F0ifn" id="75cVuPqSa77" role="3EZMnx">
+        <property role="3F0ifm" value="sensors" />
+      </node>
+      <node concept="3F0A7n" id="75cVuPqSa7i" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
       <node concept="3F0ifn" id="75cVuPqSa7s" role="3EZMnx">
-        <property role="3F0ifm" value="sensors with data source" />
+        <property role="3F0ifm" value="following" />
       </node>
       <node concept="1iCGBv" id="75cVuPqSa7Z" role="3EZMnx">
         <ref role="1NtTu8" to="7ew6:3PPzdvo2Eg_" resolve="dataSource" />
@@ -142,17 +142,17 @@
   <node concept="24kQdi" id="75cVuPqSaa9">
     <ref role="1XX52x" to="7ew6:3PPzdvo2Egx" resolve="Random" />
     <node concept="3EZMnI" id="75cVuPqSads" role="2wV5jI">
-      <node concept="3EZMnI" id="75cVuPqSaaf" role="3EZMnx">
-        <node concept="3F0ifn" id="75cVuPqSaah" role="3EZMnx">
-          <property role="3F0ifm" value="random data source named" />
+      <node concept="3EZMnI" id="46K65BnkiFS" role="3EZMnx">
+        <node concept="3F0ifn" id="46K65BnkiFZ" role="3EZMnx">
+          <property role="3F0ifm" value="data source" />
         </node>
-        <node concept="3F0A7n" id="75cVuPqSaau" role="3EZMnx">
+        <node concept="3F0A7n" id="46K65BnkiG5" role="3EZMnx">
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         </node>
-        <node concept="3F0ifn" id="75cVuPqSaaF" role="3EZMnx">
-          <property role="3F0ifm" value="with the following configuration :" />
+        <node concept="3F0ifn" id="46K65BnkiGd" role="3EZMnx">
+          <property role="3F0ifm" value="is random_law" />
         </node>
-        <node concept="l2Vlx" id="75cVuPqSaai" role="2iSdaV" />
+        <node concept="l2Vlx" id="46K65BnkiFV" role="2iSdaV" />
       </node>
       <node concept="3EZMnI" id="75cVuPqSafH" role="3EZMnx">
         <node concept="VPM3Z" id="75cVuPqSafJ" role="3F10Kt">
