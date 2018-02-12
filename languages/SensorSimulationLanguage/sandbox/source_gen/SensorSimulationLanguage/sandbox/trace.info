@@ -1,3 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<debug-info version="2" />
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068390468200:jetbrains.mps.baseLanguage.structure.FieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <root nodeRef="r:663025a1-1e7a-453d-b44a-22b7ae4c4b13(SensorSimulationLanguage.sandbox)/8164161828203581123">
+    <file name="RandomLaw.java">
+      <node id="8164161828203590185" at="8,0,9,0" concept="2" trace="lawName" />
+      <node id="8164161828203594537" at="8,0,9,0" concept="2" trace="lawName" />
+      <node id="8164161828203590185" at="9,0,10,0" concept="2" trace="min" />
+      <node id="8164161828203594537" at="9,0,10,0" concept="2" trace="min" />
+      <node id="8164161828203590185" at="10,0,11,0" concept="2" trace="max" />
+      <node id="8164161828203594537" at="10,0,11,0" concept="2" trace="max" />
+      <node id="8164161828203590185" at="12,0,13,0" concept="2" trace="samplingFrequency" />
+      <node id="8164161828203594537" at="12,0,13,0" concept="2" trace="samplingFrequency" />
+      <node id="8164161828203590185" at="13,0,14,0" concept="2" trace="period" />
+      <node id="8164161828203594537" at="13,0,14,0" concept="2" trace="period" />
+      <node id="8164161828203590185" at="16,94,17,23" concept="1" />
+      <node id="8164161828203594537" at="16,94,17,23" concept="1" />
+      <node id="8164161828203590185" at="17,23,18,15" concept="1" />
+      <node id="8164161828203594537" at="17,23,18,15" concept="1" />
+      <node id="8164161828203590185" at="18,15,19,15" concept="1" />
+      <node id="8164161828203594537" at="18,15,19,15" concept="1" />
+      <node id="8164161828203590185" at="19,15,20,43" concept="1" />
+      <node id="8164161828203594537" at="19,15,20,43" concept="1" />
+      <node id="8164161828203590185" at="20,43,21,21" concept="1" />
+      <node id="8164161828203594537" at="20,43,21,21" concept="1" />
+      <node id="8164161828203590185" at="24,24,25,57" concept="5" />
+      <node id="8164161828203594537" at="24,24,25,57" concept="5" />
+      <node id="8164161828203590185" at="28,37,29,29" concept="5" />
+      <node id="8164161828203594537" at="28,37,29,29" concept="5" />
+      <node id="8164161828203590185" at="32,26,33,18" concept="5" />
+      <node id="8164161828203594537" at="32,26,33,18" concept="5" />
+      <node id="8164161828203590185" at="24,0,27,0" concept="3" trace="getNext#()I" />
+      <node id="8164161828203594537" at="24,0,27,0" concept="3" trace="getNext#()I" />
+      <node id="8164161828203590185" at="28,0,31,0" concept="3" trace="getSamplingFrequency#()I" />
+      <node id="8164161828203594537" at="28,0,31,0" concept="3" trace="getSamplingFrequency#()I" />
+      <node id="8164161828203590185" at="32,0,35,0" concept="3" trace="getPeriod#()I" />
+      <node id="8164161828203594537" at="32,0,35,0" concept="3" trace="getPeriod#()I" />
+      <node id="8164161828203590185" at="16,0,23,0" concept="0" trace="RandomLaw#(Ljava/lang/String;IIII)V" />
+      <node id="8164161828203594537" at="16,0,23,0" concept="0" trace="RandomLaw#(Ljava/lang/String;IIII)V" />
+      <scope id="8164161828203590185" at="24,24,25,57" />
+      <scope id="8164161828203594537" at="24,24,25,57" />
+      <scope id="8164161828203590185" at="28,37,29,29" />
+      <scope id="8164161828203594537" at="28,37,29,29" />
+      <scope id="8164161828203590185" at="32,26,33,18" />
+      <scope id="8164161828203594537" at="32,26,33,18" />
+      <scope id="8164161828203590185" at="24,0,27,0" />
+      <scope id="8164161828203594537" at="24,0,27,0" />
+      <scope id="8164161828203590185" at="28,0,31,0" />
+      <scope id="8164161828203594537" at="28,0,31,0" />
+      <scope id="8164161828203590185" at="32,0,35,0" />
+      <scope id="8164161828203594537" at="32,0,35,0" />
+      <scope id="8164161828203590185" at="16,94,21,21" />
+      <scope id="8164161828203594537" at="16,94,21,21" />
+      <scope id="8164161828203590185" at="16,0,23,0">
+        <var name="lawName1" id="8164161828203590185" />
+        <var name="max1" id="8164161828203590185" />
+        <var name="min1" id="8164161828203590185" />
+        <var name="period1" id="8164161828203590185" />
+        <var name="samplingFrequency1" id="8164161828203590185" />
+      </scope>
+      <scope id="8164161828203594537" at="16,0,23,0">
+        <var name="lawName1" id="8164161828203594537" />
+        <var name="max1" id="8164161828203594537" />
+        <var name="min1" id="8164161828203594537" />
+        <var name="period1" id="8164161828203594537" />
+        <var name="samplingFrequency1" id="8164161828203594537" />
+      </scope>
+      <unit id="8164161828203590185" at="7,0,36,0" name="SensorSimulationLanguage.sandbox.RandomLaw" />
+      <unit id="8164161828203594537" at="7,0,36,0" name="SensorSimulationLanguage.sandbox.RandomLaw" />
+    </file>
+    <file name="TestSimulation.java">
+      <node id="8164161828203581123" at="7,0,8,0" concept="2" trace="simName" />
+      <node id="8164161828203581123" at="9,27,10,43" concept="1" />
+      <node id="8164161828203581123" at="14,42,15,25" concept="1" />
+      <node id="8164161828203590185" at="15,25,16,74" concept="4" />
+      <node id="8164161828203594537" at="16,74,17,79" concept="4" />
+      <node id="8164161828203581123" at="9,0,12,0" concept="0" trace="TestSimulation#()V" />
+      <node id="8164161828203581123" at="14,0,19,0" concept="6" trace="main#([Ljava/lang/String;)V" />
+      <scope id="8164161828203581123" at="9,27,10,43" />
+      <scope id="8164161828203581123" at="9,0,12,0" />
+      <scope id="8164161828203581123" at="14,42,17,79">
+        <var name="random_1_10" id="8164161828203590185" />
+        <var name="random_boolean" id="8164161828203594537" />
+      </scope>
+      <scope id="8164161828203581123" at="14,0,19,0">
+        <var name="args" id="8164161828203581123" />
+      </scope>
+      <unit id="8164161828203581123" at="6,0,21,0" name="SensorSimulationLanguage.sandbox.TestSimulation" />
+    </file>
+  </root>
+</debug-info>
 

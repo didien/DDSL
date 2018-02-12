@@ -1,3 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependenciesRoot />
+<dependenciesRoot>
+  <dependency className="SensorSimulationLanguage.sandbox.RandomLaw" file="RandomLaw.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.concurrent.ThreadLocalRandom" />
+  </dependency>
+  <dependency className="SensorSimulationLanguage.sandbox.TestSimulation" file="TestSimulation.java">
+    <classNode dependClassName="SensorSimulationLanguage.sandbox.RandomLaw" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+  </dependency>
+</dependenciesRoot>
 

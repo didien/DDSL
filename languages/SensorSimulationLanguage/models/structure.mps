@@ -95,12 +95,12 @@
     <node concept="1TJgyi" id="3PPzdvo2EgG" role="1TKVEl">
       <property role="IQ2nx" value="4428600667259184172" />
       <property role="TrG5h" value="min" />
-      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="1TJgyi" id="3PPzdvo2EgI" role="1TKVEl">
       <property role="IQ2nx" value="4428600667259184174" />
       <property role="TrG5h" value="max" />
-      <ref role="AX2Wp" to="tpee:gc$lTUB" resolve="_FPNumber_String" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="PrWs8" id="75cVuPqSa9H" role="PzmwI">
       <ref role="PrY4T" node="75cVuPqSa90" resolve="IDataSource" />
