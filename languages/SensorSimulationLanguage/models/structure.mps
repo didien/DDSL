@@ -147,12 +147,17 @@
     </node>
     <node concept="1TJgyi" id="75cVuPqSa98" role="1TKVEl">
       <property role="IQ2nx" value="8164161828203569736" />
-      <property role="TrG5h" value="period" />
+      <property role="TrG5h" value="updatePeriod" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="3juagqJxLPu" role="1TKVEl">
+      <property role="IQ2nx" value="3809527443493428574" />
+      <property role="TrG5h" value="resetPeriod" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="1TJgyi" id="75cVuPqSa9b" role="1TKVEl">
       <property role="IQ2nx" value="8164161828203569739" />
-      <property role="TrG5h" value="sampling" />
+      <property role="TrG5h" value="samplingPeriod" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>

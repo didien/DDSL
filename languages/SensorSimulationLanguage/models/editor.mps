@@ -217,10 +217,10 @@
         </node>
         <node concept="3XFhqQ" id="75cVuPqSaiv" role="3EZMnx" />
         <node concept="3F0ifn" id="75cVuPqSaiw" role="3EZMnx">
-          <property role="3F0ifm" value="period   :" />
+          <property role="3F0ifm" value="update period   :" />
         </node>
         <node concept="3F0A7n" id="75cVuPqSaix" role="3EZMnx">
-          <ref role="1NtTu8" to="7ew6:75cVuPqSa98" resolve="period" />
+          <ref role="1NtTu8" to="7ew6:75cVuPqSa98" resolve="updatePeriod" />
         </node>
         <node concept="l2Vlx" id="75cVuPqSaiy" role="2iSdaV" />
       </node>
@@ -230,12 +230,25 @@
         </node>
         <node concept="3XFhqQ" id="75cVuPqSajn" role="3EZMnx" />
         <node concept="3F0ifn" id="75cVuPqSajo" role="3EZMnx">
-          <property role="3F0ifm" value="sampling :" />
+          <property role="3F0ifm" value="sampling period :" />
         </node>
         <node concept="3F0A7n" id="75cVuPqSajp" role="3EZMnx">
-          <ref role="1NtTu8" to="7ew6:75cVuPqSa9b" resolve="sampling" />
+          <ref role="1NtTu8" to="7ew6:75cVuPqSa9b" resolve="samplingPeriod" />
         </node>
         <node concept="l2Vlx" id="75cVuPqSajq" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="3juagqJxLQs" role="3EZMnx">
+        <node concept="VPM3Z" id="3juagqJxLQu" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="3juagqJxLR4" role="3EZMnx" />
+        <node concept="3F0ifn" id="3juagqJxLRa" role="3EZMnx">
+          <property role="3F0ifm" value="reset period    :" />
+        </node>
+        <node concept="3F0A7n" id="3juagqJxLRi" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:3juagqJxLPu" resolve="resetPeriod" />
+        </node>
+        <node concept="l2Vlx" id="3juagqJxLQx" role="2iSdaV" />
       </node>
       <node concept="2iRkQZ" id="75cVuPqSadt" role="2iSdaV" />
       <node concept="3EZMnI" id="46K65BnkthO" role="AHCbl">
@@ -262,13 +275,19 @@
           <property role="3F0ifm" value="," />
         </node>
         <node concept="3F0A7n" id="46K65Bnktj3" role="3EZMnx">
-          <ref role="1NtTu8" to="7ew6:75cVuPqSa98" resolve="period" />
+          <ref role="1NtTu8" to="7ew6:75cVuPqSa98" resolve="updatePeriod" />
         </node>
         <node concept="3F0ifn" id="46K65Bnktjl" role="3EZMnx">
           <property role="3F0ifm" value="," />
         </node>
         <node concept="3F0A7n" id="46K65BnktjD" role="3EZMnx">
-          <ref role="1NtTu8" to="7ew6:75cVuPqSa9b" resolve="sampling" />
+          <ref role="1NtTu8" to="7ew6:75cVuPqSa9b" resolve="samplingPeriod" />
+        </node>
+        <node concept="3F0ifn" id="3juagqJxNie" role="3EZMnx">
+          <property role="3F0ifm" value="," />
+        </node>
+        <node concept="3F0A7n" id="3juagqJxNhO" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:3juagqJxLPu" resolve="resetPeriod" />
         </node>
         <node concept="3F0ifn" id="46K65Bnkunz" role="3EZMnx">
           <property role="3F0ifm" value=")" />

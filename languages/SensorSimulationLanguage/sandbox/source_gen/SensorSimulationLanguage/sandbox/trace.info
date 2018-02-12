@@ -76,22 +76,25 @@
     </file>
     <file name="TestSimulation.java">
       <node id="8164161828203581123" at="7,0,8,0" concept="2" trace="simName" />
-      <node id="8164161828203581123" at="9,27,10,43" concept="1" />
-      <node id="8164161828203581123" at="14,42,15,25" concept="1" />
-      <node id="8164161828203590185" at="15,25,16,74" concept="4" />
-      <node id="8164161828203594537" at="16,74,17,79" concept="4" />
-      <node id="8164161828203581123" at="9,0,12,0" concept="0" trace="TestSimulation#()V" />
-      <node id="8164161828203581123" at="14,0,19,0" concept="6" trace="main#([Ljava/lang/String;)V" />
-      <scope id="8164161828203581123" at="9,27,10,43" />
-      <scope id="8164161828203581123" at="9,0,12,0" />
-      <scope id="8164161828203581123" at="14,42,17,79">
+      <node id="8164161828203590185" at="14,42,15,74" concept="4" />
+      <node id="8164161828203590185" at="15,74,16,46" concept="1" />
+      <node id="8164161828203594537" at="16,46,17,79" concept="4" />
+      <node id="8164161828203594537" at="17,79,18,49" concept="1" />
+      <node id="8164161828203581123" at="10,0,12,0" concept="0" trace="TestSimulation#()V" />
+      <node id="8164161828203581123" at="14,0,20,0" concept="6" trace="main#([Ljava/lang/String;)V" />
+      <scope id="8164161828203581123" at="10,27,10,27" />
+      <scope id="8164161828203581123" at="10,0,12,0" />
+      <scope id="8164161828203590185" at="14,42,16,46">
         <var name="random_1_10" id="8164161828203590185" />
+      </scope>
+      <scope id="8164161828203594537" at="16,46,18,49">
         <var name="random_boolean" id="8164161828203594537" />
       </scope>
-      <scope id="8164161828203581123" at="14,0,19,0">
+      <scope id="8164161828203581123" at="14,42,18,49" />
+      <scope id="8164161828203581123" at="14,0,20,0">
         <var name="args" id="8164161828203581123" />
       </scope>
-      <unit id="8164161828203581123" at="6,0,21,0" name="SensorSimulationLanguage.sandbox.TestSimulation" />
+      <unit id="8164161828203581123" at="6,0,22,0" name="SensorSimulationLanguage.sandbox.TestSimulation" />
     </file>
   </root>
 </debug-info>

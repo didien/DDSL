@@ -9,7 +9,8 @@
   <registry>
     <language id="bc16fd15-bfa2-47e7-b9c2-9f80e5b399e0" name="SensorSimulationLanguage">
       <concept id="8164161828203569728" name="SensorSimulationLanguage.structure.IDataSource" flags="ng" index="FF4YH">
-        <property id="8164161828203569736" name="period" index="FF4Y_" />
+        <property id="3809527443493428574" name="resetPeriod" index="2rmjho" />
+        <property id="8164161828203569736" name="updatePeriod" index="FF4Y_" />
         <property id="8164161828203569739" name="sampling" index="FF4YA" />
       </concept>
       <concept id="4428600667259184161" name="SensorSimulationLanguage.structure.Random" flags="ng" index="3_vMzQ">
@@ -49,17 +50,19 @@
     </node>
     <node concept="3_vMzQ" id="75cVuPqSf8D" role="3_vMOX">
       <property role="TrG5h" value="random_1_10" />
-      <property role="FF4Y_" value="86400" />
+      <property role="FF4Y_" value="30" />
       <property role="FF4YA" value="5" />
       <property role="3_vMzV" value="0" />
       <property role="3_vMzT" value="10" />
+      <property role="2rmjho" value="86400" />
     </node>
     <node concept="3_vMzQ" id="75cVuPqSgcD" role="3_vMOX">
       <property role="TrG5h" value="random_boolean" />
-      <property role="FF4Y_" value="86400" />
+      <property role="FF4Y_" value="25" />
       <property role="FF4YA" value="5" />
       <property role="3_vMzV" value="0" />
       <property role="3_vMzT" value="1" />
+      <property role="2rmjho" value="86400" />
     </node>
   </node>
 </model>
