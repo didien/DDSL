@@ -17,6 +17,8 @@
         <property id="4428600667259184172" name="min" index="3_vMzV" />
       </concept>
       <concept id="4428600667259183591" name="SensorSimulationLanguage.structure.Simulation" flags="ng" index="3_vMOK">
+        <property id="3809527443493296810" name="endDate" index="2rmNeG" />
+        <property id="3809527443493296808" name="startDate" index="2rmNeI" />
         <child id="4428600667259183596" name="sensors" index="3_vMOV" />
         <child id="4428600667259183594" name="dataSources" index="3_vMOX" />
       </concept>
@@ -33,6 +35,8 @@
   </registry>
   <node concept="3_vMOK" id="75cVuPqScV3">
     <property role="TrG5h" value="TestSimulation" />
+    <property role="2rmNeI" value="12-02-18 15:00" />
+    <property role="2rmNeG" value="12-02-18 15:05" />
     <node concept="3_vMOS" id="75cVuPqSgcl" role="3_vMOV">
       <property role="TrG5h" value="randomDoorSensor" />
       <property role="FF4LG" value="24" />

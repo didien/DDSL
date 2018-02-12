@@ -67,6 +67,16 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="3PPzdvo2E7J" resolve="SensorCollection" />
     </node>
+    <node concept="1TJgyi" id="3juagqJxhEC" role="1TKVEl">
+      <property role="IQ2nx" value="3809527443493296808" />
+      <property role="TrG5h" value="startDate" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="3juagqJxhEE" role="1TKVEl">
+      <property role="IQ2nx" value="3809527443493296810" />
+      <property role="TrG5h" value="endDate" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3PPzdvo2E7J">
     <property role="EcuMT" value="4428600667259183599" />

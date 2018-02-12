@@ -31,6 +31,7 @@
       </concept>
       <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1139852716018" name="noTargetText" index="1$x2rV" />
         <property id="1140017977771" name="readOnly" index="1Intyy" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
@@ -68,6 +69,33 @@
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         </node>
         <node concept="l2Vlx" id="75cVuPqSan1" role="2iSdaV" />
+      </node>
+      <node concept="35HoNQ" id="3juagqJxE68" role="3EZMnx" />
+      <node concept="3EZMnI" id="3juagqJxlBz" role="3EZMnx">
+        <node concept="VPM3Z" id="3juagqJxlB_" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F0ifn" id="3juagqJxlBB" role="3EZMnx">
+          <property role="3F0ifm" value="starts the" />
+        </node>
+        <node concept="3F0A7n" id="3juagqJxlCe" role="3EZMnx">
+          <property role="1$x2rV" value="dd-mm-yy hh:mm" />
+          <ref role="1NtTu8" to="7ew6:3juagqJxhEC" resolve="startDate" />
+        </node>
+        <node concept="l2Vlx" id="3juagqJxlBC" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="3juagqJxlCS" role="3EZMnx">
+        <node concept="VPM3Z" id="3juagqJxlCU" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F0ifn" id="3juagqJxlCW" role="3EZMnx">
+          <property role="3F0ifm" value="ends the" />
+        </node>
+        <node concept="3F0A7n" id="3juagqJxlDC" role="3EZMnx">
+          <property role="1$x2rV" value="dd-mm-yy hh:mm" />
+          <ref role="1NtTu8" to="7ew6:3juagqJxhEE" resolve="endDate" />
+        </node>
+        <node concept="l2Vlx" id="3juagqJxlCX" role="2iSdaV" />
       </node>
       <node concept="35HoNQ" id="75cVuPqSanB" role="3EZMnx" />
       <node concept="3F0ifn" id="75cVuPqSanP" role="3EZMnx">

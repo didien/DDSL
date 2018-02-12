@@ -7,12 +7,21 @@
   </languages>
   <imports>
     <import index="7ew6" ref="r:e465baf8-de2e-4ffc-b433-5fde6234c8fc(SensorSimulationLanguage.structure)" implicit="true" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1153417849900" name="jetbrains.mps.baseLanguage.structure.GreaterThanOrEqualsExpression" flags="nn" index="2d3UOw" />
+      <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
+      <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
+        <child id="1197027771414" name="operand" index="2Oq$k0" />
+        <child id="1197027833540" name="operation" index="2OqNvi" />
+      </concept>
       <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
         <child id="1137022507850" name="body" index="2VODD2" />
+      </concept>
+      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
+        <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
@@ -22,6 +31,10 @@
       </concept>
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
+      </concept>
+      <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
+        <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
+        <child id="1068499141038" name="actualArgument" index="37wK5m" />
       </concept>
       <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
@@ -53,6 +66,45 @@
                 <property role="3cmrfH" value="1" />
               </node>
               <node concept="1Wqviy" id="5fx1X_lOS41" role="3uHU7B" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="3juagqJxhF6">
+    <ref role="1M2myG" to="7ew6:3PPzdvo2E7B" resolve="Simulation" />
+    <node concept="EnEH3" id="3juagqJxhFX" role="1MhHOB">
+      <ref role="EomxK" to="7ew6:3juagqJxhEC" resolve="startDate" />
+      <node concept="QB0g5" id="3juagqJxhFZ" role="QCWH9">
+        <node concept="3clFbS" id="3juagqJxhG0" role="2VODD2">
+          <node concept="3clFbF" id="3juagqJxhN9" role="3cqZAp">
+            <node concept="2OqwBi" id="3juagqJxifl" role="3clFbG">
+              <node concept="1Wqviy" id="3juagqJxhN8" role="2Oq$k0" />
+              <node concept="liA8E" id="3juagqJxiZ$" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.matches(java.lang.String):boolean" resolve="matches" />
+                <node concept="Xl_RD" id="3juagqJxjmW" role="37wK5m">
+                  <property role="Xl_RC" value="[0-9]{2}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="EnEH3" id="3juagqJxjDH" role="1MhHOB">
+      <ref role="EomxK" to="7ew6:3juagqJxhEE" resolve="endDate" />
+      <node concept="QB0g5" id="3juagqJxjDX" role="QCWH9">
+        <node concept="3clFbS" id="3juagqJxjDY" role="2VODD2">
+          <node concept="3clFbF" id="3juagqJxjL7" role="3cqZAp">
+            <node concept="2OqwBi" id="3juagqJxkdj" role="3clFbG">
+              <node concept="1Wqviy" id="3juagqJxjL6" role="2Oq$k0" />
+              <node concept="liA8E" id="3juagqJxkJU" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.matches(java.lang.String):boolean" resolve="matches" />
+                <node concept="Xl_RD" id="3juagqJxkRO" role="37wK5m">
+                  <property role="Xl_RC" value="[0-9]{2}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}" />
+                </node>
+              </node>
             </node>
           </node>
         </node>
