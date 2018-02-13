@@ -10,6 +10,7 @@
   </languages>
   <imports>
     <import index="2ns9" ref="r:2ebb615b-7d7d-46a9-af25-8b8353fe1098(SensorSimulationLanguage.runtime.simulation)" />
+    <import index="9nbq" ref="cc7fb470-7d0c-4aea-af2a-5d870ff3092f/java:org.influxdb(InfluxDB/)" />
   </imports>
   <registry>
     <language id="bc16fd15-bfa2-47e7-b9c2-9f80e5b399e0" name="SensorSimulationLanguage">
@@ -42,11 +43,11 @@
   <node concept="3_vMOK" id="75cVuPqScV3">
     <property role="TrG5h" value="TestSimulation" />
     <property role="2rmNeI" value="12-02-18 15:00" />
-    <property role="2rmNeG" value="12-02-18 15:05" />
+    <property role="2rmNeG" value="12-02-18 18:05" />
     <node concept="3_vMOS" id="75cVuPqSgcl" role="3_vMOV">
       <property role="TrG5h" value="randomDoorSensor" />
       <property role="FF4LG" value="24" />
-      <ref role="3_vMzM" node="75cVuPqSf8D" resolve="random_1_10" />
+      <ref role="3_vMzM" node="75cVuPqSf8D" resolve="random_door_angle" />
     </node>
     <node concept="3_vMOS" id="75cVuPqSgcv" role="3_vMOV">
       <property role="TrG5h" value="randomParkingLot" />
@@ -54,11 +55,11 @@
       <ref role="3_vMzM" node="75cVuPqSgcD" resolve="random_boolean" />
     </node>
     <node concept="3_vMzQ" id="75cVuPqSf8D" role="3_vMOX">
-      <property role="TrG5h" value="random_1_10" />
+      <property role="TrG5h" value="random_door_angle" />
       <property role="FF4Y_" value="15" />
       <property role="FF4YA" value="5" />
       <property role="3_vMzV" value="0" />
-      <property role="3_vMzT" value="10" />
+      <property role="3_vMzT" value="175" />
       <property role="2rmjho" value="86400" />
     </node>
     <node concept="3_vMzQ" id="75cVuPqSgcD" role="3_vMOX">

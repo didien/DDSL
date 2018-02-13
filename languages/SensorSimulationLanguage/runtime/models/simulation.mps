@@ -12,8 +12,10 @@
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="mqa2" ref="r:996c6b7b-3791-40af-aae2-84dfc153ac81(main@generator)" />
     <import index="28m1" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.time(JDK/)" />
+    <import index="9nbq" ref="cc7fb470-7d0c-4aea-af2a-5d870ff3092f/java:org.influxdb(InfluxDB/)" />
+    <import index="wthj" ref="cc7fb470-7d0c-4aea-af2a-5d870ff3092f/java:org.influxdb.dto(InfluxDB/)" />
+    <import index="7fo8" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.time.chrono(JDK/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
-    <import index="7fo8" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.time.chrono(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -27,6 +29,10 @@
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
+      </concept>
+      <concept id="1083260308424" name="jetbrains.mps.baseLanguage.structure.EnumConstantReference" flags="nn" index="Rm8GO">
+        <reference id="1083260308426" name="enumConstantDeclaration" index="Rm8GQ" />
+        <reference id="1144432896254" name="enumClass" index="1Px2BO" />
       </concept>
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
@@ -45,6 +51,7 @@
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <property id="1176718929932" name="isFinal" index="3TUv4t" />
+        <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
@@ -84,6 +91,10 @@
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
       </concept>
+      <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
+        <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
+      </concept>
+      <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
@@ -585,6 +596,71 @@
             </node>
           </node>
         </node>
+        <node concept="3cpWs8" id="5dO5_UbgkRO" role="3cqZAp">
+          <node concept="3cpWsn" id="5dO5_UbgkRP" role="3cpWs9">
+            <property role="TrG5h" value="point" />
+            <node concept="3uibUv" id="5dO5_UbgkRQ" role="1tU5fm">
+              <ref role="3uigEE" to="wthj:~Point" resolve="Point" />
+            </node>
+            <node concept="2OqwBi" id="5dO5_UbfAs4" role="33vP2m">
+              <node concept="2OqwBi" id="5dO5_Ubfsg1" role="2Oq$k0">
+                <node concept="2OqwBi" id="5dO5_Ubfmx7" role="2Oq$k0">
+                  <node concept="2YIFZM" id="5dO5_UbfluI" role="2Oq$k0">
+                    <ref role="1Pybhc" to="wthj:~Point" resolve="Point" />
+                    <ref role="37wK5l" to="wthj:~Point.measurement(java.lang.String):org.influxdb.dto.Point$Builder" resolve="measurement" />
+                    <node concept="37vLTw" id="5dO5_UbgCLI" role="37wK5m">
+                      <ref role="3cqZAo" node="3juagqJydeO" resolve="sensorID" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="5dO5_UbfnHR" role="2OqNvi">
+                    <ref role="37wK5l" to="wthj:~Point$Builder.time(long,java.util.concurrent.TimeUnit):org.influxdb.dto.Point$Builder" resolve="time" />
+                    <node concept="2OqwBi" id="5dO5_UbfoNM" role="37wK5m">
+                      <node concept="37vLTw" id="5dO5_UbgD54" role="2Oq$k0">
+                        <ref role="3cqZAo" node="36n0RtVzhS9" resolve="currentTime" />
+                      </node>
+                      <node concept="liA8E" id="5dO5_Ubfq91" role="2OqNvi">
+                        <ref role="37wK5l" to="7fo8:~ChronoLocalDateTime.toEpochSecond(java.time.ZoneOffset):long" resolve="toEpochSecond" />
+                        <node concept="10M0yZ" id="5dO5_UbfryU" role="37wK5m">
+                          <ref role="3cqZAo" to="28m1:~ZoneOffset.UTC" resolve="UTC" />
+                          <ref role="1PxDUh" to="28m1:~ZoneOffset" resolve="ZoneOffset" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rm8GO" id="5dO5_Ubf_Fz" role="37wK5m">
+                      <ref role="1Px2BO" to="5zyv:~TimeUnit" resolve="TimeUnit" />
+                      <ref role="Rm8GQ" to="5zyv:~TimeUnit.SECONDS" resolve="SECONDS" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="5dO5_UbftMd" role="2OqNvi">
+                  <ref role="37wK5l" to="wthj:~Point$Builder.addField(java.lang.String,java.lang.Number):org.influxdb.dto.Point$Builder" resolve="addField" />
+                  <node concept="Xl_RD" id="5dO5_Ubfv_0" role="37wK5m">
+                    <property role="Xl_RC" value="value" />
+                  </node>
+                  <node concept="37vLTw" id="5dO5_UbgFBw" role="37wK5m">
+                    <ref role="3cqZAo" node="36n0RtVzwMG" resolve="lastReading" />
+                  </node>
+                </node>
+              </node>
+              <node concept="liA8E" id="5dO5_UbfDIE" role="2OqNvi">
+                <ref role="37wK5l" to="wthj:~Point$Builder.build():org.influxdb.dto.Point" resolve="build" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5dO5_UbgGqD" role="3cqZAp">
+          <node concept="2OqwBi" id="5dO5_UbgH8b" role="3clFbG">
+            <node concept="37vLTw" id="5dO5_UbgGqB" role="2Oq$k0">
+              <ref role="3cqZAo" node="5dO5_UbgyWu" resolve="batchPoint" />
+            </node>
+            <node concept="liA8E" id="5dO5_UbgHLl" role="2OqNvi">
+              <ref role="37wK5l" to="wthj:~BatchPoints.point(org.influxdb.dto.Point):org.influxdb.dto.BatchPoints" resolve="point" />
+              <node concept="37vLTw" id="5dO5_UbgHMt" role="37wK5m">
+                <ref role="3cqZAo" node="5dO5_UbgkRP" resolve="point" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbH" id="36n0RtV_rUa" role="3cqZAp" />
         <node concept="3SKdUt" id="36n0RtV_sXz" role="3cqZAp">
           <node concept="3SKdUq" id="36n0RtV_sX_" role="3SKWNk">
@@ -647,6 +723,12 @@
       <node concept="3Tm1VV" id="3juagqJydqZ" role="1B3o_S" />
       <node concept="3uibUv" id="36n0RtVzt07" role="3clF45">
         <ref role="3uigEE" to="28m1:~LocalDateTime" resolve="LocalDateTime" />
+      </node>
+      <node concept="37vLTG" id="5dO5_UbgyWu" role="3clF46">
+        <property role="TrG5h" value="batchPoint" />
+        <node concept="3uibUv" id="5dO5_UbgyWt" role="1tU5fm">
+          <ref role="3uigEE" to="wthj:~BatchPoints" resolve="BatchPoints" />
+        </node>
       </node>
     </node>
     <node concept="2tJIrI" id="36n0RtVzCsA" role="jymVt" />

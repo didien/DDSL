@@ -5,11 +5,18 @@
       <sourceRoot location="models" />
     </modelRoot>
     <modelRoot contentPath="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party" type="java_classes">
-      <sourceRoot location="influxdb-java.jar" />
+      <sourceRoot location="influxdb-java-2.8.jar" />
+      <excluded location="influxdb-java.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
-    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/influxdb-java.jar" />
+    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/converter-moshi-2.3.0.jar" />
+    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/logging-interceptor-3.9.1.jar" />
+    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/moshi-1.4.0.jar" />
+    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/okhttp-3.9.1.jar" />
+    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/okio-1.13.0.jar" />
+    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/retrofit-2.3.0.jar" />
+    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/influxdb-java-2.8.jar" />
   </stubModelEntries>
   <sourcePath />
   <languageVersions>

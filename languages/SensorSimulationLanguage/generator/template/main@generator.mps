@@ -15,6 +15,8 @@
     <import index="6t7w" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.time.format(JDK/)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
     <import index="9nbq" ref="cc7fb470-7d0c-4aea-af2a-5d870ff3092f/java:org.influxdb(InfluxDB/)" />
+    <import index="wthj" ref="cc7fb470-7d0c-4aea-af2a-5d870ff3092f/java:org.influxdb.dto(InfluxDB/)" />
+    <import index="5zyv" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util.concurrent(JDK/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -33,6 +35,10 @@
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
+      </concept>
+      <concept id="1083260308424" name="jetbrains.mps.baseLanguage.structure.EnumConstantReference" flags="nn" index="Rm8GO">
+        <reference id="1083260308426" name="enumConstantDeclaration" index="Rm8GQ" />
+        <reference id="1144432896254" name="enumClass" index="1Px2BO" />
       </concept>
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
@@ -74,6 +80,9 @@
       <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
+      </concept>
+      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
+        <property id="1068580123138" name="value" index="3clFbU" />
       </concept>
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
@@ -332,7 +341,137 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="36n0RtVyVq7" role="3cqZAp" />
+        <node concept="3clFbH" id="5dO5_UbfUqj" role="3cqZAp" />
+        <node concept="3cpWs8" id="5dO5_UbeVkj" role="3cqZAp">
+          <node concept="3cpWsn" id="5dO5_UbeVkk" role="3cpWs9">
+            <property role="TrG5h" value="influxDB" />
+            <node concept="3uibUv" id="5dO5_UbeVkl" role="1tU5fm">
+              <ref role="3uigEE" to="9nbq:~InfluxDB" resolve="InfluxDB" />
+            </node>
+            <node concept="2YIFZM" id="5dO5_UbeVVE" role="33vP2m">
+              <ref role="1Pybhc" to="9nbq:~InfluxDBFactory" resolve="InfluxDBFactory" />
+              <ref role="37wK5l" to="9nbq:~InfluxDBFactory.connect(java.lang.String,java.lang.String,java.lang.String):org.influxdb.InfluxDB" resolve="connect" />
+              <node concept="Xl_RD" id="5dO5_UbeVWm" role="37wK5m">
+                <property role="Xl_RC" value="http://localhost:8086" />
+              </node>
+              <node concept="Xl_RD" id="5dO5_UbeWwO" role="37wK5m">
+                <property role="Xl_RC" value="root" />
+              </node>
+              <node concept="Xl_RD" id="5dO5_UbeX1t" role="37wK5m">
+                <property role="Xl_RC" value="root" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="5dO5_UbeYCi" role="3cqZAp">
+          <node concept="3cpWsn" id="5dO5_UbeYCj" role="3cpWs9">
+            <property role="TrG5h" value="dbName" />
+            <node concept="17QB3L" id="5dO5_Ubf423" role="1tU5fm" />
+            <node concept="Xl_RD" id="5dO5_UbeZk_" role="33vP2m">
+              <property role="Xl_RC" value="sensorSeries" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5dO5_UbeZZY" role="3cqZAp">
+          <node concept="2OqwBi" id="5dO5_Ubf0HR" role="3clFbG">
+            <node concept="37vLTw" id="5dO5_UbeZZW" role="2Oq$k0">
+              <ref role="3cqZAo" node="5dO5_UbeVkk" resolve="influxDB" />
+            </node>
+            <node concept="liA8E" id="5dO5_Ubf16D" role="2OqNvi">
+              <ref role="37wK5l" to="9nbq:~InfluxDB.createDatabase(java.lang.String):void" resolve="createDatabase" />
+              <node concept="37vLTw" id="5dO5_Ubf1gw" role="37wK5m">
+                <ref role="3cqZAo" node="5dO5_UbeYCj" resolve="dbName" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="5dO5_Ubf471" role="3cqZAp">
+          <node concept="3cpWsn" id="5dO5_Ubf474" role="3cpWs9">
+            <property role="TrG5h" value="rpName" />
+            <node concept="17QB3L" id="5dO5_Ubf46Z" role="1tU5fm" />
+            <node concept="Xl_RD" id="5dO5_Ubf4Lk" role="33vP2m">
+              <property role="Xl_RC" value="aRetentionPolicy" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5dO5_Ubf5su" role="3cqZAp">
+          <node concept="2OqwBi" id="5dO5_Ubf6bE" role="3clFbG">
+            <node concept="37vLTw" id="5dO5_Ubf5ss" role="2Oq$k0">
+              <ref role="3cqZAo" node="5dO5_UbeVkk" resolve="influxDB" />
+            </node>
+            <node concept="liA8E" id="5dO5_Ubf6BS" role="2OqNvi">
+              <ref role="37wK5l" to="9nbq:~InfluxDB.createRetentionPolicy(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,boolean):void" resolve="createRetentionPolicy" />
+              <node concept="37vLTw" id="5dO5_Ubf6Ly" role="37wK5m">
+                <ref role="3cqZAo" node="5dO5_Ubf474" resolve="rpName" />
+              </node>
+              <node concept="37vLTw" id="5dO5_Ubf78l" role="37wK5m">
+                <ref role="3cqZAo" node="5dO5_UbeYCj" resolve="dbName" />
+              </node>
+              <node concept="Xl_RD" id="5dO5_Ubf7Cb" role="37wK5m">
+                <property role="Xl_RC" value="30d" />
+              </node>
+              <node concept="Xl_RD" id="5dO5_Ubf88m" role="37wK5m">
+                <property role="Xl_RC" value="30m" />
+              </node>
+              <node concept="3cmrfG" id="5dO5_UbfbLv" role="37wK5m">
+                <property role="3cmrfH" value="2" />
+              </node>
+              <node concept="3clFbT" id="5dO5_UbfcmM" role="37wK5m">
+                <property role="3clFbU" value="true" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="5dO5_Ubgc$B" role="3cqZAp" />
+        <node concept="3cpWs8" id="5dO5_Ubg7GG" role="3cqZAp">
+          <node concept="3cpWsn" id="5dO5_Ubg7GH" role="3cpWs9">
+            <property role="TrG5h" value="batchPoints" />
+            <node concept="3uibUv" id="5dO5_Ubg7GI" role="1tU5fm">
+              <ref role="3uigEE" to="wthj:~BatchPoints" resolve="BatchPoints" />
+            </node>
+            <node concept="2OqwBi" id="5dO5_UbggvK" role="33vP2m">
+              <node concept="2OqwBi" id="5dO5_UbgdMg" role="2Oq$k0">
+                <node concept="2OqwBi" id="5dO5_Ubga_q" role="2Oq$k0">
+                  <node concept="2OqwBi" id="5dO5_Ubg8NN" role="2Oq$k0">
+                    <node concept="2YIFZM" id="5dO5_Ubg8Ap" role="2Oq$k0">
+                      <ref role="37wK5l" to="wthj:~BatchPoints.database(java.lang.String):org.influxdb.dto.BatchPoints$Builder" resolve="database" />
+                      <ref role="1Pybhc" to="wthj:~BatchPoints" resolve="BatchPoints" />
+                      <node concept="37vLTw" id="5dO5_Ubg8Bh" role="37wK5m">
+                        <ref role="3cqZAo" node="5dO5_UbeYCj" resolve="dbName" />
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="5dO5_Ubg90t" role="2OqNvi">
+                      <ref role="37wK5l" to="wthj:~BatchPoints$Builder.tag(java.lang.String,java.lang.String):org.influxdb.dto.BatchPoints$Builder" resolve="tag" />
+                      <node concept="Xl_RD" id="5dO5_Ubg9ec" role="37wK5m">
+                        <property role="Xl_RC" value="async" />
+                      </node>
+                      <node concept="Xl_RD" id="5dO5_Ubga79" role="37wK5m">
+                        <property role="Xl_RC" value="true" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="5dO5_Ubgbub" role="2OqNvi">
+                    <ref role="37wK5l" to="wthj:~BatchPoints$Builder.retentionPolicy(java.lang.String):org.influxdb.dto.BatchPoints$Builder" resolve="retentionPolicy" />
+                    <node concept="37vLTw" id="5dO5_Ubgdrc" role="37wK5m">
+                      <ref role="3cqZAo" node="5dO5_Ubf474" resolve="rpName" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="5dO5_Ubgf16" role="2OqNvi">
+                  <ref role="37wK5l" to="wthj:~BatchPoints$Builder.consistency(org.influxdb.InfluxDB$ConsistencyLevel):org.influxdb.dto.BatchPoints$Builder" resolve="consistency" />
+                  <node concept="Rm8GO" id="5dO5_UbgfXc" role="37wK5m">
+                    <ref role="Rm8GQ" to="9nbq:~InfluxDB$ConsistencyLevel.ALL" resolve="ALL" />
+                    <ref role="1Px2BO" to="9nbq:~InfluxDB$ConsistencyLevel" resolve="InfluxDB.ConsistencyLevel" />
+                  </node>
+                </node>
+              </node>
+              <node concept="liA8E" id="5dO5_Ubgi6I" role="2OqNvi">
+                <ref role="37wK5l" to="wthj:~BatchPoints$Builder.build():org.influxdb.dto.BatchPoints" resolve="build" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="5dO5_Ubgr6r" role="3cqZAp" />
         <node concept="3clFbH" id="1Vo$Sn9O$Le" role="3cqZAp">
           <node concept="2b32R4" id="1Vo$Sn9O$Lt" role="lGtFl">
             <node concept="3JmXsc" id="1Vo$Sn9O$Lw" role="2P8S$">
@@ -370,6 +509,9 @@
                               </node>
                               <node concept="liA8E" id="36n0RtVA_JF" role="2OqNvi">
                                 <ref role="37wK5l" to="2ns9:3juagqJydtv" resolve="readValue" />
+                                <node concept="37vLTw" id="5dO5_Ubh2Q$" role="37wK5m">
+                                  <ref role="3cqZAo" node="5dO5_Ubg7GH" resolve="batchPoints" />
+                                </node>
                               </node>
                             </node>
                             <node concept="liA8E" id="36n0RtVABnV" role="2OqNvi">
@@ -391,6 +533,19 @@
                         <ref role="3uigEE" to="2ns9:3K9a83awgxk" resolve="Sensor" />
                       </node>
                     </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="5dO5_UbgrXK" role="3cqZAp">
+              <node concept="2OqwBi" id="5dO5_UbgsJU" role="3clFbG">
+                <node concept="37vLTw" id="5dO5_UbgrXI" role="2Oq$k0">
+                  <ref role="3cqZAo" node="5dO5_UbeVkk" resolve="influxDB" />
+                </node>
+                <node concept="liA8E" id="5dO5_UbgtyW" role="2OqNvi">
+                  <ref role="37wK5l" to="9nbq:~InfluxDB.write(org.influxdb.dto.BatchPoints):void" resolve="write" />
+                  <node concept="37vLTw" id="5dO5_UbgtGN" role="37wK5m">
+                    <ref role="3cqZAo" node="5dO5_Ubg7GH" resolve="batchPoints" />
                   </node>
                 </node>
               </node>
