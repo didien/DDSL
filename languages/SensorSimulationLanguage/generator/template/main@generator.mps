@@ -10,8 +10,11 @@
   </languages>
   <imports>
     <import index="7ew6" ref="r:e465baf8-de2e-4ffc-b433-5fde6234c8fc(SensorSimulationLanguage.structure)" />
-    <import index="5zyv" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util.concurrent(JDK/)" />
     <import index="2ns9" ref="r:2ebb615b-7d7d-46a9-af25-8b8353fe1098(SensorSimulationLanguage.runtime.simulation)" />
+    <import index="28m1" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.time(JDK/)" />
+    <import index="6t7w" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.time.format(JDK/)" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -39,17 +42,18 @@
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
       <concept id="1081236700938" name="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" flags="ig" index="2YIFZL" />
+      <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
+        <reference id="1144433194310" name="classConcept" index="1Pybhc" />
+      </concept>
+      <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
+        <reference id="1144433057691" name="classifier" index="1PxDUh" />
+      </concept>
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1070534760951" name="jetbrains.mps.baseLanguage.structure.ArrayType" flags="in" index="10Q1$e">
         <child id="1070534760952" name="componentType" index="10Q1$1" />
       </concept>
-      <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg">
-        <property id="8606350594693632173" name="isTransient" index="eg7rD" />
-        <property id="1240249534625" name="isVolatile" index="34CwA1" />
-      </concept>
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
-        <property id="1176718929932" name="isFinal" index="3TUv4t" />
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
@@ -69,10 +73,13 @@
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
       <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
+      <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
+        <child id="1068580123160" name="condition" index="3clFbw" />
+        <child id="1068580123161" name="ifTrue" index="3clFbx" />
+      </concept>
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
-      <concept id="1068580123140" name="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" flags="ig" index="3clFbW" />
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
@@ -82,6 +89,7 @@
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
+      <concept id="1081506762703" name="jetbrains.mps.baseLanguage.structure.GreaterThanExpression" flags="nn" index="3eOSWO" />
       <concept id="1081506773034" name="jetbrains.mps.baseLanguage.structure.LessThanExpression" flags="nn" index="3eOVzh" />
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
@@ -110,7 +118,6 @@
         <child id="1144231408325" name="iteration" index="1Dwrff" />
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
-      <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
     </language>
     <language id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator">
       <concept id="1114729360583" name="jetbrains.mps.lang.generator.structure.CopySrcListMacro" flags="ln" index="2b32R4">
@@ -202,6 +209,7 @@
       <concept id="1203518072036" name="jetbrains.mps.baseLanguage.collections.structure.SmartClosureParameterDeclaration" flags="ig" index="Rh6nW" />
       <concept id="1160600644654" name="jetbrains.mps.baseLanguage.collections.structure.ListCreatorWithInit" flags="nn" index="Tc6Ow" />
       <concept id="1160612413312" name="jetbrains.mps.baseLanguage.collections.structure.AddElementOperation" flags="nn" index="TSZUe" />
+      <concept id="1167380149909" name="jetbrains.mps.baseLanguage.collections.structure.RemoveElementOperation" flags="nn" index="3dhRuq" />
     </language>
   </registry>
   <node concept="bUwia" id="3bvT0dJbuOS">
@@ -219,42 +227,7 @@
   </node>
   <node concept="312cEu" id="1Vo$Sn9MHKj">
     <property role="TrG5h" value="reduce_Simulation" />
-    <node concept="312cEg" id="1Vo$Sn9MJgY" role="jymVt">
-      <property role="34CwA1" value="false" />
-      <property role="eg7rD" value="false" />
-      <property role="TrG5h" value="simName" />
-      <property role="3TUv4t" value="false" />
-      <node concept="3Tm6S6" id="1Vo$Sn9MJ6e" role="1B3o_S" />
-      <node concept="17QB3L" id="1Vo$Sn9MJgT" role="1tU5fm" />
-      <node concept="Xl_RD" id="1Vo$Sn9MJhl" role="33vP2m">
-        <property role="Xl_RC" value="reduce_Simulation" />
-        <node concept="17Uvod" id="1Vo$Sn9MJrZ" role="lGtFl">
-          <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
-          <property role="2qtEX9" value="value" />
-          <node concept="3zFVjK" id="1Vo$Sn9MJs2" role="3zH0cK">
-            <node concept="3clFbS" id="1Vo$Sn9MJs3" role="2VODD2">
-              <node concept="3clFbF" id="1Vo$Sn9MJs9" role="3cqZAp">
-                <node concept="2OqwBi" id="1Vo$Sn9MJs4" role="3clFbG">
-                  <node concept="30H73N" id="1Vo$Sn9MJs8" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="1Vo$Sn9MOhE" role="2OqNvi">
-                    <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="2tJIrI" id="3juagqJxhmc" role="jymVt" />
-    <node concept="2tJIrI" id="1Vo$Sn9MIVA" role="jymVt" />
-    <node concept="3clFbW" id="1Vo$Sn9MIAc" role="jymVt">
-      <node concept="3cqZAl" id="1Vo$Sn9MIAe" role="3clF45" />
-      <node concept="3Tm1VV" id="1Vo$Sn9MIAf" role="1B3o_S" />
-      <node concept="3clFbS" id="1Vo$Sn9MIAg" role="3clF47" />
-    </node>
-    <node concept="2tJIrI" id="1Vo$Sn9MO_i" role="jymVt" />
-    <node concept="2tJIrI" id="1Vo$Sn9MLPT" role="jymVt" />
+    <node concept="2tJIrI" id="36n0RtVzqB1" role="jymVt" />
     <node concept="2YIFZL" id="1Vo$Sn9MMnG" role="jymVt">
       <property role="TrG5h" value="main" />
       <node concept="37vLTG" id="1Vo$Sn9MMnH" role="3clF46">
@@ -283,7 +256,110 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="3juagqJyq4b" role="3cqZAp" />
+        <node concept="3cpWs8" id="36n0RtVz8xR" role="3cqZAp">
+          <node concept="3cpWsn" id="36n0RtVz8xS" role="3cpWs9">
+            <property role="TrG5h" value="dateFormat" />
+            <node concept="3uibUv" id="36n0RtVz8xT" role="1tU5fm">
+              <ref role="3uigEE" to="6t7w:~DateTimeFormatter" resolve="DateTimeFormatter" />
+            </node>
+            <node concept="2YIFZM" id="36n0RtVz8V_" role="33vP2m">
+              <ref role="37wK5l" to="6t7w:~DateTimeFormatter.ofPattern(java.lang.String):java.time.format.DateTimeFormatter" resolve="ofPattern" />
+              <ref role="1Pybhc" to="6t7w:~DateTimeFormatter" resolve="DateTimeFormatter" />
+              <node concept="Xl_RD" id="36n0RtVz8We" role="37wK5m">
+                <property role="Xl_RC" value="dd-MM-yy HH:mm" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="36n0RtVz7uh" role="3cqZAp" />
+        <node concept="3cpWs8" id="36n0RtVyWTA" role="3cqZAp">
+          <node concept="3cpWsn" id="36n0RtVyWTB" role="3cpWs9">
+            <property role="TrG5h" value="startDate" />
+            <node concept="3uibUv" id="36n0RtVyWTC" role="1tU5fm">
+              <ref role="3uigEE" to="28m1:~LocalDateTime" resolve="LocalDateTime" />
+            </node>
+            <node concept="2YIFZM" id="36n0RtVyXY9" role="33vP2m">
+              <ref role="1Pybhc" to="28m1:~LocalDateTime" resolve="LocalDateTime" />
+              <ref role="37wK5l" to="28m1:~LocalDateTime.parse(java.lang.CharSequence,java.time.format.DateTimeFormatter):java.time.LocalDateTime" resolve="parse" />
+              <node concept="Xl_RD" id="36n0RtVyXZq" role="37wK5m">
+                <property role="Xl_RC" value="01-01-18 15:00" />
+                <node concept="17Uvod" id="36n0RtVyYKP" role="lGtFl">
+                  <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
+                  <property role="2qtEX9" value="value" />
+                  <node concept="3zFVjK" id="36n0RtVyYKS" role="3zH0cK">
+                    <node concept="3clFbS" id="36n0RtVyYKT" role="2VODD2">
+                      <node concept="3clFbF" id="36n0RtVyYKZ" role="3cqZAp">
+                        <node concept="2OqwBi" id="36n0RtVyYKU" role="3clFbG">
+                          <node concept="3TrcHB" id="36n0RtVyYKX" role="2OqNvi">
+                            <ref role="3TsBF5" to="7ew6:3juagqJxhEC" resolve="startDate" />
+                          </node>
+                          <node concept="30H73N" id="36n0RtVyYKY" role="2Oq$k0" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="37vLTw" id="36n0RtVz9v0" role="37wK5m">
+                <ref role="3cqZAo" node="36n0RtVz8xS" resolve="dateFormat" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="36n0RtVz9Ib" role="3cqZAp">
+          <node concept="3cpWsn" id="36n0RtVz9Ic" role="3cpWs9">
+            <property role="TrG5h" value="endDate" />
+            <node concept="3uibUv" id="36n0RtVz9Id" role="1tU5fm">
+              <ref role="3uigEE" to="28m1:~LocalDateTime" resolve="LocalDateTime" />
+            </node>
+            <node concept="2YIFZM" id="36n0RtVz9Ie" role="33vP2m">
+              <ref role="1Pybhc" to="28m1:~LocalDateTime" resolve="LocalDateTime" />
+              <ref role="37wK5l" to="28m1:~LocalDateTime.parse(java.lang.CharSequence,java.time.format.DateTimeFormatter):java.time.LocalDateTime" resolve="parse" />
+              <node concept="Xl_RD" id="36n0RtVz9If" role="37wK5m">
+                <property role="Xl_RC" value="01-01-18 16:00" />
+                <node concept="17Uvod" id="36n0RtVz9Ig" role="lGtFl">
+                  <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
+                  <property role="2qtEX9" value="value" />
+                  <node concept="3zFVjK" id="36n0RtVz9Ih" role="3zH0cK">
+                    <node concept="3clFbS" id="36n0RtVz9Ii" role="2VODD2">
+                      <node concept="3clFbF" id="36n0RtVz9Ij" role="3cqZAp">
+                        <node concept="2OqwBi" id="36n0RtVz9Ik" role="3clFbG">
+                          <node concept="3TrcHB" id="36n0RtVzbQt" role="2OqNvi">
+                            <ref role="3TsBF5" to="7ew6:3juagqJxhEE" resolve="endDate" />
+                          </node>
+                          <node concept="30H73N" id="36n0RtVz9Im" role="2Oq$k0" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="37vLTw" id="36n0RtVz9In" role="37wK5m">
+                <ref role="3cqZAo" node="36n0RtVz8xS" resolve="dateFormat" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="36n0RtVyZmb" role="3cqZAp">
+          <node concept="2OqwBi" id="36n0RtVyZm8" role="3clFbG">
+            <node concept="10M0yZ" id="36n0RtVyZm9" role="2Oq$k0">
+              <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
+              <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
+            </node>
+            <node concept="liA8E" id="36n0RtVyZma" role="2OqNvi">
+              <ref role="37wK5l" to="guwi:~PrintStream.println(int):void" resolve="println" />
+              <node concept="2OqwBi" id="36n0RtVz0gR" role="37wK5m">
+                <node concept="37vLTw" id="36n0RtVyZHi" role="2Oq$k0">
+                  <ref role="3cqZAo" node="36n0RtVyWTB" resolve="startDate" />
+                </node>
+                <node concept="liA8E" id="36n0RtVz0LB" role="2OqNvi">
+                  <ref role="37wK5l" to="28m1:~LocalDateTime.getHour():int" resolve="getHour" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="36n0RtVyVq7" role="3cqZAp" />
         <node concept="3clFbH" id="1Vo$Sn9O$Le" role="3cqZAp">
           <node concept="2b32R4" id="1Vo$Sn9O$Lt" role="lGtFl">
             <node concept="3JmXsc" id="1Vo$Sn9O$Lw" role="2P8S$">
@@ -309,16 +385,54 @@
             <node concept="2es0OD" id="3K9a83axeff" role="2OqNvi">
               <node concept="1bVj0M" id="3K9a83axefh" role="23t8la">
                 <node concept="3clFbS" id="3K9a83axefi" role="1bW5cS">
-                  <node concept="3clFbF" id="3K9a83axehw" role="3cqZAp">
-                    <node concept="2OqwBi" id="3K9a83axeoF" role="3clFbG">
-                      <node concept="37vLTw" id="3K9a83axehv" role="2Oq$k0">
-                        <ref role="3cqZAo" node="3K9a83axefj" resolve="it" />
-                      </node>
-                      <node concept="liA8E" id="3K9a83axews" role="2OqNvi">
-                        <ref role="37wK5l" to="2ns9:3juagqJydtv" resolve="readValue" />
-                        <node concept="Xl_RD" id="3K9a83axe_b" role="37wK5m">
-                          <property role="Xl_RC" value="now" />
+                  <node concept="3clFbJ" id="36n0RtVzmi1" role="3cqZAp">
+                    <node concept="3clFbS" id="36n0RtVzmi3" role="3clFbx">
+                      <node concept="3clFbF" id="36n0RtV$fG1" role="3cqZAp">
+                        <node concept="2OqwBi" id="36n0RtV$fFY" role="3clFbG">
+                          <node concept="10M0yZ" id="36n0RtV$fFZ" role="2Oq$k0">
+                            <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
+                            <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
+                          </node>
+                          <node concept="liA8E" id="36n0RtV$fG0" role="2OqNvi">
+                            <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
+                            <node concept="Xl_RD" id="36n0RtV$gEU" role="37wK5m">
+                              <property role="Xl_RC" value="removed" />
+                            </node>
+                          </node>
                         </node>
+                      </node>
+                      <node concept="3clFbF" id="36n0RtVzmQX" role="3cqZAp">
+                        <node concept="2OqwBi" id="36n0RtVznws" role="3clFbG">
+                          <node concept="37vLTw" id="36n0RtVzmQV" role="2Oq$k0">
+                            <ref role="3cqZAo" node="3juagqJzGv8" resolve="sensorsList" />
+                          </node>
+                          <node concept="3dhRuq" id="36n0RtVzo_J" role="2OqNvi">
+                            <node concept="37vLTw" id="36n0RtVzoF2" role="25WWJ7">
+                              <ref role="3cqZAo" node="3K9a83axefj" resolve="it" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="3eOSWO" id="36n0RtV$emK" role="3clFbw">
+                      <node concept="2OqwBi" id="36n0RtV$3eE" role="3uHU7B">
+                        <node concept="2OqwBi" id="36n0RtV$24D" role="2Oq$k0">
+                          <node concept="37vLTw" id="36n0RtV$1U2" role="2Oq$k0">
+                            <ref role="3cqZAo" node="3K9a83axefj" resolve="it" />
+                          </node>
+                          <node concept="liA8E" id="36n0RtV$2kY" role="2OqNvi">
+                            <ref role="37wK5l" to="2ns9:3juagqJydtv" resolve="readValue" />
+                          </node>
+                        </node>
+                        <node concept="liA8E" id="36n0RtV$4G8" role="2OqNvi">
+                          <ref role="37wK5l" to="28m1:~LocalDateTime.compareTo(java.time.chrono.ChronoLocalDateTime):int" resolve="compareTo" />
+                          <node concept="37vLTw" id="36n0RtV$4X$" role="37wK5m">
+                            <ref role="3cqZAo" node="36n0RtVz9Ic" resolve="endDate" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3cmrfG" id="36n0RtV$drQ" role="3uHU7w">
+                        <property role="3cmrfH" value="0" />
                       </node>
                     </node>
                   </node>
@@ -369,6 +483,14 @@
           </node>
         </node>
       </node>
+      <node concept="3cpWs8" id="36n0RtV$nss" role="3cqZAp">
+        <node concept="3cpWsn" id="36n0RtV$nst" role="3cpWs9">
+          <property role="TrG5h" value="startDate" />
+          <node concept="3uibUv" id="36n0RtV$nsu" role="1tU5fm">
+            <ref role="3uigEE" to="28m1:~LocalDateTime" resolve="LocalDateTime" />
+          </node>
+        </node>
+      </node>
       <node concept="3clFbH" id="3juagqJzwR8" role="3cqZAp" />
       <node concept="1Dw8fO" id="3juagqJylgu" role="3cqZAp">
         <node concept="3cpWsn" id="3juagqJylgv" role="1Duv9x">
@@ -387,7 +509,7 @@
               <node concept="TSZUe" id="3juagqJyuCX" role="2OqNvi">
                 <node concept="2ShNRf" id="3juagqJyvab" role="25WWJ7">
                   <node concept="1pGfFk" id="3juagqJyvfU" role="2ShVmc">
-                    <ref role="37wK5l" to="2ns9:3juagqJydfX" resolve="Sensor" />
+                    <ref role="37wK5l" to="2ns9:36n0RtVzifZ" resolve="Sensor" />
                     <node concept="3cpWs3" id="3juagqJyvQm" role="37wK5m">
                       <node concept="37vLTw" id="3juagqJyCMo" role="3uHU7w">
                         <ref role="3cqZAo" node="3juagqJylgv" resolve="i" />
@@ -570,6 +692,9 @@
                           </node>
                         </node>
                       </node>
+                    </node>
+                    <node concept="37vLTw" id="36n0RtV$oRA" role="37wK5m">
+                      <ref role="3cqZAo" node="36n0RtV$nst" resolve="startDate" />
                     </node>
                   </node>
                 </node>

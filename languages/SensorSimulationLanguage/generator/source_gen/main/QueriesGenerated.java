@@ -13,8 +13,11 @@ import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
 
 @Generated
 public class QueriesGenerated {
-  public static Object propertyMacro_GetPropertyValue_2222688618932795138(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+  public static Object propertyMacro_GetPropertyValue_3573328641050537016(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x3d758cd7d80aa1e7L, 0x34de2906af851aa8L, "startDate"));
+  }
+  public static Object propertyMacro_GetPropertyValue_3573328641050581905(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x3d758cd7d80aa1e7L, 0x34de2906af851aaaL, "endDate"));
   }
   public static Object propertyMacro_GetPropertyValue_2222688618932788269(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
