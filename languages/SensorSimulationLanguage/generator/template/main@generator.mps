@@ -14,6 +14,7 @@
     <import index="28m1" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.time(JDK/)" />
     <import index="6t7w" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.time.format(JDK/)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
+    <import index="9nbq" ref="cc7fb470-7d0c-4aea-af2a-5d870ff3092f/java:org.influxdb(InfluxDB/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -348,7 +349,7 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="3K9a83axc7p" role="3cqZAp" />
+        <node concept="3clFbH" id="36n0RtVB2V0" role="3cqZAp" />
         <node concept="2$JKZl" id="36n0RtV$B$P" role="3cqZAp">
           <node concept="3clFbS" id="36n0RtV$B$R" role="2LFqv$">
             <node concept="3clFbF" id="36n0RtVAzAO" role="3cqZAp">
