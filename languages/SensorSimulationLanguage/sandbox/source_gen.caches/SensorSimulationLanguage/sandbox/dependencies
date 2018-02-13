@@ -4,12 +4,11 @@
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.RandomLaw" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.Sensor" />
     <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.time.LocalDateTime" />
     <classNode dependClassName="java.time.format.DateTimeFormatter" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />
+    <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
   </dependency>
 </dependenciesRoot>

@@ -55,7 +55,7 @@
     </node>
     <node concept="3_vMzQ" id="75cVuPqSf8D" role="3_vMOX">
       <property role="TrG5h" value="random_1_10" />
-      <property role="FF4Y_" value="30" />
+      <property role="FF4Y_" value="15" />
       <property role="FF4YA" value="5" />
       <property role="3_vMzV" value="0" />
       <property role="3_vMzT" value="10" />
@@ -63,11 +63,11 @@
     </node>
     <node concept="3_vMzQ" id="75cVuPqSgcD" role="3_vMOX">
       <property role="TrG5h" value="random_boolean" />
-      <property role="FF4Y_" value="25" />
+      <property role="FF4Y_" value="28" />
       <property role="3_vMzV" value="0" />
       <property role="3_vMzT" value="1" />
       <property role="2rmjho" value="86400" />
-      <property role="FF4YA" value="5" />
+      <property role="FF4YA" value="7" />
     </node>
   </node>
 </model>
