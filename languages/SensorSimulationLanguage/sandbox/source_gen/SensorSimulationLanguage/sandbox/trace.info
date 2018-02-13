@@ -16,18 +16,17 @@
       <node id="8164161828203594517" at="23,34,24,139" concept="1" />
       <node id="8164161828203594527" at="26,35,27,141" concept="1" />
       <node id="8164161828203581123" at="28,5,29,0" concept="6" />
-      <node id="8164161828203581123" at="29,0,30,0" concept="6" />
-      <node id="8164161828203581123" at="32,36,33,28" concept="1" />
+      <node id="8164161828203581123" at="31,36,32,28" concept="1" />
       <node id="8164161828203581123" at="16,0,18,0" concept="0" trace="TestSimulation#()V" />
       <node id="8164161828203594517" at="22,0,25,5" concept="3" />
       <node id="8164161828203594527" at="25,5,28,5" concept="3" />
-      <node id="8164161828203581123" at="32,0,35,0" concept="4" trace="visit#(LSensorSimulationLanguage/runtime/simulation/Sensor;)V" />
-      <node id="8164161828203581123" at="30,0,35,7" concept="1" />
-      <node id="8164161828203581123" at="20,0,37,0" concept="7" trace="main#([Ljava/lang/String;)V" />
+      <node id="8164161828203581123" at="31,0,34,0" concept="4" trace="visit#(LSensorSimulationLanguage/runtime/simulation/Sensor;)V" />
+      <node id="8164161828203581123" at="29,0,34,7" concept="1" />
+      <node id="8164161828203581123" at="20,0,36,0" concept="7" trace="main#([Ljava/lang/String;)V" />
       <scope id="8164161828203581123" at="16,27,16,27" />
       <scope id="8164161828203594517" at="23,34,24,139" />
       <scope id="8164161828203594527" at="26,35,27,141" />
-      <scope id="8164161828203581123" at="32,36,33,28" />
+      <scope id="8164161828203581123" at="31,36,32,28" />
       <scope id="8164161828203581123" at="16,0,18,0" />
       <scope id="8164161828203594517" at="22,0,25,5">
         <var name="i" id="8164161828203594517" />
@@ -35,17 +34,17 @@
       <scope id="8164161828203594527" at="25,5,28,5">
         <var name="i" id="8164161828203594527" />
       </scope>
-      <scope id="8164161828203581123" at="32,0,35,0">
+      <scope id="8164161828203581123" at="31,0,34,0">
         <var name="it" id="8164161828203581123" />
       </scope>
-      <scope id="8164161828203581123" at="20,42,35,7">
+      <scope id="8164161828203581123" at="20,42,34,7">
         <var name="sensorsList" id="8164161828203581123" />
       </scope>
-      <scope id="8164161828203581123" at="20,0,37,0">
+      <scope id="8164161828203581123" at="20,0,36,0">
         <var name="args" id="8164161828203581123" />
       </scope>
-      <unit id="8164161828203581123" at="31,52,35,5" name="SensorSimulationLanguage.sandbox.TestSimulation$1" />
-      <unit id="8164161828203581123" at="12,0,39,0" name="SensorSimulationLanguage.sandbox.TestSimulation" />
+      <unit id="8164161828203581123" at="30,52,34,5" name="SensorSimulationLanguage.sandbox.TestSimulation$1" />
+      <unit id="8164161828203581123" at="12,0,38,0" name="SensorSimulationLanguage.sandbox.TestSimulation" />
     </file>
   </root>
 </debug-info>

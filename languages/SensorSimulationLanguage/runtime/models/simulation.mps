@@ -69,6 +69,9 @@
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
       <concept id="1068580123140" name="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" flags="ig" index="3clFbW" />
+      <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
+        <property id="1068580320021" name="value" index="3cmrfH" />
+      </concept>
       <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
@@ -278,8 +281,13 @@
               <node concept="37vLTw" id="1Vo$Sn9O4Gj" role="37wK5m">
                 <ref role="3cqZAo" node="1Vo$Sn9NYK$" resolve="min" />
               </node>
-              <node concept="37vLTw" id="1Vo$Sn9O4Rl" role="37wK5m">
-                <ref role="3cqZAo" node="1Vo$Sn9NYLi" resolve="max" />
+              <node concept="3cpWs3" id="3K9a83ayvyL" role="37wK5m">
+                <node concept="3cmrfG" id="3K9a83ayvGt" role="3uHU7w">
+                  <property role="3cmrfH" value="1" />
+                </node>
+                <node concept="37vLTw" id="1Vo$Sn9O4Rl" role="3uHU7B">
+                  <ref role="3cqZAo" node="1Vo$Sn9NYLi" resolve="max" />
+                </node>
               </node>
             </node>
           </node>
