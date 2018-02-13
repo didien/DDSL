@@ -4,10 +4,18 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.concurrent.ThreadLocalRandom" />
   </dependency>
-  <dependency className="SensorSimulationLanguage.sandbox.TestSimulation" file="TestSimulation.java">
+  <dependency className="SensorSimulationLanguage.sandbox.Sensor" file="Sensor.java">
     <classNode dependClassName="SensorSimulationLanguage.sandbox.RandomLaw" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+  </dependency>
+  <dependency className="SensorSimulationLanguage.sandbox.TestSimulation" file="TestSimulation.java">
+    <classNode dependClassName="SensorSimulationLanguage.sandbox.RandomLaw" />
+    <classNode dependClassName="SensorSimulationLanguage.sandbox.Sensor" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
   </dependency>
 </dependenciesRoot>
 

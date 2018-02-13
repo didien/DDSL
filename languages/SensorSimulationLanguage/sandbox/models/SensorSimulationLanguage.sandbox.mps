@@ -4,6 +4,8 @@
   <languages>
     <use id="bc16fd15-bfa2-47e7-b9c2-9f80e5b399e0" name="SensorSimulationLanguage" version="0" />
     <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="5" />
+    <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="0" />
   </languages>
   <imports />
   <registry>
@@ -11,7 +13,7 @@
       <concept id="8164161828203569728" name="SensorSimulationLanguage.structure.IDataSource" flags="ng" index="FF4YH">
         <property id="3809527443493428574" name="resetPeriod" index="2rmjho" />
         <property id="8164161828203569736" name="updatePeriod" index="FF4Y_" />
-        <property id="8164161828203569739" name="sampling" index="FF4YA" />
+        <property id="8164161828203569739" name="samplingPeriod" index="FF4YA" />
       </concept>
       <concept id="4428600667259184161" name="SensorSimulationLanguage.structure.Random" flags="ng" index="3_vMzQ">
         <property id="4428600667259184174" name="max" index="3_vMzT" />
