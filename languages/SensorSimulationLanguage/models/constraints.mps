@@ -62,6 +62,11 @@
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
     </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+    </language>
   </registry>
   <node concept="1M2fIO" id="5fx1X_lOQzO">
     <ref role="1M2myG" to="7ew6:3PPzdvo2E7J" resolve="SensorCollection" />
@@ -121,6 +126,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="lhB3YR58JM">
+    <property role="3GE5qa" value="laws" />
     <ref role="1M2myG" to="7ew6:3PPzdvo2Egx" resolve="Random" />
     <node concept="EnEH3" id="lhB3YR5cqf" role="1MhHOB">
       <ref role="EomxK" to="7ew6:3PPzdvo2EgI" resolve="max" />
@@ -156,6 +162,28 @@
                 </node>
               </node>
               <node concept="1Wqviy" id="lhB3YR5kw$" role="3uHU7B" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="7dKB6cHP$35">
+    <property role="3GE5qa" value="laws" />
+    <ref role="1M2myG" to="7ew6:7dKB6cHPCI6" resolve="MarkovTransition" />
+    <node concept="EnEH3" id="7dKB6cHP$3x" role="1MhHOB">
+      <ref role="EomxK" to="7ew6:7dKB6cHPCIy" resolve="probability" />
+      <node concept="QB0g5" id="7dKB6cHP$3z" role="QCWH9">
+        <node concept="3clFbS" id="7dKB6cHP$3$" role="2VODD2">
+          <node concept="3clFbF" id="7dKB6cHP$bT" role="3cqZAp">
+            <node concept="2OqwBi" id="7dKB6cHP$C5" role="3clFbG">
+              <node concept="1Wqviy" id="7dKB6cHP$bS" role="2Oq$k0" />
+              <node concept="liA8E" id="7dKB6cHP_aD" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.matches(java.lang.String):boolean" resolve="matches" />
+                <node concept="Xl_RD" id="7dKB6cHP_iw" role="37wK5m">
+                  <property role="Xl_RC" value="^[0-9]*\\.[0-9]*$" />
+                </node>
+              </node>
             </node>
           </node>
         </node>

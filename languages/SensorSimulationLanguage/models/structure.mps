@@ -41,6 +41,9 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -105,6 +108,7 @@
   <node concept="1TIwiD" id="3PPzdvo2Egx">
     <property role="EcuMT" value="4428600667259184161" />
     <property role="TrG5h" value="Random" />
+    <property role="3GE5qa" value="laws" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="3PPzdvo2EgG" role="1TKVEl">
       <property role="IQ2nx" value="4428600667259184172" />
@@ -163,6 +167,49 @@
       <property role="IQ2nx" value="8164161828203569739" />
       <property role="TrG5h" value="samplingPeriod" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7dKB6cHPzZ_">
+    <property role="EcuMT" value="8318320461538017253" />
+    <property role="TrG5h" value="Markov" />
+    <property role="3GE5qa" value="laws" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="7dKB6cHP$0s" role="PzmwI">
+      <ref role="PrY4T" node="75cVuPqSa90" resolve="IDataSource" />
+    </node>
+    <node concept="1TJgyj" id="7dKB6cHP$0u" role="1TKVEi">
+      <property role="IQ2ns" value="8318320461538017310" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="states" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="7dKB6cHP$0X" resolve="MarkovStates" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7dKB6cHP$0X">
+    <property role="EcuMT" value="8318320461538017341" />
+    <property role="3GE5qa" value="laws" />
+    <property role="TrG5h" value="MarkovStates" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="7dKB6cHPCXV" role="1TKVEi">
+      <property role="IQ2ns" value="8318320461538037627" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="transitions" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="7dKB6cHPCI6" resolve="MarkovTransition" />
+    </node>
+    <node concept="PrWs8" id="7dKB6cHQn4J" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7dKB6cHPCI6">
+    <property role="EcuMT" value="8318320461538036614" />
+    <property role="3GE5qa" value="laws" />
+    <property role="TrG5h" value="MarkovTransition" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="7dKB6cHPCIy" role="1TKVEl">
+      <property role="IQ2nx" value="8318320461538036642" />
+      <property role="TrG5h" value="probability" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
 </model>

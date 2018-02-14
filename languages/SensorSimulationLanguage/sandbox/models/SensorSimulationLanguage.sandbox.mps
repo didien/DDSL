@@ -19,6 +19,15 @@
         <property id="8164161828203569736" name="updatePeriod" index="FF4Y_" />
         <property id="8164161828203569739" name="samplingPeriod" index="FF4YA" />
       </concept>
+      <concept id="8318320461538036614" name="SensorSimulationLanguage.structure.MarkovTransition" flags="ng" index="1uDxv_">
+        <property id="8318320461538036642" name="probability" index="1uDxv1" />
+      </concept>
+      <concept id="8318320461538017253" name="SensorSimulationLanguage.structure.Markov" flags="ng" index="1uDEe6">
+        <child id="8318320461538017310" name="states" index="1uDHLX" />
+      </concept>
+      <concept id="8318320461538017341" name="SensorSimulationLanguage.structure.MarkovStates" flags="ng" index="1uDHLu">
+        <child id="8318320461538037627" name="transitions" index="1uDxco" />
+      </concept>
       <concept id="4428600667259184161" name="SensorSimulationLanguage.structure.Random" flags="ng" index="3_vMzQ">
         <property id="4428600667259184174" name="max" index="3_vMzT" />
         <property id="4428600667259184172" name="min" index="3_vMzV" />
@@ -87,6 +96,48 @@
       <property role="FF4Y_" value="45" />
       <property role="FF4YA" value="6" />
       <property role="2rmjho" value="86400" />
+    </node>
+    <node concept="1uDEe6" id="7dKB6cHPHr2" role="3_vMOX">
+      <property role="TrG5h" value="weather" />
+      <property role="FF4Y_" value="67" />
+      <property role="FF4YA" value="60" />
+      <property role="2rmjho" value="86400" />
+      <node concept="1uDHLu" id="7dKB6cHPMh_" role="1uDHLX">
+        <property role="TrG5h" value="sunny" />
+        <node concept="1uDxv_" id="7dKB6cHPMi6" role="1uDxco">
+          <property role="1uDxv1" value="0.8" />
+        </node>
+        <node concept="1uDxv_" id="7dKB6cHPMi3" role="1uDxco">
+          <property role="1uDxv1" value="0." />
+        </node>
+        <node concept="1uDxv_" id="7dKB6cHPMif" role="1uDxco">
+          <property role="1uDxv1" value="0.2" />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="7dKB6cHPMht" role="1uDHLX">
+        <property role="TrG5h" value="cloudy" />
+        <node concept="1uDxv_" id="7dKB6cHPMhu" role="1uDxco">
+          <property role="1uDxv1" value="0.6" />
+        </node>
+        <node concept="1uDxv_" id="7dKB6cHPMin" role="1uDxco">
+          <property role="1uDxv1" value="0.15" />
+        </node>
+        <node concept="1uDxv_" id="7dKB6cHPMiq" role="1uDxco">
+          <property role="1uDxv1" value="0.35" />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="7dKB6cHPHs8" role="1uDHLX">
+        <property role="TrG5h" value="rainy" />
+        <node concept="1uDxv_" id="7dKB6cHPKEE" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="7dKB6cHPKEH" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="7dKB6cHPKEQ" role="1uDxco">
+          <property role="1uDxv1" value="0.6" />
+        </node>
+      </node>
     </node>
   </node>
 </model>
