@@ -40,35 +40,53 @@
       </concept>
     </language>
   </registry>
-  <node concept="3_vMOK" id="75cVuPqScV3">
-    <property role="TrG5h" value="TestSimulation" />
-    <property role="2rmNeI" value="12-02-18 15:00" />
-    <property role="2rmNeG" value="12-02-18 18:05" />
-    <node concept="3_vMOS" id="75cVuPqSgcl" role="3_vMOV">
-      <property role="TrG5h" value="randomDoorSensor" />
-      <property role="FF4LG" value="24" />
-      <ref role="3_vMzM" node="75cVuPqSf8D" resolve="random_door_angle" />
+  <node concept="3_vMOK" id="lhB3YR55MJ">
+    <property role="TrG5h" value="LaDemo" />
+    <property role="2rmNeI" value="14-02-10 02:00" />
+    <property role="2rmNeG" value="14-02-18 02:20" />
+    <node concept="3_vMOS" id="lhB3YR55NJ" role="3_vMOV">
+      <property role="FF4LG" value="30" />
+      <property role="TrG5h" value="porte_connectee" />
+      <ref role="3_vMzM" node="lhB3YR55NG" resolve="random_law_dooropening" />
     </node>
-    <node concept="3_vMOS" id="75cVuPqSgcv" role="3_vMOV">
-      <property role="TrG5h" value="randomParkingLot" />
-      <property role="FF4LG" value="110" />
-      <ref role="3_vMzM" node="75cVuPqSgcD" resolve="random_boolean" />
-    </node>
-    <node concept="3_vMzQ" id="75cVuPqSf8D" role="3_vMOX">
-      <property role="TrG5h" value="random_door_angle" />
-      <property role="FF4Y_" value="15" />
-      <property role="FF4YA" value="5" />
+    <node concept="3_vMzQ" id="lhB3YR55NG" role="3_vMOX">
+      <property role="TrG5h" value="random_law_dooropening" />
       <property role="3_vMzV" value="0" />
       <property role="3_vMzT" value="175" />
+      <property role="FF4Y_" value="26" />
+      <property role="FF4YA" value="7" />
+      <property role="2rmjho" value="26" />
+    </node>
+  </node>
+  <node concept="3_vMOK" id="lhB3YR9EAW">
+    <property role="TrG5h" value="Simulation" />
+    <property role="2rmNeI" value="14-02-18 15:15" />
+    <property role="2rmNeG" value="14-02-18 15:45" />
+    <node concept="3_vMOS" id="lhB3YR9EBU" role="3_vMOV">
+      <property role="FF4LG" value="14" />
+      <property role="TrG5h" value="door" />
+      <ref role="3_vMzM" node="lhB3YR9EBQ" resolve="random_angle" />
+    </node>
+    <node concept="3_vMOS" id="lhB3YR9EBX" role="3_vMOV">
+      <property role="FF4LG" value="56" />
+      <property role="TrG5h" value="parking" />
+      <ref role="3_vMzM" node="lhB3YR9EC7" resolve="random_bool" />
+    </node>
+    <node concept="3_vMzQ" id="lhB3YR9EBQ" role="3_vMOX">
+      <property role="TrG5h" value="random_angle" />
+      <property role="3_vMzT" value="175" />
+      <property role="3_vMzV" value="0" />
+      <property role="FF4Y_" value="30" />
+      <property role="FF4YA" value="5" />
       <property role="2rmjho" value="86400" />
     </node>
-    <node concept="3_vMzQ" id="75cVuPqSgcD" role="3_vMOX">
-      <property role="TrG5h" value="random_boolean" />
-      <property role="FF4Y_" value="28" />
-      <property role="3_vMzV" value="0" />
+    <node concept="3_vMzQ" id="lhB3YR9EC7" role="3_vMOX">
+      <property role="TrG5h" value="random_bool" />
       <property role="3_vMzT" value="1" />
+      <property role="3_vMzV" value="0" />
+      <property role="FF4Y_" value="45" />
+      <property role="FF4YA" value="6" />
       <property role="2rmjho" value="86400" />
-      <property role="FF4YA" value="7" />
     </node>
   </node>
 </model>
