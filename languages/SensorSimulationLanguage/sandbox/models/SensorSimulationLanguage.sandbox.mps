@@ -98,7 +98,7 @@
       <property role="2rmjho" value="86400" />
     </node>
     <node concept="1uDEe6" id="7dKB6cHPHr2" role="3_vMOX">
-      <property role="TrG5h" value="weather" />
+      <property role="TrG5h" value="weather_law" />
       <property role="FF4Y_" value="67" />
       <property role="FF4YA" value="60" />
       <property role="2rmjho" value="86400" />
@@ -123,7 +123,7 @@
           <property role="1uDxv1" value="0.15" />
         </node>
         <node concept="1uDxv_" id="7dKB6cHPMiq" role="1uDxco">
-          <property role="1uDxv1" value="0.35" />
+          <property role="1uDxv1" value="0.25" />
         </node>
       </node>
       <node concept="1uDHLu" id="7dKB6cHPHs8" role="1uDHLX">
