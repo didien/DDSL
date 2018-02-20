@@ -33,6 +33,15 @@ public class QueriesGenerated {
   public static Object propertyMacro_GetPropertyValue_8059823793871315991(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
   }
+  public static Object propertyMacro_GetPropertyValue_8059823793873054314(final PropertyMacroContext _context) {
+    return SPropertyOperations.getInteger(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x714ceded5ae0a240L, 0x714ceded5ae0a248L, "updatePeriod"));
+  }
+  public static Object propertyMacro_GetPropertyValue_8059823793873060161(final PropertyMacroContext _context) {
+    return SPropertyOperations.getInteger(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x714ceded5ae0a240L, 0x714ceded5ae0a24bL, "samplingPeriod"));
+  }
+  public static Object propertyMacro_GetPropertyValue_8059823793873075051(final PropertyMacroContext _context) {
+    return SPropertyOperations.getInteger(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x714ceded5ae0a240L, 0x34de2906af871d5eL, "resetPeriod"));
+  }
   public static Object propertyMacro_GetPropertyValue_8574414041137840581(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
   }

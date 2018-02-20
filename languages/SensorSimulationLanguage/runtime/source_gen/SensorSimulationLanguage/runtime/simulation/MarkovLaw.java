@@ -4,24 +4,47 @@ package SensorSimulationLanguage.runtime.simulation;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.math.BigDecimal;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.Iterator;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 
 public class MarkovLaw extends IDataSource {
   private List<MarkovState> states;
+  private MarkovState currentState;
   private String name;
+  protected int updatePeriod;
+  protected int samplingFrequency;
+  protected int resetPeriod;
 
-  public MarkovLaw(String name) {
+
+  public MarkovLaw(String name, int updatePeriod, int samplingFrequency, int resetPeriod) {
     states = new ArrayList<MarkovState>();
+    this.updatePeriod = updatePeriod;
+    this.samplingFrequency = samplingFrequency;
+    this.resetPeriod = resetPeriod;
     this.name = name;
   }
 
   @Override
   public String getNext() {
+    BigDecimal sum = BigDecimal.ZERO;
+    BigDecimal random = new BigDecimal(ThreadLocalRandom.current().nextDouble());
+    for (int i = 0; i < currentState.getTransitions().size(); i++) {
+      sum = sum.add(currentState.getTransitions().get(i));
+      if (random.compareTo(sum) <= 0) {
+        currentState = states.get(i);
+        System.out.println(random + " <= " + sum + " switch to " + currentState.getName());
+        return currentState.getName();
+      }
+    }
     return states.get(0).getName();
   }
 
   public void addState(MarkovState state) {
+    if (states.isEmpty()) {
+      currentState = state;
+    }
     states.add(state);
   }
 
@@ -40,5 +63,15 @@ public class MarkovLaw extends IDataSource {
 
   public List<MarkovState> getStates() {
     return states;
+  }
+
+  public int getUpdatePeriod() {
+    return updatePeriod;
+  }
+  public int getSamplingFrequency() {
+    return samplingFrequency;
+  }
+  public int getResetPeriod() {
+    return resetPeriod;
   }
 }
