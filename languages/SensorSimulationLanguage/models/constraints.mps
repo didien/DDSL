@@ -190,5 +190,13 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="7rYs2gB7cg$">
+    <property role="3GE5qa" value="laws" />
+    <ref role="1M2myG" to="7ew6:7dKB6cHPzZ_" resolve="Markov" />
+  </node>
+  <node concept="1M2fIO" id="7rYs2gB7g7d">
+    <property role="3GE5qa" value="laws" />
+    <ref role="1M2myG" to="7ew6:7dKB6cHP$0X" resolve="MarkovStates" />
+  </node>
 </model>
 

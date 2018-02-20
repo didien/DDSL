@@ -26,6 +26,12 @@
       <concept id="1153422305557" name="jetbrains.mps.baseLanguage.structure.LessThanOrEqualsExpression" flags="nn" index="2dkUwp" />
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
+      <concept id="1188207840427" name="jetbrains.mps.baseLanguage.structure.AnnotationInstance" flags="nn" index="2AHcQZ">
+        <reference id="1188208074048" name="annotation" index="2AI5Lk" />
+      </concept>
+      <concept id="1188208481402" name="jetbrains.mps.baseLanguage.structure.HasAnnotation" flags="ng" index="2AJDlI">
+        <child id="1188208488637" name="annotation" index="2AJF6D" />
+      </concept>
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
@@ -48,7 +54,10 @@
         <property id="8606350594693632173" name="isTransient" index="eg7rD" />
         <property id="1240249534625" name="isVolatile" index="34CwA1" />
       </concept>
-      <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu" />
+      <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu">
+        <property id="1075300953594" name="abstractClass" index="1sVAO0" />
+        <child id="1165602531693" name="superclass" index="1zkMxy" />
+      </concept>
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <property id="1176718929932" name="isFinal" index="3TUv4t" />
         <child id="1068431790190" name="initializer" index="33vP2m" />
@@ -117,7 +126,6 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
-      <concept id="1107796713796" name="jetbrains.mps.baseLanguage.structure.Interface" flags="ig" index="3HP615" />
       <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
         <property id="6329021646629104958" name="text" index="3SKdUp" />
       </concept>
@@ -126,6 +134,7 @@
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
+      <concept id="1146644641414" name="jetbrains.mps.baseLanguage.structure.ProtectedVisibility" flags="nn" index="3Tmbuc" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -133,28 +142,8 @@
       </concept>
     </language>
   </registry>
-  <node concept="3HP615" id="3K9a83awcVA">
-    <property role="TrG5h" value="IDataSource" />
-    <node concept="3clFb_" id="3K9a83awcWb" role="jymVt">
-      <property role="1EzhhJ" value="true" />
-      <property role="2aFKle" value="false" />
-      <property role="TrG5h" value="getNext" />
-      <node concept="3clFbS" id="3K9a83awcWe" role="3clF47" />
-      <node concept="3Tm1VV" id="3K9a83awcWf" role="1B3o_S" />
-      <node concept="10Oyi0" id="3K9a83awcW2" role="3clF45" />
-    </node>
-    <node concept="3Tm1VV" id="3K9a83awcVB" role="1B3o_S" />
-  </node>
   <node concept="312cEu" id="3K9a83awfDC">
     <property role="TrG5h" value="RandomLaw" />
-    <node concept="312cEg" id="1Vo$Sn9NYJk" role="jymVt">
-      <property role="34CwA1" value="false" />
-      <property role="eg7rD" value="false" />
-      <property role="TrG5h" value="lawName" />
-      <property role="3TUv4t" value="false" />
-      <node concept="3Tm6S6" id="1Vo$Sn9NYJ3" role="1B3o_S" />
-      <node concept="17QB3L" id="1Vo$Sn9NYJd" role="1tU5fm" />
-    </node>
     <node concept="312cEg" id="1Vo$Sn9NYK$" role="jymVt">
       <property role="34CwA1" value="false" />
       <property role="eg7rD" value="false" />
@@ -171,32 +160,6 @@
       <node concept="3Tm6S6" id="1Vo$Sn9NYKV" role="1B3o_S" />
       <node concept="10Oyi0" id="1Vo$Sn9O5c6" role="1tU5fm" />
     </node>
-    <node concept="2tJIrI" id="1Vo$Sn9NYOV" role="jymVt" />
-    <node concept="312cEg" id="1Vo$Sn9NYN9" role="jymVt">
-      <property role="34CwA1" value="false" />
-      <property role="eg7rD" value="false" />
-      <property role="TrG5h" value="updatePeriod" />
-      <property role="3TUv4t" value="false" />
-      <node concept="3Tm6S6" id="1Vo$Sn9NYML" role="1B3o_S" />
-      <node concept="10Oyi0" id="1Vo$Sn9NYN2" role="1tU5fm" />
-    </node>
-    <node concept="312cEg" id="1Vo$Sn9NYM9" role="jymVt">
-      <property role="34CwA1" value="false" />
-      <property role="eg7rD" value="false" />
-      <property role="TrG5h" value="samplingFrequency" />
-      <property role="3TUv4t" value="false" />
-      <node concept="3Tm6S6" id="1Vo$Sn9NYLJ" role="1B3o_S" />
-      <node concept="10Oyi0" id="1Vo$Sn9NYM2" role="1tU5fm" />
-    </node>
-    <node concept="312cEg" id="3juagqJxR9G" role="jymVt">
-      <property role="34CwA1" value="false" />
-      <property role="eg7rD" value="false" />
-      <property role="TrG5h" value="resetPeriod" />
-      <property role="3TUv4t" value="false" />
-      <node concept="3Tm6S6" id="3juagqJxR1K" role="1B3o_S" />
-      <node concept="10Oyi0" id="3juagqJxR9B" role="1tU5fm" />
-    </node>
-    <node concept="2tJIrI" id="1Vo$Sn9O0IY" role="jymVt" />
     <node concept="2tJIrI" id="3juagqJy1EW" role="jymVt" />
     <node concept="3clFbW" id="3juagqJy1KY" role="jymVt">
       <node concept="3cqZAl" id="3juagqJy1KZ" role="3clF45" />
@@ -204,8 +167,8 @@
       <node concept="3clFbS" id="3juagqJy1L2" role="3clF47">
         <node concept="3clFbF" id="3juagqJy1L6" role="3cqZAp">
           <node concept="37vLTI" id="3juagqJy1L8" role="3clFbG">
-            <node concept="37vLTw" id="3juagqJy1Lc" role="37vLTJ">
-              <ref role="3cqZAo" node="1Vo$Sn9NYJk" resolve="lawName" />
+            <node concept="37vLTw" id="7rYs2gBaG1e" role="37vLTJ">
+              <ref role="3cqZAo" node="7rYs2gBaBxJ" resolve="lawName" />
             </node>
             <node concept="37vLTw" id="3juagqJy1Ld" role="37vLTx">
               <ref role="3cqZAo" node="3juagqJy1L5" resolve="lawName1" />
@@ -322,46 +285,10 @@
       <node concept="3Tm1VV" id="1Vo$Sn9O0WH" role="1B3o_S" />
       <node concept="10Oyi0" id="1Vo$Sn9O19R" role="3clF45" />
     </node>
-    <node concept="2tJIrI" id="1Vo$Sn9O6pS" role="jymVt" />
-    <node concept="3clFb_" id="1Vo$Sn9O6zK" role="jymVt">
-      <property role="TrG5h" value="getSamplingFrequency" />
-      <node concept="10Oyi0" id="1Vo$Sn9O6zL" role="3clF45" />
-      <node concept="3Tm1VV" id="1Vo$Sn9O6zM" role="1B3o_S" />
-      <node concept="3clFbS" id="1Vo$Sn9O6zN" role="3clF47">
-        <node concept="3cpWs6" id="3juagqJy7Z4" role="3cqZAp">
-          <node concept="37vLTw" id="1Vo$Sn9O6zJ" role="3cqZAk">
-            <ref role="3cqZAo" node="1Vo$Sn9NYM9" resolve="samplingFrequency" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="2tJIrI" id="1Vo$Sn9O6Ho" role="jymVt" />
-    <node concept="3clFb_" id="1Vo$Sn9O6zQ" role="jymVt">
-      <property role="TrG5h" value="getUpdatePeriod" />
-      <node concept="10Oyi0" id="1Vo$Sn9O6zR" role="3clF45" />
-      <node concept="3Tm1VV" id="1Vo$Sn9O6zS" role="1B3o_S" />
-      <node concept="3clFbS" id="1Vo$Sn9O6zT" role="3clF47">
-        <node concept="3cpWs6" id="3juagqJya4h" role="3cqZAp">
-          <node concept="37vLTw" id="1Vo$Sn9O6zP" role="3cqZAk">
-            <ref role="3cqZAo" node="1Vo$Sn9NYN9" resolve="updatePeriod" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="2tJIrI" id="3juagqJxSpf" role="jymVt" />
-    <node concept="3clFb_" id="3juagqJxSEb" role="jymVt">
-      <property role="TrG5h" value="getResetPeriod" />
-      <node concept="10Oyi0" id="3juagqJxSEc" role="3clF45" />
-      <node concept="3Tm1VV" id="3juagqJxSEd" role="1B3o_S" />
-      <node concept="3clFbS" id="3juagqJxSEe" role="3clF47">
-        <node concept="3cpWs6" id="3juagqJybvD" role="3cqZAp">
-          <node concept="37vLTw" id="3juagqJxSEa" role="3cqZAk">
-            <ref role="3cqZAo" node="3juagqJxR9G" resolve="resetPeriod" />
-          </node>
-        </node>
-      </node>
-    </node>
     <node concept="3Tm1VV" id="3K9a83awfDD" role="1B3o_S" />
+    <node concept="3uibUv" id="7rYs2gBaEBk" role="1zkMxy">
+      <ref role="3uigEE" node="7rYs2gBaBv4" resolve="IDataSource" />
+    </node>
   </node>
   <node concept="312cEu" id="3K9a83awgxk">
     <property role="TrG5h" value="Sensor" />
@@ -379,8 +306,8 @@
       <property role="TrG5h" value="dataSource" />
       <property role="3TUv4t" value="false" />
       <node concept="3Tm6S6" id="3juagqJyddD" role="1B3o_S" />
-      <node concept="3uibUv" id="3juagqJ$enL" role="1tU5fm">
-        <ref role="3uigEE" node="3K9a83awfDC" resolve="RandomLaw" />
+      <node concept="3uibUv" id="7rYs2gBaIj0" role="1tU5fm">
+        <ref role="3uigEE" node="7rYs2gBaBv4" resolve="IDataSource" />
       </node>
     </node>
     <node concept="312cEg" id="36n0RtVzhS9" role="jymVt">
@@ -459,7 +386,7 @@
                 <ref role="3cqZAo" node="3juagqJyddW" resolve="dataSource" />
               </node>
               <node concept="liA8E" id="36n0RtVzz83" role="2OqNvi">
-                <ref role="37wK5l" node="1Vo$Sn9O13d" resolve="getNext" />
+                <ref role="37wK5l" node="7rYs2gBaBww" resolve="getNext" />
               </node>
             </node>
             <node concept="37vLTw" id="36n0RtVzx1g" role="37vLTJ">
@@ -484,8 +411,8 @@
       </node>
       <node concept="37vLTG" id="36n0RtVzigg" role="3clF46">
         <property role="TrG5h" value="dataSource1" />
-        <node concept="3uibUv" id="36n0RtVzigf" role="1tU5fm">
-          <ref role="3uigEE" node="3K9a83awfDC" resolve="RandomLaw" />
+        <node concept="3uibUv" id="7rYs2gBaJpU" role="1tU5fm">
+          <ref role="3uigEE" node="7rYs2gBaBv4" resolve="IDataSource" />
         </node>
       </node>
       <node concept="37vLTG" id="36n0RtVzigq" role="3clF46">
@@ -512,7 +439,7 @@
                     <ref role="3cqZAo" node="3juagqJyddW" resolve="dataSource" />
                   </node>
                   <node concept="liA8E" id="36n0RtVzUGw" role="2OqNvi">
-                    <ref role="37wK5l" node="1Vo$Sn9O13d" resolve="getNext" />
+                    <ref role="37wK5l" node="7rYs2gBaBww" resolve="getNext" />
                   </node>
                 </node>
                 <node concept="37vLTw" id="36n0RtVzSIG" role="37vLTJ">
@@ -633,7 +560,7 @@
                   </node>
                 </node>
                 <node concept="liA8E" id="5dO5_UbftMd" role="2OqNvi">
-                  <ref role="37wK5l" to="wthj:~Point$Builder.addField(java.lang.String,java.lang.Number):org.influxdb.dto.Point$Builder" resolve="addField" />
+                  <ref role="37wK5l" to="wthj:~Point$Builder.addField(java.lang.String,long):org.influxdb.dto.Point$Builder" resolve="addField" />
                   <node concept="Xl_RD" id="5dO5_Ubfv_0" role="37wK5m">
                     <property role="Xl_RC" value="value" />
                   </node>
@@ -771,6 +698,119 @@
       </node>
     </node>
     <node concept="3Tm1VV" id="3K9a83awgxl" role="1B3o_S" />
+  </node>
+  <node concept="312cEu" id="7rYs2gB7g7k">
+    <property role="TrG5h" value="MarkovLaw" />
+    <node concept="2tJIrI" id="7rYs2gB8ar0" role="jymVt" />
+    <node concept="3Tm1VV" id="7rYs2gB7g7l" role="1B3o_S" />
+    <node concept="3clFb_" id="7rYs2gB7kFm" role="jymVt">
+      <property role="1EzhhJ" value="false" />
+      <property role="2aFKle" value="false" />
+      <property role="TrG5h" value="getNext" />
+      <node concept="3Tm1VV" id="7rYs2gB7kFo" role="1B3o_S" />
+      <node concept="10Oyi0" id="7rYs2gB7kFp" role="3clF45" />
+      <node concept="3clFbS" id="7rYs2gB7kFq" role="3clF47">
+        <node concept="3cpWs6" id="7rYs2gB7kLW" role="3cqZAp">
+          <node concept="3cmrfG" id="7rYs2gB7kMs" role="3cqZAk">
+            <property role="3cmrfH" value="0" />
+          </node>
+        </node>
+      </node>
+      <node concept="2AHcQZ" id="7rYs2gB7kFr" role="2AJF6D">
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
+      </node>
+    </node>
+    <node concept="3uibUv" id="7rYs2gBaH4a" role="1zkMxy">
+      <ref role="3uigEE" node="7rYs2gBaBv4" resolve="IDataSource" />
+    </node>
+  </node>
+  <node concept="312cEu" id="7rYs2gBaBv4">
+    <property role="1sVAO0" value="true" />
+    <property role="TrG5h" value="IDataSource" />
+    <node concept="312cEg" id="7rYs2gBaBxJ" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="lawName" />
+      <property role="3TUv4t" value="false" />
+      <node concept="3Tmbuc" id="7rYs2gBaFE5" role="1B3o_S" />
+      <node concept="17QB3L" id="7rYs2gBaBxD" role="1tU5fm" />
+    </node>
+    <node concept="312cEg" id="1Vo$Sn9NYN9" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="updatePeriod" />
+      <property role="3TUv4t" value="false" />
+      <node concept="3Tmbuc" id="7rYs2gBaFEe" role="1B3o_S" />
+      <node concept="10Oyi0" id="1Vo$Sn9NYN2" role="1tU5fm" />
+    </node>
+    <node concept="312cEg" id="1Vo$Sn9NYM9" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="samplingFrequency" />
+      <property role="3TUv4t" value="false" />
+      <node concept="3Tmbuc" id="7rYs2gBaFEn" role="1B3o_S" />
+      <node concept="10Oyi0" id="1Vo$Sn9NYM2" role="1tU5fm" />
+    </node>
+    <node concept="312cEg" id="3juagqJxR9G" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="resetPeriod" />
+      <property role="3TUv4t" value="false" />
+      <node concept="3Tmbuc" id="7rYs2gBaGzN" role="1B3o_S" />
+      <node concept="10Oyi0" id="3juagqJxR9B" role="1tU5fm" />
+    </node>
+    <node concept="2tJIrI" id="7rYs2gBaBSG" role="jymVt" />
+    <node concept="3clFb_" id="7rYs2gBaBww" role="jymVt">
+      <property role="1EzhhJ" value="true" />
+      <property role="TrG5h" value="getNext" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="7rYs2gBaBwz" role="3clF47" />
+      <node concept="3Tm1VV" id="7rYs2gBaBwf" role="1B3o_S" />
+      <node concept="10Oyi0" id="7rYs2gBaBwq" role="3clF45" />
+    </node>
+    <node concept="2tJIrI" id="7rYs2gBaMBq" role="jymVt" />
+    <node concept="3clFb_" id="1Vo$Sn9O6zK" role="jymVt">
+      <property role="TrG5h" value="getSamplingFrequency" />
+      <node concept="10Oyi0" id="1Vo$Sn9O6zL" role="3clF45" />
+      <node concept="3Tm1VV" id="1Vo$Sn9O6zM" role="1B3o_S" />
+      <node concept="3clFbS" id="1Vo$Sn9O6zN" role="3clF47">
+        <node concept="3cpWs6" id="3juagqJy7Z4" role="3cqZAp">
+          <node concept="37vLTw" id="1Vo$Sn9O6zJ" role="3cqZAk">
+            <ref role="3cqZAo" node="1Vo$Sn9NYM9" resolve="samplingFrequency" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="1Vo$Sn9O6Ho" role="jymVt" />
+    <node concept="3clFb_" id="1Vo$Sn9O6zQ" role="jymVt">
+      <property role="TrG5h" value="getUpdatePeriod" />
+      <node concept="10Oyi0" id="1Vo$Sn9O6zR" role="3clF45" />
+      <node concept="3Tm1VV" id="1Vo$Sn9O6zS" role="1B3o_S" />
+      <node concept="3clFbS" id="1Vo$Sn9O6zT" role="3clF47">
+        <node concept="3cpWs6" id="3juagqJya4h" role="3cqZAp">
+          <node concept="37vLTw" id="1Vo$Sn9O6zP" role="3cqZAk">
+            <ref role="3cqZAo" node="1Vo$Sn9NYN9" resolve="updatePeriod" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="3juagqJxSpf" role="jymVt" />
+    <node concept="3clFb_" id="3juagqJxSEb" role="jymVt">
+      <property role="TrG5h" value="getResetPeriod" />
+      <node concept="10Oyi0" id="3juagqJxSEc" role="3clF45" />
+      <node concept="3Tm1VV" id="3juagqJxSEd" role="1B3o_S" />
+      <node concept="3clFbS" id="3juagqJxSEe" role="3clF47">
+        <node concept="3cpWs6" id="3juagqJybvD" role="3cqZAp">
+          <node concept="37vLTw" id="3juagqJxSEa" role="3cqZAk">
+            <ref role="3cqZAo" node="3juagqJxR9G" resolve="resetPeriod" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2tJIrI" id="7rYs2gBaMBI" role="jymVt" />
+    <node concept="3Tm1VV" id="7rYs2gBaBv5" role="1B3o_S" />
   </node>
 </model>
 

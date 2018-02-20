@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="SensorSimulationLanguage.sandbox.TestSimulation" file="TestSimulation.java">
+  <dependency className="SensorSimulationLanguage.sandbox.LaDemo" file="LaDemo.java">
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IDataSource" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.RandomLaw" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.Sensor" />
     <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.time.LocalDateTime" />
     <classNode dependClassName="java.time.format.DateTimeFormatter" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="org.influxdb.InfluxDB" />
+    <classNode dependClassName="org.influxdb.InfluxDBFactory" />
+    <classNode dependClassName="org.influxdb.dto.BatchPoints" />
+  </dependency>
+  <dependency className="SensorSimulationLanguage.sandbox.Simulation" file="Simulation.java">
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IDataSource" />
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.MarkovLaw" />
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.RandomLaw" />
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.Sensor" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.time.LocalDateTime" />
+    <classNode dependClassName="java.time.format.DateTimeFormatter" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
     <classNode dependClassName="org.influxdb.InfluxDB" />
