@@ -247,6 +247,12 @@
         <ref role="v9R2y" node="7rYs2gB9b_n" resolve="reduce_Random" />
       </node>
     </node>
+    <node concept="3aamgX" id="6ZqfKADUojr" role="3acgRq">
+      <ref role="30HIoZ" to="7ew6:7dKB6cHP$0X" resolve="MarkovStates" />
+      <node concept="j$656" id="6ZqfKADUojs" role="1lVwrX">
+        <ref role="v9R2y" node="6ZqfKADUojp" resolve="reduce_MarkovStates" />
+      </node>
+    </node>
   </node>
   <node concept="312cEu" id="1Vo$Sn9MHKj">
     <property role="TrG5h" value="reduce_Simulation" />
@@ -1158,6 +1164,12 @@
         <node concept="raruj" id="7rYs2gB9RAo" role="lGtFl" />
       </node>
     </node>
+  </node>
+  <node concept="13MO4I" id="6ZqfKADUojp">
+    <property role="TrG5h" value="reduce_MarkovStates" />
+    <property role="3GE5qa" value="laws" />
+    <ref role="3gUMe" to="7ew6:7dKB6cHP$0X" resolve="MarkovStates" />
+    <node concept="2VYdi" id="6ZqfKADUojq" role="13RCb5" />
   </node>
 </model>
 

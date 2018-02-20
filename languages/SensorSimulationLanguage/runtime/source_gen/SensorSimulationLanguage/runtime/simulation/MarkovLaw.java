@@ -6,7 +6,7 @@ package SensorSimulationLanguage.runtime.simulation;
 public class MarkovLaw extends IDataSource {
 
   @Override
-  public int getNext() {
-    return 0;
+  public String getNext() {
+    return "hello";
   }
 }
