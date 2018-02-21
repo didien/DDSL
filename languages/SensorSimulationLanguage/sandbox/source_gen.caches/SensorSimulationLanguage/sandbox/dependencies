@@ -34,7 +34,6 @@
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
     <classNode dependClassName="org.influxdb.InfluxDB" />
     <classNode dependClassName="org.influxdb.InfluxDBFactory" />
     <classNode dependClassName="org.influxdb.dto.BatchPoints" />
