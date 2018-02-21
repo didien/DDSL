@@ -135,8 +135,23 @@
     </node>
     <node concept="1TJgyi" id="75cVuPqSa9j" role="1TKVEl">
       <property role="IQ2nx" value="8164161828203569747" />
-      <property role="TrG5h" value="identifier" />
+      <property role="TrG5h" value="sensorFilter" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="5u9gdSXmaGX" role="1TKVEl">
+      <property role="IQ2nx" value="6307644076365228861" />
+      <property role="TrG5h" value="timeColumn" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5u9gdSXmfKE" role="1TKVEl">
+      <property role="IQ2nx" value="6307644076365249578" />
+      <property role="TrG5h" value="nameColumn" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="5u9gdSXmfKJ" role="1TKVEl">
+      <property role="IQ2nx" value="6307644076365249583" />
+      <property role="TrG5h" value="valueColumn" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="PrWs8" id="75cVuPqSa9g" role="PzmwI">
       <ref role="PrY4T" node="75cVuPqSa90" resolve="IDataSource" />

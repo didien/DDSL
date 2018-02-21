@@ -444,5 +444,92 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="5u9gdSXmgGe">
+    <ref role="1XX52x" to="7ew6:3PPzdvo2Egy" resolve="CSV" />
+    <node concept="3EZMnI" id="5u9gdSXmgGg" role="2wV5jI">
+      <node concept="3EZMnI" id="5u9gdSXmgGn" role="3EZMnx">
+        <node concept="VPM3Z" id="5u9gdSXmgGp" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F0ifn" id="5u9gdSXmgGx" role="3EZMnx">
+          <property role="3F0ifm" value="data source" />
+        </node>
+        <node concept="3F0A7n" id="5u9gdSXmgGB" role="3EZMnx">
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        </node>
+        <node concept="3F0ifn" id="5u9gdSXmgGJ" role="3EZMnx">
+          <property role="3F0ifm" value="is CSV file" />
+        </node>
+        <node concept="2iRfu4" id="5u9gdSXmgGs" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="5u9gdSXmgI6" role="3EZMnx">
+        <node concept="VPM3Z" id="5u9gdSXmgI8" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="5u9gdSXmgIa" role="3EZMnx" />
+        <node concept="3F0ifn" id="5u9gdSXmgIs" role="3EZMnx">
+          <property role="3F0ifm" value="path :" />
+        </node>
+        <node concept="3F0A7n" id="5u9gdSXmgID" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:3PPzdvo2EgC" resolve="filepath" />
+        </node>
+        <node concept="l2Vlx" id="5u9gdSXmgIb" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="5u9gdSXmgJ$" role="3EZMnx">
+        <node concept="VPM3Z" id="5u9gdSXmgJA" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="5u9gdSXmgJW" role="3EZMnx" />
+        <node concept="3F0ifn" id="5u9gdSXmgK2" role="3EZMnx">
+          <property role="3F0ifm" value="read sensors :" />
+        </node>
+        <node concept="3F0A7n" id="5u9gdSXmgKf" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:75cVuPqSa9j" resolve="sensorFilter" />
+        </node>
+        <node concept="l2Vlx" id="5u9gdSXmgJD" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="5u9gdSXmgKD" role="3EZMnx">
+        <node concept="VPM3Z" id="5u9gdSXmgKF" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="5u9gdSXmgLa" role="3EZMnx" />
+        <node concept="3F0ifn" id="5u9gdSXmgLe" role="3EZMnx">
+          <property role="3F0ifm" value="sensor name column :" />
+        </node>
+        <node concept="3F0A7n" id="5u9gdSXmgLm" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:5u9gdSXmfKE" resolve="nameColumn" />
+        </node>
+        <node concept="l2Vlx" id="5u9gdSXmgKI" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="5u9gdSXmgLY" role="3EZMnx">
+        <node concept="VPM3Z" id="5u9gdSXmgM0" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="5u9gdSXmgMy" role="3EZMnx" />
+        <node concept="3F0ifn" id="5u9gdSXmgMC" role="3EZMnx">
+          <property role="3F0ifm" value="time column        :" />
+        </node>
+        <node concept="3F0A7n" id="5u9gdSXmgMK" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:5u9gdSXmaGX" resolve="timeColumn" />
+        </node>
+        <node concept="l2Vlx" id="5u9gdSXmgM3" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="5u9gdSXmgNm" role="3EZMnx">
+        <node concept="VPM3Z" id="5u9gdSXmgNo" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="5u9gdSXmgOa" role="3EZMnx" />
+        <node concept="3F0ifn" id="5u9gdSXmgOg" role="3EZMnx">
+          <property role="3F0ifm" value="value column       :" />
+        </node>
+        <node concept="3F0A7n" id="5u9gdSXmgOo" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:5u9gdSXmfKJ" resolve="valueColumn" />
+        </node>
+        <node concept="l2Vlx" id="5u9gdSXmgNr" role="2iSdaV" />
+      </node>
+      <node concept="3F0ifn" id="5u9gdSXmgJ7" role="3EZMnx" />
+      <node concept="2iRkQZ" id="5u9gdSXmgGj" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

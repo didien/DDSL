@@ -368,7 +368,7 @@
               <ref role="1Pybhc" to="9nbq:~InfluxDBFactory" resolve="InfluxDBFactory" />
               <ref role="37wK5l" to="9nbq:~InfluxDBFactory.connect(java.lang.String,java.lang.String,java.lang.String):org.influxdb.InfluxDB" resolve="connect" />
               <node concept="Xl_RD" id="5dO5_UbeVWm" role="37wK5m">
-                <property role="Xl_RC" value="http://localhost:8086" />
+                <property role="Xl_RC" value="http://192.168.99.100:8086" />
               </node>
               <node concept="Xl_RD" id="5dO5_UbeWwO" role="37wK5m">
                 <property role="Xl_RC" value="root" />

@@ -2,18 +2,18 @@
 <solution name="InfluxDB" uuid="cc7fb470-7d0c-4aea-af2a-5d870ff3092f" moduleVersion="0" compileInMPS="true">
   <models>
     <modelRoot contentPath="${module}" type="default" />
-    <modelRoot contentPath="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party" type="java_classes">
+    <modelRoot contentPath="E:/Documents/Cours/Polytech/SI5 - S9/DSL/DDSL/languages/SensorSimulationLanguage/third_party" type="java_classes">
       <sourceRoot location="influxdb-java-2.8.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
-    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/moshi-1.4.0.jar" />
-    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/okhttp-3.9.1.jar" />
-    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/retrofit-2.3.0.jar" />
-    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/converter-moshi-2.3.0.jar" />
-    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/logging-interceptor-3.9.1.jar" />
-    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/okio-1.13.0.jar" />
-    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/influxdb-java-2.8.jar" />
+    <stubModelEntry path="E:/Documents/Cours/Polytech/SI5 - S9/DSL/DDSL/languages/SensorSimulationLanguage/third_party/okio-1.13.0.jar" />
+    <stubModelEntry path="E:/Documents/Cours/Polytech/SI5 - S9/DSL/DDSL/languages/SensorSimulationLanguage/third_party/okhttp-3.9.1.jar" />
+    <stubModelEntry path="E:/Documents/Cours/Polytech/SI5 - S9/DSL/DDSL/languages/SensorSimulationLanguage/third_party/influxdb-java-2.8.jar" />
+    <stubModelEntry path="E:/Documents/Cours/Polytech/SI5 - S9/DSL/DDSL/languages/SensorSimulationLanguage/third_party/retrofit-2.3.0.jar" />
+    <stubModelEntry path="E:/Documents/Cours/Polytech/SI5 - S9/DSL/DDSL/languages/SensorSimulationLanguage/third_party/moshi-1.4.0.jar" />
+    <stubModelEntry path="E:/Documents/Cours/Polytech/SI5 - S9/DSL/DDSL/languages/SensorSimulationLanguage/third_party/logging-interceptor-3.9.1.jar" />
+    <stubModelEntry path="E:/Documents/Cours/Polytech/SI5 - S9/DSL/DDSL/languages/SensorSimulationLanguage/third_party/converter-moshi-2.3.0.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

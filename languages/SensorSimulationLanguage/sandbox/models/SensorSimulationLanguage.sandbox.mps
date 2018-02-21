@@ -28,6 +28,13 @@
       <concept id="8318320461538017341" name="SensorSimulationLanguage.structure.MarkovStates" flags="ng" index="1uDHLu">
         <child id="8318320461538037627" name="transitions" index="1uDxco" />
       </concept>
+      <concept id="4428600667259184162" name="SensorSimulationLanguage.structure.CSV" flags="ng" index="3_vMzP">
+        <property id="8164161828203569747" name="sensorFilter" index="FF4YY" />
+        <property id="4428600667259184168" name="filepath" index="3_vMzZ" />
+        <property id="6307644076365249583" name="valueColumn" index="1EOrNL" />
+        <property id="6307644076365249578" name="nameColumn" index="1EOrNO" />
+        <property id="6307644076365228861" name="timeColumn" index="1EOuJz" />
+      </concept>
       <concept id="4428600667259184161" name="SensorSimulationLanguage.structure.Random" flags="ng" index="3_vMzQ">
         <property id="4428600667259184174" name="max" index="3_vMzT" />
         <property id="4428600667259184172" name="min" index="3_vMzV" />
@@ -167,6 +174,14 @@
           <property role="1uDxv1" value="0.20" />
         </node>
       </node>
+    </node>
+    <node concept="3_vMzP" id="5u9gdSXmGC2" role="3_vMOX">
+      <property role="TrG5h" value="csv_file" />
+      <property role="3_vMzZ" value="E:/file.csv" />
+      <property role="FF4YY" value="door_sensor" />
+      <property role="1EOrNO" value="1" />
+      <property role="1EOuJz" value="2" />
+      <property role="1EOrNL" value="3" />
     </node>
   </node>
 </model>
