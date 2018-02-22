@@ -14,6 +14,11 @@
   </imports>
   <registry>
     <language id="bc16fd15-bfa2-47e7-b9c2-9f80e5b399e0" name="SensorSimulationLanguage">
+      <concept id="7488662984381415906" name="SensorSimulationLanguage.structure.Noise" flags="ng" index="2_hHaG">
+        <property id="7488662984381415912" name="scale" index="2_hHaA" />
+        <property id="7488662984381415909" name="max" index="2_hHaF" />
+        <property id="7488662984381415907" name="min" index="2_hHaH" />
+      </concept>
       <concept id="8164161828203569728" name="SensorSimulationLanguage.structure.IDataSource" flags="ng" index="FF4YH">
         <property id="3809527443493428574" name="resetPeriod" index="2rmjho" />
         <property id="8164161828203569736" name="updatePeriod" index="FF4Y_" />
@@ -26,6 +31,7 @@
       <concept id="8574414041138603139" name="SensorSimulationLanguage.structure.ModellingLaw" flags="ng" index="1hN_iB">
         <property id="8574414041138603145" name="upperBound" index="1hN_iH" />
         <property id="8574414041138603147" name="lowerBound" index="1hN_iJ" />
+        <child id="7488662984381416118" name="noise" index="2_hH7S" />
         <child id="8574414041138603150" name="constraint" index="1hN_iE" />
       </concept>
       <concept id="8318320461538036614" name="SensorSimulationLanguage.structure.MarkovTransition" flags="ng" index="1uDxv_">
@@ -60,8 +66,8 @@
   </registry>
   <node concept="3_vMOK" id="lhB3YR9EAW">
     <property role="TrG5h" value="Simulation" />
-    <property role="2rmNeI" value="20-02-18 06:15" />
-    <property role="2rmNeG" value="20-02-18 23:45" />
+    <property role="2rmNeI" value="19-02-18 06:15" />
+    <property role="2rmNeG" value="19-02-18 23:45" />
     <node concept="3_vMOS" id="6ZqfKAE0OF6" role="3_vMOV">
       <property role="FF4LG" value="1" />
       <property role="TrG5h" value="weather_sensor" />
@@ -158,6 +164,11 @@
       <node concept="1hN_iy" id="6vH4OV2_r$R" role="1hN_iE">
         <property role="1hN_iK" value="24" />
         <property role="1hN_iM" value="09" />
+      </node>
+      <node concept="2_hHaG" id="6vH4OV2FdJF" role="2_hH7S">
+        <property role="2_hHaH" value="-5." />
+        <property role="2_hHaF" value="5." />
+        <property role="2_hHaA" value="0" />
       </node>
     </node>
   </node>

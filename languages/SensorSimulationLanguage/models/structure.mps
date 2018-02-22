@@ -252,6 +252,12 @@
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="7rYs2gBc2i6" resolve="ModellingConstraint" />
     </node>
+    <node concept="1TJgyj" id="6vH4OV2EWaQ" role="1TKVEi">
+      <property role="IQ2ns" value="7488662984381416118" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="noise" />
+      <ref role="20lvS9" node="6vH4OV2EW7y" resolve="Noise" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7rYs2gBc2i6">
     <property role="EcuMT" value="8574414041138603142" />
@@ -267,6 +273,26 @@
       <property role="IQ2nx" value="8574414041138603158" />
       <property role="TrG5h" value="closure" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6vH4OV2EW7y">
+    <property role="EcuMT" value="7488662984381415906" />
+    <property role="TrG5h" value="Noise" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="6vH4OV2EW7z" role="1TKVEl">
+      <property role="IQ2nx" value="7488662984381415907" />
+      <property role="TrG5h" value="min" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="6vH4OV2EW7_" role="1TKVEl">
+      <property role="IQ2nx" value="7488662984381415909" />
+      <property role="TrG5h" value="max" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="6vH4OV2EW7C" role="1TKVEl">
+      <property role="IQ2nx" value="7488662984381415912" />
+      <property role="TrG5h" value="scale" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
 </model>

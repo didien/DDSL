@@ -5,6 +5,7 @@
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.MarkovLaw" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.MarkovState" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.ModellingLaw" />
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.NoiseGenerator" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.RandomLaw" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.Sensor" />
     <classNode dependClassName="java.lang.String" />

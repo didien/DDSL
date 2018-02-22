@@ -49,7 +49,8 @@ public class ModellingLaw extends IDataSource {
     for (Pair<Integer, String> constraint : ListSequence.fromList(constraints)) {
       if (tick < constraint.getKey()) {
         Expression e = new ExpressionBuilder(constraint.getValue()).variable("x").build().setVariable("x", tick);
-        return Double.toString(e.evaluate());
+        double value = ((noiseGenerator == null) ? e.evaluate() : e.evaluate() + noiseGenerator.bringTheNoise().doubleValue());
+        return Double.toString(value);
       }
     }
 
