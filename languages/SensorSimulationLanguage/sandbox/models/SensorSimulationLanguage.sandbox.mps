@@ -19,6 +19,9 @@
         <property id="7488662984381415909" name="max" index="2_hHaF" />
         <property id="7488662984381415907" name="min" index="2_hHaH" />
       </concept>
+      <concept id="7488662984381963706" name="SensorSimulationLanguage.structure.INoisable" flags="ng" index="2_mgVO">
+        <child id="7488662984381416118" name="noise" index="2_hH7S" />
+      </concept>
       <concept id="8164161828203569728" name="SensorSimulationLanguage.structure.IDataSource" flags="ng" index="FF4YH">
         <property id="3809527443493428574" name="resetPeriod" index="2rmjho" />
         <property id="8164161828203569736" name="updatePeriod" index="FF4Y_" />
@@ -29,9 +32,6 @@
         <property id="8574414041138603158" name="closure" index="1hN_iM" />
       </concept>
       <concept id="8574414041138603139" name="SensorSimulationLanguage.structure.ModellingLaw" flags="ng" index="1hN_iB">
-        <property id="8574414041138603145" name="upperBound" index="1hN_iH" />
-        <property id="8574414041138603147" name="lowerBound" index="1hN_iJ" />
-        <child id="7488662984381416118" name="noise" index="2_hH7S" />
         <child id="8574414041138603150" name="constraint" index="1hN_iE" />
       </concept>
       <concept id="8318320461538036614" name="SensorSimulationLanguage.structure.MarkovTransition" flags="ng" index="1uDxv_">
@@ -66,12 +66,12 @@
   </registry>
   <node concept="3_vMOK" id="lhB3YR9EAW">
     <property role="TrG5h" value="Simulation" />
-    <property role="2rmNeI" value="19-02-18 06:15" />
-    <property role="2rmNeG" value="19-02-18 23:45" />
+    <property role="2rmNeI" value="18-02-18 01:15" />
+    <property role="2rmNeG" value="18-02-18 23:45" />
     <node concept="3_vMOS" id="6ZqfKAE0OF6" role="3_vMOV">
       <property role="FF4LG" value="1" />
       <property role="TrG5h" value="weather_sensor" />
-      <ref role="3_vMzM" node="6vH4OV2_rzz" resolve="modelling_law" />
+      <ref role="3_vMzM" node="6vH4OV2HlWj" resolve="modelling_law" />
     </node>
     <node concept="3_vMzQ" id="lhB3YR9EBQ" role="3_vMOX">
       <property role="TrG5h" value="random_angle" />
@@ -147,27 +147,25 @@
         </node>
       </node>
     </node>
-    <node concept="1hN_iB" id="6vH4OV2_rzz" role="3_vMOX">
+    <node concept="1hN_iB" id="6vH4OV2HlWj" role="3_vMOX">
       <property role="TrG5h" value="modelling_law" />
-      <property role="1hN_iJ" value="0" />
-      <property role="1hN_iH" value="24" />
-      <property role="FF4YA" value="400" />
-      <property role="FF4Y_" value="300" />
-      <node concept="1hN_iy" id="6vH4OV2_rz_" role="1hN_iE">
+      <property role="FF4Y_" value="500" />
+      <property role="FF4YA" value="180" />
+      <node concept="1hN_iy" id="6vH4OV2HlWl" role="1hN_iE">
         <property role="1hN_iK" value="7" />
         <property role="1hN_iM" value="0" />
       </node>
-      <node concept="1hN_iy" id="6vH4OV2_r$O" role="1hN_iE">
+      <node concept="1hN_iy" id="6vH4OV2HlWI" role="1hN_iE">
         <property role="1hN_iK" value="18" />
-        <property role="1hN_iM" value="abs(1/2x^2-11x+20)" />
+        <property role="1hN_iM" value="abs(1/2x^2 - 11x + 20)" />
       </node>
-      <node concept="1hN_iy" id="6vH4OV2_r$R" role="1hN_iE">
+      <node concept="1hN_iy" id="6vH4OV2HlWL" role="1hN_iE">
         <property role="1hN_iK" value="24" />
-        <property role="1hN_iM" value="09" />
+        <property role="1hN_iM" value="0" />
       </node>
-      <node concept="2_hHaG" id="6vH4OV2FdJF" role="2_hH7S">
-        <property role="2_hHaH" value="-5." />
-        <property role="2_hHaF" value="5." />
+      <node concept="2_hHaG" id="6vH4OV2HlXD" role="2_hH7S">
+        <property role="2_hHaH" value="-3." />
+        <property role="2_hHaF" value="3." />
         <property role="2_hHaA" value="0" />
       </node>
     </node>
