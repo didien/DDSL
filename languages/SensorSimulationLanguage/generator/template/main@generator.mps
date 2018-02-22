@@ -374,7 +374,7 @@
               <ref role="1Pybhc" to="9nbq:~InfluxDBFactory" resolve="InfluxDBFactory" />
               <ref role="37wK5l" to="9nbq:~InfluxDBFactory.connect(java.lang.String,java.lang.String,java.lang.String):org.influxdb.InfluxDB" resolve="connect" />
               <node concept="Xl_RD" id="5dO5_UbeVWm" role="37wK5m">
-                <property role="Xl_RC" value="http://192.168.99.100:8086" />
+                <property role="Xl_RC" value="http://127.0.0.1:8086" />
               </node>
               <node concept="Xl_RD" id="5dO5_UbeWwO" role="37wK5m">
                 <property role="Xl_RC" value="root" />
@@ -1551,6 +1551,16 @@
                     </node>
                   </node>
                 </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="6vH4OV2E$HC" role="3cqZAp">
+            <node concept="2OqwBi" id="6vH4OV2E_wb" role="3clFbG">
+              <node concept="37vLTw" id="6vH4OV2E$HA" role="2Oq$k0">
+                <ref role="3cqZAo" node="6JiemAxMR_W" resolve="modeling_law" />
+              </node>
+              <node concept="liA8E" id="6vH4OV2E_K6" role="2OqNvi">
+                <ref role="37wK5l" to="2ns9:6vH4OV2CS3m" resolve="assertValidModel" />
               </node>
             </node>
           </node>

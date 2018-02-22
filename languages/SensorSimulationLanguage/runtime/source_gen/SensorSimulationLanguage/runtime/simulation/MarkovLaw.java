@@ -4,6 +4,7 @@ package SensorSimulationLanguage.runtime.simulation;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.time.LocalDateTime;
 import java.math.BigDecimal;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.Iterator;
@@ -27,7 +28,7 @@ public class MarkovLaw extends IDataSource {
   }
 
   @Override
-  public String getNext() {
+  public String getNext(LocalDateTime currentTime) {
     BigDecimal sum = BigDecimal.ZERO;
     BigDecimal random = new BigDecimal(ThreadLocalRandom.current().nextDouble());
     for (int i = 0; i < currentState.getTransitions().size(); i++) {

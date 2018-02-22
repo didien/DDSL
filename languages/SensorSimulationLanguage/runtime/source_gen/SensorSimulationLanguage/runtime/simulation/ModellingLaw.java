@@ -8,21 +8,18 @@ import java.util.ArrayList;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
+import java.time.LocalDateTime;
 
 public class ModellingLaw extends IDataSource {
-  protected String name;
-  protected int updatePeriod;
-  protected int samplingFrequency;
-  protected int resetPeriod;
 
   private int lowerBound;
   private int upperBound;
   private List<Pair<Integer, String>> constraints;
 
   public ModellingLaw(String name, int lower, int upper, int update, int sampling) {
-    this.name = name;
-    lowerBound = lower;
-    upperBound = upper;
+    lawName = name;
+    lowerBound = 0;
+    upperBound = 24;
     updatePeriod = update;
     samplingFrequency = sampling;
     resetPeriod = 0;
@@ -33,10 +30,22 @@ public class ModellingLaw extends IDataSource {
     constraints.add(new Pair<Integer, String>(bound, closure));
   }
 
-  @Override
-  public String getNext() {
-    int tick = 52400;
+  public void assertValidModel() {
+    if (constraints.get(constraints.size() - 1).getKey() != upperBound) {
+      throw new RuntimeException("The last bound has to be equal to the upper bound (" + upperBound + ")");
+    }
 
+    for (Pair<Integer, String> constraint : ListSequence.fromList(constraints)) {
+      Expression e = new ExpressionBuilder(constraint.getValue()).variable("x").build();
+      if (!(e.validate(false).isValid())) {
+        throw new RuntimeException("The function " + constraint.getValue() + " is not valid. (How did you even achieved to type-in something ill-formed?)");
+      }
+    }
+  }
+
+  @Override
+  public String getNext(LocalDateTime currentTime) {
+    double tick = currentTime.getHour() + (currentTime.getMinute() / (double) 60);
     for (Pair<Integer, String> constraint : ListSequence.fromList(constraints)) {
       if (tick < constraint.getKey()) {
         Expression e = new ExpressionBuilder(constraint.getValue()).variable("x").build().setVariable("x", tick);

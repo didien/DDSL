@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <solution name="exp4j" uuid="f94783b1-6c83-46e2-a40e-86c1cdf7b0d4" moduleVersion="0" compileInMPS="true">
   <models>
-    <modelRoot contentPath="${module}" type="default">
-      <sourceRoot location="models" />
-    </modelRoot>
-    <modelRoot contentPath="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party" type="java_classes">
-      <sourceRoot location="exp4j.jar" />
+    <modelRoot contentPath="${module}" type="default" />
+    <modelRoot contentPath="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party" type="java_classes">
+      <sourceRoot location="exp4j-0.4.8.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/exp4j.jar" />
+    <stubModelEntry path="E:/Users/Adrien/Desktop/code/DSL/languages/SensorSimulationLanguage/third_party/exp4j-0.4.8.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

@@ -58,32 +58,14 @@
       </concept>
     </language>
   </registry>
-  <node concept="3_vMOK" id="lhB3YR55MJ">
-    <property role="TrG5h" value="LaDemo" />
-    <property role="2rmNeI" value="14-02-10 02:00" />
-    <property role="2rmNeG" value="14-02-18 02:20" />
-    <node concept="3_vMOS" id="lhB3YR55NJ" role="3_vMOV">
-      <property role="FF4LG" value="30" />
-      <property role="TrG5h" value="porte_connectee" />
-      <ref role="3_vMzM" node="lhB3YR55NG" resolve="random_law_dooropening" />
-    </node>
-    <node concept="3_vMzQ" id="lhB3YR55NG" role="3_vMOX">
-      <property role="TrG5h" value="random_law_dooropening" />
-      <property role="3_vMzV" value="0" />
-      <property role="3_vMzT" value="175" />
-      <property role="FF4Y_" value="26" />
-      <property role="FF4YA" value="7" />
-      <property role="2rmjho" value="26" />
-    </node>
-  </node>
   <node concept="3_vMOK" id="lhB3YR9EAW">
     <property role="TrG5h" value="Simulation" />
-    <property role="2rmNeI" value="20-02-18 15:15" />
-    <property role="2rmNeG" value="20-02-18 17:45" />
+    <property role="2rmNeI" value="20-02-18 06:15" />
+    <property role="2rmNeG" value="20-02-18 23:45" />
     <node concept="3_vMOS" id="6ZqfKAE0OF6" role="3_vMOV">
       <property role="FF4LG" value="1" />
       <property role="TrG5h" value="weather_sensor" />
-      <ref role="3_vMzM" node="7rYs2gBcgSY" resolve="modelling_law" />
+      <ref role="3_vMzM" node="6vH4OV2_rzz" resolve="modelling_law" />
     </node>
     <node concept="3_vMzQ" id="lhB3YR9EBQ" role="3_vMOX">
       <property role="TrG5h" value="random_angle" />
@@ -159,23 +141,23 @@
         </node>
       </node>
     </node>
-    <node concept="1hN_iB" id="7rYs2gBcgSY" role="3_vMOX">
+    <node concept="1hN_iB" id="6vH4OV2_rzz" role="3_vMOX">
       <property role="TrG5h" value="modelling_law" />
       <property role="1hN_iJ" value="0" />
-      <property role="1hN_iH" value="86400" />
-      <property role="FF4Y_" value="45" />
-      <property role="FF4YA" value="15" />
-      <node concept="1hN_iy" id="7rYs2gBcgT0" role="1hN_iE">
-        <property role="1hN_iK" value="27000" />
+      <property role="1hN_iH" value="24" />
+      <property role="FF4YA" value="400" />
+      <property role="FF4Y_" value="300" />
+      <node concept="1hN_iy" id="6vH4OV2_rz_" role="1hN_iE">
+        <property role="1hN_iK" value="7" />
         <property role="1hN_iM" value="0" />
       </node>
-      <node concept="1hN_iy" id="7rYs2gBcgTp" role="1hN_iE">
-        <property role="1hN_iK" value="61200" />
-        <property role="1hN_iM" value="abs(-2x^2 + 5x - 1)" />
+      <node concept="1hN_iy" id="6vH4OV2_r$O" role="1hN_iE">
+        <property role="1hN_iK" value="18" />
+        <property role="1hN_iM" value="abs(1/2x^2-11x+20)" />
       </node>
-      <node concept="1hN_iy" id="6JiemAxOnG6" role="1hN_iE">
-        <property role="1hN_iK" value="86400" />
-        <property role="1hN_iM" value="0" />
+      <node concept="1hN_iy" id="6vH4OV2_r$R" role="1hN_iE">
+        <property role="1hN_iK" value="24" />
+        <property role="1hN_iM" value="09" />
       </node>
     </node>
   </node>

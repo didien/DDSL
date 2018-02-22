@@ -569,31 +569,15 @@
         </node>
         <node concept="l2Vlx" id="7rYs2gBc3mp" role="2iSdaV" />
       </node>
-      <node concept="3EZMnI" id="7rYs2gBc3nA" role="3EZMnx">
-        <node concept="VPM3Z" id="7rYs2gBc3nC" role="3F10Kt">
+      <node concept="3EZMnI" id="6vH4OV2CEr3" role="3EZMnx">
+        <node concept="VPM3Z" id="6vH4OV2CEr5" role="3F10Kt">
           <property role="VOm3f" value="false" />
         </node>
-        <node concept="3XFhqQ" id="7rYs2gBc3nR" role="3EZMnx" />
-        <node concept="3F0ifn" id="7rYs2gBc3nX" role="3EZMnx">
-          <property role="3F0ifm" value="lower bound :" />
+        <node concept="3XFhqQ" id="6vH4OV2CErD" role="3EZMnx" />
+        <node concept="3F0ifn" id="6vH4OV2CErJ" role="3EZMnx">
+          <property role="3F0ifm" value="x is in hours, lower bound is 00 and upper bound is 24" />
         </node>
-        <node concept="3F0A7n" id="7rYs2gBc3od" role="3EZMnx">
-          <ref role="1NtTu8" to="7ew6:7rYs2gBc2ib" resolve="lowerBound" />
-        </node>
-        <node concept="l2Vlx" id="7rYs2gBc3nF" role="2iSdaV" />
-      </node>
-      <node concept="3EZMnI" id="7rYs2gBc3oq" role="3EZMnx">
-        <node concept="VPM3Z" id="7rYs2gBc3or" role="3F10Kt">
-          <property role="VOm3f" value="false" />
-        </node>
-        <node concept="3XFhqQ" id="7rYs2gBc3os" role="3EZMnx" />
-        <node concept="3F0ifn" id="7rYs2gBc3ot" role="3EZMnx">
-          <property role="3F0ifm" value="upper bound :" />
-        </node>
-        <node concept="3F0A7n" id="7rYs2gBc3ou" role="3EZMnx">
-          <ref role="1NtTu8" to="7ew6:7rYs2gBc2i9" resolve="upperBound" />
-        </node>
-        <node concept="l2Vlx" id="7rYs2gBc3ov" role="2iSdaV" />
+        <node concept="l2Vlx" id="6vH4OV2CEr8" role="2iSdaV" />
       </node>
       <node concept="3EZMnI" id="7rYs2gBc3oM" role="3EZMnx">
         <node concept="VPM3Z" id="7rYs2gBc3oN" role="3F10Kt">
