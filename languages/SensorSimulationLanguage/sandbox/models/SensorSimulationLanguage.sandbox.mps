@@ -2,11 +2,11 @@
 <model ref="r:663025a1-1e7a-453d-b44a-22b7ae4c4b13(SensorSimulationLanguage.sandbox)">
   <persistence version="9" />
   <languages>
-    <use id="bc16fd15-bfa2-47e7-b9c2-9f80e5b399e0" name="SensorSimulationLanguage" version="-1" />
-    <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="-1" />
-    <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="-1" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="-1" />
-    <use id="fdcdc48f-bfd8-4831-aa76-5abac2ffa010" name="jetbrains.mps.baseLanguage.jdk8" version="-1" />
+    <use id="bc16fd15-bfa2-47e7-b9c2-9f80e5b399e0" name="SensorSimulationLanguage" version="0" />
+    <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
+    <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="0" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="5" />
+    <use id="fdcdc48f-bfd8-4831-aa76-5abac2ffa010" name="jetbrains.mps.baseLanguage.jdk8" version="0" />
   </languages>
   <imports>
     <import index="2ns9" ref="r:2ebb615b-7d7d-46a9-af25-8b8353fe1098(SensorSimulationLanguage.runtime.simulation)" />
@@ -19,6 +19,15 @@
         <property id="8164161828203569736" name="updatePeriod" index="FF4Y_" />
         <property id="8164161828203569739" name="samplingPeriod" index="FF4YA" />
       </concept>
+      <concept id="8574414041138603142" name="SensorSimulationLanguage.structure.ModellingConstraint" flags="ng" index="1hN_iy">
+        <property id="8574414041138603156" name="bound" index="1hN_iK" />
+        <property id="8574414041138603158" name="closure" index="1hN_iM" />
+      </concept>
+      <concept id="8574414041138603139" name="SensorSimulationLanguage.structure.ModellingLaw" flags="ng" index="1hN_iB">
+        <property id="8574414041138603145" name="upperBound" index="1hN_iH" />
+        <property id="8574414041138603147" name="lowerBound" index="1hN_iJ" />
+        <child id="8574414041138603150" name="constraint" index="1hN_iE" />
+      </concept>
       <concept id="8318320461538036614" name="SensorSimulationLanguage.structure.MarkovTransition" flags="ng" index="1uDxv_">
         <property id="8318320461538036642" name="probability" index="1uDxv1" />
       </concept>
@@ -27,13 +36,6 @@
       </concept>
       <concept id="8318320461538017341" name="SensorSimulationLanguage.structure.MarkovStates" flags="ng" index="1uDHLu">
         <child id="8318320461538037627" name="transitions" index="1uDxco" />
-      </concept>
-      <concept id="4428600667259184162" name="SensorSimulationLanguage.structure.CSV" flags="ng" index="3_vMzP">
-        <property id="8164161828203569747" name="sensorFilter" index="FF4YY" />
-        <property id="4428600667259184168" name="filepath" index="3_vMzZ" />
-        <property id="6307644076365249583" name="valueColumn" index="1EOrNL" />
-        <property id="6307644076365249578" name="nameColumn" index="1EOrNO" />
-        <property id="6307644076365228861" name="timeColumn" index="1EOuJz" />
       </concept>
       <concept id="4428600667259184161" name="SensorSimulationLanguage.structure.Random" flags="ng" index="3_vMzQ">
         <property id="4428600667259184174" name="max" index="3_vMzT" />
@@ -81,17 +83,7 @@
     <node concept="3_vMOS" id="6ZqfKAE0OF6" role="3_vMOV">
       <property role="FF4LG" value="1" />
       <property role="TrG5h" value="weather_sensor" />
-      <ref role="3_vMzM" node="7dKB6cHPHr2" resolve="weather_law" />
-    </node>
-    <node concept="3_vMOS" id="6ZqfKAE3gYy" role="3_vMOV">
-      <property role="FF4LG" value="56" />
-      <property role="TrG5h" value="door_sensor" />
-      <ref role="3_vMzM" node="lhB3YR9EBQ" resolve="random_angle" />
-    </node>
-    <node concept="3_vMOS" id="6ZqfKAE3gY_" role="3_vMOV">
-      <property role="FF4LG" value="107" />
-      <property role="TrG5h" value="parking_sensor" />
-      <ref role="3_vMzM" node="6ZqfKAE3gZq" resolve="parking_law" />
+      <ref role="3_vMzM" node="7rYs2gBcgSY" resolve="modelling_law" />
     </node>
     <node concept="3_vMzQ" id="lhB3YR9EBQ" role="3_vMOX">
       <property role="TrG5h" value="random_angle" />
@@ -99,14 +91,6 @@
       <property role="3_vMzV" value="0" />
       <property role="FF4Y_" value="30" />
       <property role="FF4YA" value="5" />
-      <property role="2rmjho" value="86400" />
-    </node>
-    <node concept="3_vMzQ" id="lhB3YR9EC7" role="3_vMOX">
-      <property role="TrG5h" value="random_bool" />
-      <property role="3_vMzT" value="1" />
-      <property role="3_vMzV" value="0" />
-      <property role="FF4Y_" value="45" />
-      <property role="FF4YA" value="6" />
       <property role="2rmjho" value="86400" />
     </node>
     <node concept="1uDEe6" id="7dKB6cHPHr2" role="3_vMOX">
@@ -175,13 +159,24 @@
         </node>
       </node>
     </node>
-    <node concept="3_vMzP" id="5u9gdSXmGC2" role="3_vMOX">
-      <property role="TrG5h" value="csv_file" />
-      <property role="3_vMzZ" value="E:/file.csv" />
-      <property role="FF4YY" value="door_sensor" />
-      <property role="1EOrNO" value="1" />
-      <property role="1EOuJz" value="2" />
-      <property role="1EOrNL" value="3" />
+    <node concept="1hN_iB" id="7rYs2gBcgSY" role="3_vMOX">
+      <property role="TrG5h" value="modelling_law" />
+      <property role="1hN_iJ" value="0" />
+      <property role="1hN_iH" value="86400" />
+      <property role="FF4Y_" value="45" />
+      <property role="FF4YA" value="15" />
+      <node concept="1hN_iy" id="7rYs2gBcgT0" role="1hN_iE">
+        <property role="1hN_iK" value="27000" />
+        <property role="1hN_iM" value="0" />
+      </node>
+      <node concept="1hN_iy" id="7rYs2gBcgTp" role="1hN_iE">
+        <property role="1hN_iK" value="61200" />
+        <property role="1hN_iM" value="abs(-2x^2 + 5x - 1)" />
+      </node>
+      <node concept="1hN_iy" id="6JiemAxOnG6" role="1hN_iE">
+        <property role="1hN_iK" value="86400" />
+        <property role="1hN_iM" value="0" />
+      </node>
     </node>
   </node>
 </model>

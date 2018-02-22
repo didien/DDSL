@@ -2,7 +2,7 @@
 <model ref="r:e465baf8-de2e-4ffc-b433-5fde6234c8fc(SensorSimulationLanguage.structure)">
   <persistence version="9" />
   <languages>
-    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="6" />
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="-1" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
@@ -224,6 +224,48 @@
     <node concept="1TJgyi" id="7dKB6cHPCIy" role="1TKVEl">
       <property role="IQ2nx" value="8318320461538036642" />
       <property role="TrG5h" value="probability" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7rYs2gBc2i3">
+    <property role="EcuMT" value="8574414041138603139" />
+    <property role="3GE5qa" value="laws" />
+    <property role="TrG5h" value="ModellingLaw" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="7rYs2gBc3lZ" role="PzmwI">
+      <ref role="PrY4T" node="75cVuPqSa90" resolve="IDataSource" />
+    </node>
+    <node concept="1TJgyi" id="7rYs2gBc2i9" role="1TKVEl">
+      <property role="IQ2nx" value="8574414041138603145" />
+      <property role="TrG5h" value="upperBound" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7rYs2gBc2ib" role="1TKVEl">
+      <property role="IQ2nx" value="8574414041138603147" />
+      <property role="TrG5h" value="lowerBound" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="7rYs2gBc2ie" role="1TKVEi">
+      <property role="IQ2ns" value="8574414041138603150" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="constraint" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="7rYs2gBc2i6" resolve="ModellingConstraint" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7rYs2gBc2i6">
+    <property role="EcuMT" value="8574414041138603142" />
+    <property role="3GE5qa" value="laws" />
+    <property role="TrG5h" value="ModellingConstraint" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="7rYs2gBc2ik" role="1TKVEl">
+      <property role="IQ2nx" value="8574414041138603156" />
+      <property role="TrG5h" value="bound" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7rYs2gBc2im" role="1TKVEl">
+      <property role="IQ2nx" value="8574414041138603158" />
+      <property role="TrG5h" value="closure" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>

@@ -2,7 +2,7 @@
 <model ref="r:51e6aaa6-cfc9-4e88-a56d-3a68f9f02331(SensorSimulationLanguage.constraints)">
   <persistence version="9" />
   <languages>
-    <use id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints" version="4" />
+    <use id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints" version="-1" />
     <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />
   </languages>
   <imports>
@@ -13,6 +13,7 @@
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1080223426719" name="jetbrains.mps.baseLanguage.structure.OrExpression" flags="nn" index="22lmx$" />
       <concept id="1153417849900" name="jetbrains.mps.baseLanguage.structure.GreaterThanOrEqualsExpression" flags="nn" index="2d3UOw" />
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
@@ -25,6 +26,7 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1068580123152" name="jetbrains.mps.baseLanguage.structure.EqualsExpression" flags="nn" index="3clFbC" />
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
@@ -156,14 +158,22 @@
       <node concept="QB0g5" id="lhB3YR5kpr" role="QCWH9">
         <node concept="3clFbS" id="lhB3YR5kps" role="2VODD2">
           <node concept="3clFbF" id="lhB3YR5kw_" role="3cqZAp">
-            <node concept="2d3UOw" id="lhB3YR5mlQ" role="3clFbG">
-              <node concept="2OqwBi" id="lhB3YR5mT1" role="3uHU7w">
-                <node concept="EsrRn" id="lhB3YR5mtf" role="2Oq$k0" />
-                <node concept="3TrcHB" id="lhB3YR5n7x" role="2OqNvi">
-                  <ref role="3TsBF5" to="7ew6:75cVuPqSa98" resolve="updatePeriod" />
+            <node concept="22lmx$" id="7rYs2gBcpPD" role="3clFbG">
+              <node concept="3clFbC" id="7rYs2gBcwMb" role="3uHU7w">
+                <node concept="3cmrfG" id="7rYs2gBcxEC" role="3uHU7w">
+                  <property role="3cmrfH" value="0" />
+                </node>
+                <node concept="1Wqviy" id="7rYs2gBcq4Z" role="3uHU7B" />
+              </node>
+              <node concept="2d3UOw" id="lhB3YR5mlQ" role="3uHU7B">
+                <node concept="1Wqviy" id="lhB3YR5kw$" role="3uHU7B" />
+                <node concept="2OqwBi" id="lhB3YR5mT1" role="3uHU7w">
+                  <node concept="EsrRn" id="lhB3YR5mtf" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="lhB3YR5n7x" role="2OqNvi">
+                    <ref role="3TsBF5" to="7ew6:75cVuPqSa98" resolve="updatePeriod" />
+                  </node>
                 </node>
               </node>
-              <node concept="1Wqviy" id="lhB3YR5kw$" role="3uHU7B" />
             </node>
           </node>
         </node>

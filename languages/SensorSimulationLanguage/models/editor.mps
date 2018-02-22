@@ -2,11 +2,11 @@
 <model ref="r:cca50f0d-e1ee-4131-89ff-86e36e72d6d3(SensorSimulationLanguage.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="11" />
-    <use id="f3347d8a-0e79-4f35-8ac9-1574f25c986f" name="jetbrains.mps.execution.commands" version="0" />
-    <use id="73c1a490-99fa-4d0d-8292-b8985697c74b" name="jetbrains.mps.execution.common" version="0" />
-    <use id="443f4c36-fcf5-4eb6-9500-8d06ed259e3e" name="jetbrains.mps.baseLanguage.classifiers" version="0" />
-    <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="-1" />
+    <use id="f3347d8a-0e79-4f35-8ac9-1574f25c986f" name="jetbrains.mps.execution.commands" version="-1" />
+    <use id="73c1a490-99fa-4d0d-8292-b8985697c74b" name="jetbrains.mps.execution.common" version="-1" />
+    <use id="443f4c36-fcf5-4eb6-9500-8d06ed259e3e" name="jetbrains.mps.baseLanguage.classifiers" version="-1" />
+    <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="-1" />
     <devkit ref="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
   </languages>
   <imports>
@@ -529,6 +529,119 @@
       </node>
       <node concept="3F0ifn" id="5u9gdSXmgJ7" role="3EZMnx" />
       <node concept="2iRkQZ" id="5u9gdSXmgGj" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7rYs2gBc2ip">
+    <property role="3GE5qa" value="laws" />
+    <ref role="1XX52x" to="7ew6:7rYs2gBc2i6" resolve="ModellingConstraint" />
+    <node concept="3EZMnI" id="7rYs2gBc2ir" role="2wV5jI">
+      <node concept="3F0ifn" id="7rYs2gBc2iy" role="3EZMnx">
+        <property role="3F0ifm" value="until" />
+      </node>
+      <node concept="3F0A7n" id="7rYs2gBc2iC" role="3EZMnx">
+        <ref role="1NtTu8" to="7ew6:7rYs2gBc2ik" resolve="bound" />
+      </node>
+      <node concept="3F0ifn" id="7rYs2gBc2iK" role="3EZMnx">
+        <property role="3F0ifm" value="apply y =" />
+      </node>
+      <node concept="3F0A7n" id="7rYs2gBc2iU" role="3EZMnx">
+        <ref role="1NtTu8" to="7ew6:7rYs2gBc2im" resolve="closure" />
+      </node>
+      <node concept="l2Vlx" id="7rYs2gBc2iu" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7rYs2gBc3m2">
+    <property role="3GE5qa" value="laws" />
+    <ref role="1XX52x" to="7ew6:7rYs2gBc2i3" resolve="ModellingLaw" />
+    <node concept="3EZMnI" id="7rYs2gBc3md" role="2wV5jI">
+      <node concept="3EZMnI" id="7rYs2gBc3mk" role="3EZMnx">
+        <node concept="VPM3Z" id="7rYs2gBc3mm" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F0ifn" id="7rYs2gBc3mv" role="3EZMnx">
+          <property role="3F0ifm" value="data source" />
+        </node>
+        <node concept="3F0A7n" id="7rYs2gBc3m_" role="3EZMnx">
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        </node>
+        <node concept="3F0ifn" id="7rYs2gBc3mH" role="3EZMnx">
+          <property role="3F0ifm" value="follows a modelling function" />
+        </node>
+        <node concept="l2Vlx" id="7rYs2gBc3mp" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="7rYs2gBc3nA" role="3EZMnx">
+        <node concept="VPM3Z" id="7rYs2gBc3nC" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="7rYs2gBc3nR" role="3EZMnx" />
+        <node concept="3F0ifn" id="7rYs2gBc3nX" role="3EZMnx">
+          <property role="3F0ifm" value="lower bound :" />
+        </node>
+        <node concept="3F0A7n" id="7rYs2gBc3od" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:7rYs2gBc2ib" resolve="lowerBound" />
+        </node>
+        <node concept="l2Vlx" id="7rYs2gBc3nF" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="7rYs2gBc3oq" role="3EZMnx">
+        <node concept="VPM3Z" id="7rYs2gBc3or" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="7rYs2gBc3os" role="3EZMnx" />
+        <node concept="3F0ifn" id="7rYs2gBc3ot" role="3EZMnx">
+          <property role="3F0ifm" value="upper bound :" />
+        </node>
+        <node concept="3F0A7n" id="7rYs2gBc3ou" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:7rYs2gBc2i9" resolve="upperBound" />
+        </node>
+        <node concept="l2Vlx" id="7rYs2gBc3ov" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="7rYs2gBc3oM" role="3EZMnx">
+        <node concept="VPM3Z" id="7rYs2gBc3oN" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="7rYs2gBc3oO" role="3EZMnx" />
+        <node concept="3F0ifn" id="7rYs2gBc3oP" role="3EZMnx">
+          <property role="3F0ifm" value="constraints :" />
+        </node>
+        <node concept="3F2HdR" id="7rYs2gBc3qr" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:7rYs2gBc2ie" resolve="constraint" />
+          <node concept="2iRkQZ" id="7rYs2gBc3qu" role="2czzBx" />
+          <node concept="VPM3Z" id="7rYs2gBc3qv" role="3F10Kt">
+            <property role="VOm3f" value="false" />
+          </node>
+          <node concept="3F0ifn" id="7rYs2gBc3q_" role="2czzBI">
+            <property role="3F0ifm" value="no constraints defined !" />
+          </node>
+        </node>
+        <node concept="l2Vlx" id="7rYs2gBc3oR" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="7rYs2gBc3r4" role="3EZMnx">
+        <node concept="VPM3Z" id="7rYs2gBc3r5" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="7rYs2gBc3r6" role="3EZMnx" />
+        <node concept="3F0ifn" id="7rYs2gBc3r7" role="3EZMnx">
+          <property role="3F0ifm" value="update period   :" />
+        </node>
+        <node concept="3F0A7n" id="7rYs2gBc3r8" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:75cVuPqSa98" resolve="updatePeriod" />
+        </node>
+        <node concept="l2Vlx" id="7rYs2gBc3r9" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="7rYs2gBc3ra" role="3EZMnx">
+        <node concept="VPM3Z" id="7rYs2gBc3rb" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="7rYs2gBc3rc" role="3EZMnx" />
+        <node concept="3F0ifn" id="7rYs2gBc3rd" role="3EZMnx">
+          <property role="3F0ifm" value="sampling period :" />
+        </node>
+        <node concept="3F0A7n" id="7rYs2gBc3re" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:75cVuPqSa9b" resolve="samplingPeriod" />
+        </node>
+        <node concept="l2Vlx" id="7rYs2gBc3rf" role="2iSdaV" />
+      </node>
+      <node concept="2iRkQZ" id="7rYs2gBc3mg" role="2iSdaV" />
     </node>
   </node>
 </model>
