@@ -29,6 +29,9 @@
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
+      <concept id="1186403751766" name="jetbrains.mps.lang.editor.structure.FontStyleStyleClassItem" flags="ln" index="Vb9p2">
+        <property id="1186403771423" name="style" index="Vbekb" />
+      </concept>
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
@@ -142,6 +145,9 @@
           </node>
           <node concept="3F0ifn" id="75cVuPqSaoI" role="2czzBI">
             <property role="3F0ifm" value="no data source defined !" />
+            <node concept="Vb9p2" id="5kA4vFmkEI_" role="3F10Kt">
+              <property role="Vbekb" value="ITALIC" />
+            </node>
           </node>
         </node>
         <node concept="l2Vlx" id="75cVuPqSf9_" role="2iSdaV" />
@@ -163,9 +169,36 @@
           </node>
           <node concept="3F0ifn" id="75cVuPqSaqB" role="2czzBI">
             <property role="3F0ifm" value="no collection defined !" />
+            <node concept="Vb9p2" id="5kA4vFmkEIx" role="3F10Kt">
+              <property role="Vbekb" value="ITALIC" />
+            </node>
           </node>
         </node>
         <node concept="l2Vlx" id="75cVuPqSfdP" role="2iSdaV" />
+      </node>
+      <node concept="35HoNQ" id="5kA4vFmjPUU" role="3EZMnx" />
+      <node concept="3F0ifn" id="5kA4vFmjPUj" role="3EZMnx">
+        <property role="3F0ifm" value="grafana displays:" />
+      </node>
+      <node concept="3EZMnI" id="5kA4vFmjPWa" role="3EZMnx">
+        <node concept="VPM3Z" id="5kA4vFmjPWc" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="5kA4vFmjPWV" role="3EZMnx" />
+        <node concept="3F2HdR" id="5kA4vFmkpfF" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:5kA4vFmjPTe" resolve="displays" />
+          <node concept="2iRkQZ" id="5kA4vFmkpfI" role="2czzBx" />
+          <node concept="VPM3Z" id="5kA4vFmkpfJ" role="3F10Kt">
+            <property role="VOm3f" value="false" />
+          </node>
+          <node concept="3F0ifn" id="5kA4vFmkpfO" role="2czzBI">
+            <property role="3F0ifm" value="no display set, but it's ok that way" />
+            <node concept="Vb9p2" id="5kA4vFmkEIv" role="3F10Kt">
+              <property role="Vbekb" value="ITALIC" />
+            </node>
+          </node>
+        </node>
+        <node concept="l2Vlx" id="5kA4vFmjPWf" role="2iSdaV" />
       </node>
       <node concept="2iRkQZ" id="75cVuPqSamP" role="2iSdaV" />
     </node>
@@ -691,6 +724,57 @@
         </node>
       </node>
       <node concept="2iRkQZ" id="6vH4OV2EW8j" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="5kA4vFmjPP_">
+    <property role="3GE5qa" value="displays" />
+    <ref role="1XX52x" to="7ew6:5kA4vFmjO2P" resolve="ClassicGraph" />
+    <node concept="3EZMnI" id="5kA4vFmjPPB" role="2wV5jI">
+      <node concept="3EZMnI" id="5kA4vFmjPPI" role="3EZMnx">
+        <node concept="VPM3Z" id="5kA4vFmjPPK" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F0ifn" id="5kA4vFmjPPT" role="3EZMnx">
+          <property role="3F0ifm" value="display" />
+        </node>
+        <node concept="1iCGBv" id="5kA4vFmjPPZ" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:5kA4vFmjO2N" resolve="sensors" />
+          <node concept="1sVBvm" id="5kA4vFmjPQ1" role="1sWHZn">
+            <node concept="3F0A7n" id="5kA4vFmjPQ9" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
+        </node>
+        <node concept="3F0ifn" id="5kA4vFmjPQi" role="3EZMnx">
+          <property role="3F0ifm" value="in a dashboard named" />
+        </node>
+        <node concept="3F0A7n" id="5kA4vFmjPQw" role="3EZMnx">
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        </node>
+        <node concept="l2Vlx" id="5kA4vFmjPPN" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="5kA4vFmjPR1" role="3EZMnx">
+        <node concept="VPM3Z" id="5kA4vFmjPR3" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="5kA4vFmjPRl" role="3EZMnx" />
+        <node concept="3F0ifn" id="5kA4vFmjPRr" role="3EZMnx">
+          <property role="3F0ifm" value="plot readings as a classic graph" />
+        </node>
+        <node concept="l2Vlx" id="5kA4vFmjPR6" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="5kA4vFmjPRv" role="3EZMnx">
+        <node concept="VPM3Z" id="5kA4vFmjPRw" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="5kA4vFmjPRx" role="3EZMnx" />
+        <node concept="3F0ifn" id="5kA4vFmjPRy" role="3EZMnx">
+          <property role="3F0ifm" value="where x axis holds timestamps and y axis holds the readings' value" />
+        </node>
+        <node concept="l2Vlx" id="5kA4vFmjPRz" role="2iSdaV" />
+      </node>
+      <node concept="2iRkQZ" id="5kA4vFmjPPE" role="2iSdaV" />
     </node>
   </node>
 </model>

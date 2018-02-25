@@ -74,6 +74,13 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="3PPzdvo2E7J" resolve="SensorCollection" />
     </node>
+    <node concept="1TJgyj" id="5kA4vFmjPTe" role="1TKVEi">
+      <property role="IQ2ns" value="6135611311373901390" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="displays" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="5kA4vFmjO1U" resolve="IDisplay" />
+    </node>
     <node concept="1TJgyi" id="3juagqJxhEC" role="1TKVEl">
       <property role="IQ2nx" value="3809527443493296808" />
       <property role="TrG5h" value="startDate" />
@@ -156,11 +163,6 @@
     <node concept="PrWs8" id="75cVuPqSa9g" role="PzmwI">
       <ref role="PrY4T" node="75cVuPqSa90" resolve="IDataSource" />
     </node>
-  </node>
-  <node concept="1TIwiD" id="3PPzdvo2EgB">
-    <property role="EcuMT" value="4428600667259184167" />
-    <property role="TrG5h" value="Display" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="PlHQZ" id="75cVuPqSa90">
     <property role="EcuMT" value="8164161828203569728" />
@@ -300,6 +302,29 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="noise" />
       <ref role="20lvS9" node="6vH4OV2EW7y" resolve="Noise" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5kA4vFmjO2P">
+    <property role="EcuMT" value="6135611311373893813" />
+    <property role="TrG5h" value="ClassicGraph" />
+    <property role="3GE5qa" value="displays" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="5kA4vFmjO3h" role="PzmwI">
+      <ref role="PrY4T" node="5kA4vFmjO1U" resolve="IDisplay" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="5kA4vFmjO1U">
+    <property role="EcuMT" value="6135611311373893754" />
+    <property role="TrG5h" value="IDisplay" />
+    <node concept="PrWs8" id="5kA4vFmjO2L" role="PrDN$">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="5kA4vFmjO2N" role="1TKVEi">
+      <property role="IQ2ns" value="6135611311373893811" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="sensors" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3PPzdvo2E7J" resolve="SensorCollection" />
     </node>
   </node>
 </model>

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="InfluxDB" uuid="cc7fb470-7d0c-4aea-af2a-5d870ff3092f" moduleVersion="0" compileInMPS="true">
+<solution name="Grafana" uuid="d102dc8e-32ba-4d10-8f95-be5a142b6537" moduleVersion="0" compileInMPS="true">
   <models>
-    <modelRoot contentPath="${module}" type="default" />
+    <modelRoot contentPath="${module}" type="default">
+      <sourceRoot location="models" />
+    </modelRoot>
     <modelRoot contentPath="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party" type="java_classes">
-      <sourceRoot location="influxdb-java-2.8.jar" />
+      <sourceRoot location="grafana-api-java-client-1.0.3.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/exp4j.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/okio-1.13.0.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/jackson-databind-2.8.8.jar" />
     <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/retrofit-2.3.0.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/influxdb-java-2.8.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/grafana-api-java-client-1.0.3.jar" />
+    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/jackson-databind-2.8.8.jar" />
+    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/exp4j.jar" />
     <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/jackson-core-2.8.8.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/okhttp-3.9.1.jar" />
     <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/logging-interceptor-3.9.1.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/converter-moshi-2.3.0.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/moshi-1.4.0.jar" />
     <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/jackson-annotations-2.8.8.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/exp4j-0.4.8.jar" />
+    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/converter-moshi-2.3.0.jar" />
     <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/converter-jackson-2.2.0.jar" />
+    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/moshi-1.4.0.jar" />
+    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/okio-1.13.0.jar" />
+    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/okhttp-3.9.1.jar" />
+    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/grafana-api-java-client-1.0.3.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
@@ -34,7 +34,7 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
-    <module reference="cc7fb470-7d0c-4aea-af2a-5d870ff3092f(InfluxDB)" version="0" />
+    <module reference="d102dc8e-32ba-4d10-8f95-be5a142b6537(Grafana)" version="0" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
     <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />

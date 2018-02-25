@@ -14,6 +14,10 @@
   </imports>
   <registry>
     <language id="bc16fd15-bfa2-47e7-b9c2-9f80e5b399e0" name="SensorSimulationLanguage">
+      <concept id="6135611311373893813" name="SensorSimulationLanguage.structure.ClassicGraph" flags="ng" index="23ql5f" />
+      <concept id="6135611311373893754" name="SensorSimulationLanguage.structure.IDisplay" flags="ng" index="23ql60">
+        <reference id="6135611311373893811" name="sensors" index="23ql59" />
+      </concept>
       <concept id="7488662984381415906" name="SensorSimulationLanguage.structure.Noise" flags="ng" index="2_hHaG">
         <property id="7488662984381415912" name="scale" index="2_hHaA" />
         <property id="7488662984381415909" name="max" index="2_hHaF" />
@@ -50,6 +54,7 @@
       <concept id="4428600667259183591" name="SensorSimulationLanguage.structure.Simulation" flags="ng" index="3_vMOK">
         <property id="3809527443493296810" name="endDate" index="2rmNeG" />
         <property id="3809527443493296808" name="startDate" index="2rmNeI" />
+        <child id="6135611311373901390" name="displays" index="23qkYO" />
         <child id="4428600667259183596" name="sensors" index="3_vMOV" />
         <child id="4428600667259183594" name="dataSources" index="3_vMOX" />
       </concept>
@@ -68,10 +73,14 @@
     <property role="TrG5h" value="Simulation" />
     <property role="2rmNeI" value="18-02-18 01:15" />
     <property role="2rmNeG" value="18-02-18 23:45" />
-    <node concept="3_vMOS" id="6ZqfKAE0OF6" role="3_vMOV">
-      <property role="FF4LG" value="1" />
-      <property role="TrG5h" value="weather_sensor" />
-      <ref role="3_vMzM" node="6vH4OV2HlWj" resolve="modelling_law" />
+    <node concept="3_vMOS" id="3QxC82ZIvzJ" role="3_vMOV">
+      <property role="FF4LG" value="2" />
+      <property role="TrG5h" value="door_sensor" />
+      <ref role="3_vMzM" node="lhB3YR9EBQ" resolve="random_angle" />
+    </node>
+    <node concept="23ql5f" id="3QxC82ZIvzG" role="23qkYO">
+      <property role="TrG5h" value="door_graph_2" />
+      <ref role="23ql59" node="3QxC82ZIvzJ" resolve="door_sensor" />
     </node>
     <node concept="3_vMzQ" id="lhB3YR9EBQ" role="3_vMOX">
       <property role="TrG5h" value="random_angle" />

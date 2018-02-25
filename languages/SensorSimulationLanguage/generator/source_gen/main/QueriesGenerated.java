@@ -106,6 +106,9 @@ public class QueriesGenerated {
   public static Object propertyMacro_GetPropertyValue_7488662984381644683(final PropertyMacroContext _context) {
     return SPropertyOperations.getInteger(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x67ed134ec2abc1e2L, 0x67ed134ec2abc1e8L, "scale"));
   }
+  public static Object propertyMacro_GetPropertyValue_8692146239416246654(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+  }
   public static SNode sourceNodeQuery_7488662984381572743(final SourceSubstituteMacroNodeContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x67ed134ec2b41dbaL, 0x67ed134ec2abc2b6L, "noise"));
   }
@@ -114,6 +117,9 @@ public class QueriesGenerated {
   }
   public static Iterable<SNode> sourceNodesQuery_2222688618933275744(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x3d758cd7d80aa1e7L, 0x3d758cd7d80aa1ecL, "sensors"));
+  }
+  public static Iterable<SNode> sourceNodesQuery_4441007182397095361(final SourceSubstituteMacroNodesContext _context) {
+    return SLinkOperations.getChildren(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x3d758cd7d80aa1e7L, 0x552611fad64f5e4eL, "displays"));
   }
   public static Iterable<SNode> sourceNodesQuery_8059823793871090394(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x73709c632dd63fe5L, 0x73709c632dd6401eL, "states"));

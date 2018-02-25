@@ -5,6 +5,7 @@
       <modulePath path="$PROJECT_DIR$/languages/SensorSimulationLanguage/SensorSimulationLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/SensorSimulationLanguage/runtime/SensorSimulationLanguage.runtime.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/SensorSimulationLanguage/sandbox/SensorSimulationLanguage.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/Grafana/Grafana.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/InfluxDB/InfluxDB.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/exp4j/exp4j.msd" folder="" />
     </projectModules>
