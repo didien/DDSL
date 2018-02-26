@@ -89,7 +89,7 @@ Il faut ensuite donner les bornes inférieures et supérieures (avec des nombres
 
 Dans notre exemple, la loi est nommée `random_angle` (en hommage à l'IoT random) avec des valeurs comprises entre `0` et `180`°, avec un nouveau relevé toutes les `55` secondes et une lecture toutes les `30` secondes.
 
-### Chaine de Markov
+#### Chaine de Markov
 Plus complexe que la premier, cette loi permet de passer d'un état à un autre selon des règles de transitions ([voir le superbe exemple de Doudou le hamster](https://fr.wikipedia.org/wiki/Chaîne_de_Markov#Exemple_:_Doudou_le_hamster)).
 Le bloc suivant apparait lors de son instanciation :
 ```
@@ -116,3 +116,38 @@ data source weather_law follows markov's chain
   reset period    : 86400                          
 ```
 Appréciez la disposition gracieuse, pratique et automatique des valeurs de transitions.
+
+#### Loi de modélisation
+Avec cette loi, on peut configurer un modèle qui, en fonction de l'heure de la journée, produit une valeur de manière plus ou moins complexe.
+Le bloc par défaut se présente sous la forme suivante :
+```
+data source <no name> follows a modelling function      
+  x is in hours, lower bound is 00 and upper bound is 24
+  constraints : until <no bound> apply y = <no closure> 
+  update period   : <no updatePeriod>                   
+  sampling period : <no samplingPeriod>                 
+  <no noise>                                            
+  ```
+  La seconde ligne reflète l'introduction de cette loi : il n'a pas été jugé utile de permettre de générer des valeurs autrement qu'en fonction de l'heure de la journée (même si c'est très simple à rajouter, grâce à une simple modification de notre modèle :wink:)
+  
+Pour utiliser la loi, il faut indiquer des règles : une expression fonction de l'heure courante et l'heure jusqu'à laquelle ladite expression est valable.
+L'expression à fournir doit être une expression mathématique valide et reconnue ([voir liste des fonctions reconnues](https://www.objecthunter.net/exp4j/#Built-in_functions)), comportant ou ne comportant pas la variable x. 
+
+La dernière expression **doit** être explicitement valide jusqu'à minuit (24h).
+
+On peut donc obtenir le bloc suivant avec trois règles :
+```
+data source modelling_law follows a modelling function   
+  x is in hours, lower bound is 00 and upper bound is 24 
+  constraints : until 7 apply y = 0                      
+                until 18 apply y = abs(1/2x^2 - 11x + 20)
+                until 24 apply y = 0                     
+  update period   : 500                                  
+  sampling period : 180
+```
+On aura donc une valeur égale à 0 jusqu'à 7h du matin, puis une valeur suivant `abs(1/2x^2 - 11x + 20)` jusqu'à 18h, puis revaudra 0 jusqu'à minuit. Simple. Basique.
+
+##### Ajout de bruit
+Étant donné que ce modèle est déterministe, toutes les simulations avec cette loi auront les mêmes valeurs. Pour faire varier légèrement les relevés, on peut ajouter un générateur de bruit au modèle, en additionnant une valeur aléatoire au relevé déterministe produit. Il suffit de le rajouter en ajouter un bloc au champ `<no noise>`.
+
+La configuration du générateur consiste à spécifier une valeur minimal, une valeur maximale et le nombre de chiffres significatifs que doit avoir la valeur générée. Cela est complètement transparant pour le reste de la loi.
