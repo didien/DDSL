@@ -57,7 +57,7 @@ Il faut ensuite configurer une date de début et une date de fin à la simulatio
 
 **Attention** : l'heure est donnée par rapport au fuseau horaire UTC.
 
-Il y a ensuite les trois blocs principaux suivants : les sources de données, les grappes de capteurs et les dashboards Grafana.
+Il y a ensuite les trois blocs principaux suivants : les sources de données, les grappes de capteurs et les dashboards Grafana.  
 Il est conseillé de les compléter dans l'ordre dans lequel ils sont présentés : cela réduira les erreurs possibles lors de la complétion et résultera en un gain de temps.
 
 ### Configuration des sources de données
@@ -118,7 +118,7 @@ data source weather_law follows markov's chain
 Appréciez la disposition gracieuse, pratique et automatique des valeurs de transitions.
 
 #### Loi de modélisation
-Avec cette loi, on peut configurer un modèle qui, en fonction de l'heure de la journée, produit une valeur de manière plus ou moins complexe.
+Avec cette loi, on peut configurer un modèle qui, en fonction de l'heure de la journée, produit une valeur de manière plus ou moins complexe.  
 Le bloc par défaut se présente sous la forme suivante :
 ```
 data source <no name> follows a modelling function      
@@ -130,7 +130,7 @@ data source <no name> follows a modelling function
   ```
   La seconde ligne reflète l'introduction de cette loi : il n'a pas été jugé utile de permettre de générer des valeurs autrement qu'en fonction de l'heure de la journée (même si c'est très simple à rajouter, grâce à une simple modification de notre modèle :wink:)
   
-Pour utiliser la loi, il faut indiquer des règles : une expression fonction de l'heure courante et l'heure jusqu'à laquelle ladite expression est valable.
+Pour utiliser la loi, il faut indiquer des règles : une expression fonction de l'heure courante et l'heure jusqu'à laquelle ladite expression est valable.  
 L'expression à fournir doit être une expression mathématique valide et reconnue ([voir liste des fonctions reconnues](https://www.objecthunter.net/exp4j/#Built-in_functions)), comportant ou ne comportant pas la variable x. 
 
 La dernière expression **doit** être explicitement valide jusqu'à minuit (24h).
@@ -200,7 +200,7 @@ setup a dashboard named <no name> with the following rows
 Étant donné qu'un dashboard ne peut exister sans avoir au moins un panel, un bloc panel est fourni lors de la génération du bloc. On peut ensuite ajouter des panels sur la même ligne, ou sur une autre ligne.
 
 Chaque panel a besoin d'un nom, d'un label sur l'axe Y et d'une largeur (nombre entier naturel compris entre 1 et 12). La largeur maximale d'une ligne est de 12 : il faut donc que la somme des largeurs de panels d'une même ligne soit inférieure ou égale à 12.  
-On peut ajouter autant de lignes qu'on ne le désire.
+On peut ajouter autant de lignes qu'on le désire.
 
 Voici le dashboard défini pour ce tutoriel :
 ```
