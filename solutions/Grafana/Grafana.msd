@@ -4,23 +4,19 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party" type="java_classes">
+    <modelRoot contentPath="${module}" type="java_classes">
       <sourceRoot location="grafana-api-java-client-1.0.3.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/retrofit-2.3.0.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/jackson-databind-2.8.8.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/exp4j.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/jackson-core-2.8.8.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/logging-interceptor-3.9.1.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/jackson-annotations-2.8.8.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/converter-moshi-2.3.0.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/converter-jackson-2.2.0.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/moshi-1.4.0.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/okio-1.13.0.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/okhttp-3.9.1.jar" />
-    <stubModelEntry path="/home/didien/code/tp/S9/DSL/languages/SensorSimulationLanguage/third_party/grafana-api-java-client-1.0.3.jar" />
+    <stubModelEntry path="${module}/jackson-annotations-2.8.8.jar" />
+    <stubModelEntry path="${module}/grafana-api-java-client-1.0.3.jar" />
+    <stubModelEntry path="${module}/okhttp-3.6.0.jar" />
+    <stubModelEntry path="${module}/converter-jackson-2.2.0.jar" />
+    <stubModelEntry path="${module}/okio-1.11.0.jar" />
+    <stubModelEntry path="${module}/jackson-core-2.8.8.jar" />
+    <stubModelEntry path="${module}/jackson-databind-2.8.8.jar" />
+    <stubModelEntry path="${module}/retrofit-2.2.0.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
