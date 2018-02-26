@@ -137,7 +137,7 @@
           <property role="3F0ifm" value="starts the" />
         </node>
         <node concept="3F0A7n" id="3juagqJxlCe" role="3EZMnx">
-          <property role="1$x2rV" value="dd-mm-yy hh:mm" />
+          <property role="1$x2rV" value="dd-MM-yy HH:mm" />
           <ref role="1NtTu8" to="7ew6:3juagqJxhEC" resolve="startDate" />
         </node>
         <node concept="l2Vlx" id="3juagqJxlBC" role="2iSdaV" />
@@ -150,7 +150,7 @@
           <property role="3F0ifm" value="ends the" />
         </node>
         <node concept="3F0A7n" id="3juagqJxlDC" role="3EZMnx">
-          <property role="1$x2rV" value="dd-mm-yy hh:mm" />
+          <property role="1$x2rV" value="dd-MM-yy HH:mm" />
           <ref role="1NtTu8" to="7ew6:3juagqJxhEE" resolve="endDate" />
         </node>
         <node concept="l2Vlx" id="3juagqJxlCX" role="2iSdaV" />
@@ -324,19 +324,6 @@
         </node>
         <node concept="l2Vlx" id="75cVuPqSajq" role="2iSdaV" />
       </node>
-      <node concept="3EZMnI" id="3juagqJxLQs" role="3EZMnx">
-        <node concept="VPM3Z" id="3juagqJxLQu" role="3F10Kt">
-          <property role="VOm3f" value="false" />
-        </node>
-        <node concept="3XFhqQ" id="3juagqJxLR4" role="3EZMnx" />
-        <node concept="3F0ifn" id="3juagqJxLRa" role="3EZMnx">
-          <property role="3F0ifm" value="reset period    :" />
-        </node>
-        <node concept="3F0A7n" id="3juagqJxLRi" role="3EZMnx">
-          <ref role="1NtTu8" to="7ew6:3juagqJxLPu" resolve="resetPeriod" />
-        </node>
-        <node concept="l2Vlx" id="3juagqJxLQx" role="2iSdaV" />
-      </node>
       <node concept="2iRkQZ" id="75cVuPqSadt" role="2iSdaV" />
       <node concept="3EZMnI" id="46K65BnkthO" role="AHCbl">
         <node concept="l2Vlx" id="46K65BnkthP" role="2iSdaV" />
@@ -369,12 +356,6 @@
         </node>
         <node concept="3F0A7n" id="46K65BnktjD" role="3EZMnx">
           <ref role="1NtTu8" to="7ew6:75cVuPqSa9b" resolve="samplingPeriod" />
-        </node>
-        <node concept="3F0ifn" id="3juagqJxNie" role="3EZMnx">
-          <property role="3F0ifm" value="," />
-        </node>
-        <node concept="3F0A7n" id="3juagqJxNhO" role="3EZMnx">
-          <ref role="1NtTu8" to="7ew6:3juagqJxLPu" resolve="resetPeriod" />
         </node>
         <node concept="3F0ifn" id="46K65Bnkunz" role="3EZMnx">
           <property role="3F0ifm" value=")" />
@@ -794,9 +775,6 @@
   <node concept="24kQdi" id="pAhsp7vwkh">
     <ref role="1XX52x" to="7ew6:pAhsp7vwiy" resolve="GrafanaDisplay" />
     <node concept="3EZMnI" id="pAhsp7vwkI" role="2wV5jI">
-      <node concept="3F0ifn" id="pAhsp7vwkP" role="3EZMnx">
-        <property role="3F0ifm" value="grafana dashboards :" />
-      </node>
       <node concept="3EZMnI" id="pAhsp7vwkV" role="3EZMnx">
         <node concept="3XFhqQ" id="pAhsp7vwlT" role="3EZMnx" />
         <node concept="VPM3Z" id="pAhsp7vwkX" role="3F10Kt">
@@ -811,6 +789,7 @@
         <node concept="l2Vlx" id="pAhsp7vwl0" role="2iSdaV" />
       </node>
       <node concept="3EZMnI" id="pAhsp7vwlY" role="3EZMnx">
+        <node concept="3XFhqQ" id="pAhsp7_b38" role="3EZMnx" />
         <node concept="VPM3Z" id="pAhsp7vwm0" role="3F10Kt">
           <property role="VOm3f" value="false" />
         </node>
@@ -819,6 +798,12 @@
           <node concept="2iRkQZ" id="pAhsp7vwmj" role="2czzBx" />
           <node concept="VPM3Z" id="pAhsp7vwmk" role="3F10Kt">
             <property role="VOm3f" value="false" />
+          </node>
+          <node concept="3F0ifn" id="pAhsp7$LLe" role="2czzBI">
+            <property role="3F0ifm" value="add at least one dashboard" />
+            <node concept="Vb9p2" id="pAhsp7$LLg" role="3F10Kt">
+              <property role="Vbekb" value="ITALIC" />
+            </node>
           </node>
         </node>
         <node concept="l2Vlx" id="pAhsp7vwm3" role="2iSdaV" />

@@ -69,8 +69,6 @@
       <concept id="4428600667259183591" name="SensorSimulationLanguage.structure.Simulation" flags="ng" index="3_vMOK">
         <property id="3809527443493296810" name="endDate" index="2rmNeG" />
         <property id="3809527443493296808" name="startDate" index="2rmNeI" />
-        <property id="461132729757012035" name="grafana" index="117Pm5" />
-        <property id="461132729757012031" name="influxdb" index="117PnT" />
         <child id="6135611311373901390" name="displays" index="23qkYO" />
         <child id="4428600667259183596" name="sensors" index="3_vMOV" />
         <child id="4428600667259183594" name="dataSources" index="3_vMOX" />
@@ -90,8 +88,6 @@
     <property role="TrG5h" value="Simulation" />
     <property role="2rmNeI" value="25-02-18 17:15" />
     <property role="2rmNeG" value="25-02-18 20:45" />
-    <property role="117PnT" value="http://influxdb.meatbox.fr" />
-    <property role="117Pm5" value="http://grafana.meatbox.fr" />
     <node concept="3_vMOS" id="3QxC82ZIvzJ" role="3_vMOV">
       <property role="FF4LG" value="2" />
       <property role="TrG5h" value="door_sensor" />
@@ -194,7 +190,7 @@
       </node>
     </node>
     <node concept="11645$" id="pAhsp7w0dC" role="23qkYO">
-      <property role="11644t" value="eyJrIjoiV0dQMGNCUGVIN0Q0NFV6OG5GelRRWjE2QW53eTYwMVUiLCJuIjoiZGRzbCIsImlkIjoxfQ==" />
+      <property role="11644t" value="e" />
       <node concept="23ql5f" id="pAhsp7ycTv" role="11644v">
         <property role="TrG5h" value="fancy dashboard" />
         <node concept="11TPea" id="pAhsp7ycTw" role="11TPFM">
@@ -214,6 +210,146 @@
             <property role="TrG5h" value="Occupants counter" />
             <property role="11TP3N" value="number of persons in building" />
             <property role="11TPe1" value="10" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="3_vMOK" id="pAhsp7$whj">
+    <property role="TrG5h" value="TutorialSimulation" />
+    <property role="2rmNeI" value="26-02-18 10:00" />
+    <property role="2rmNeG" value="26-02-18 14:00" />
+    <node concept="3_vMzQ" id="pAhsp7$xCB" role="3_vMOX">
+      <property role="TrG5h" value="random_angle" />
+      <property role="3_vMzV" value="0" />
+      <property role="3_vMzT" value="180" />
+      <property role="FF4Y_" value="55" />
+      <property role="FF4YA" value="30" />
+    </node>
+    <node concept="1uDEe6" id="pAhsp7$L6p" role="3_vMOX">
+      <property role="TrG5h" value="weather_law" />
+      <property role="FF4Y_" value="500" />
+      <property role="FF4YA" value="350" />
+      <property role="2rmjho" value="86400" />
+      <node concept="1uDHLu" id="pAhsp7$L6r" role="1uDHLX">
+        <property role="TrG5h" value="sunny" />
+        <node concept="1uDxv_" id="pAhsp7$L6t" role="1uDxco">
+          <property role="1uDxv1" value="0.6" />
+        </node>
+        <node concept="1uDxv_" id="pAhsp7$L6Z" role="1uDxco">
+          <property role="1uDxv1" value="0.2" />
+        </node>
+        <node concept="1uDxv_" id="pAhsp7$L72" role="1uDxco">
+          <property role="1uDxv1" value="0.05" />
+        </node>
+        <node concept="1uDxv_" id="pAhsp7$L76" role="1uDxco">
+          <property role="1uDxv1" value="0.15" />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="pAhsp7$L6B" role="1uDHLX">
+        <property role="TrG5h" value="cloudy" />
+        <node concept="1uDxv_" id="pAhsp7$L6C" role="1uDxco">
+          <property role="1uDxv1" value="0.2" />
+        </node>
+        <node concept="1uDxv_" id="pAhsp7$L7b" role="1uDxco">
+          <property role="1uDxv1" value="0.5" />
+        </node>
+        <node concept="1uDxv_" id="pAhsp7$L7e" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="pAhsp7$L7i" role="1uDxco">
+          <property role="1uDxv1" value="0.2" />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="pAhsp7$L6H" role="1uDHLX">
+        <property role="TrG5h" value="snowy" />
+        <node concept="1uDxv_" id="pAhsp7$L6I" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="pAhsp7$L7n" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="pAhsp7$L7q" role="1uDxco">
+          <property role="1uDxv1" value="0.4" />
+        </node>
+        <node concept="1uDxv_" id="pAhsp7$L7u" role="1uDxco">
+          <property role="1uDxv1" value="0." />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="pAhsp7$L6P" role="1uDHLX">
+        <property role="TrG5h" value="rainy" />
+        <node concept="1uDxv_" id="pAhsp7$L6Q" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="pAhsp7$L7z" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="pAhsp7$L7A" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="pAhsp7$L7E" role="1uDxco">
+          <property role="1uDxv1" value="0.5" />
+        </node>
+      </node>
+    </node>
+    <node concept="1hN_iB" id="pAhsp7$L9h" role="3_vMOX">
+      <property role="TrG5h" value="modelling_law" />
+      <property role="FF4Y_" value="500" />
+      <property role="FF4YA" value="180" />
+      <node concept="1hN_iy" id="pAhsp7$L9i" role="1hN_iE">
+        <property role="1hN_iK" value="7" />
+        <property role="1hN_iM" value="0" />
+      </node>
+      <node concept="1hN_iy" id="pAhsp7$L9j" role="1hN_iE">
+        <property role="1hN_iK" value="18" />
+        <property role="1hN_iM" value="abs(1/2x^2 - 11x + 20)" />
+      </node>
+      <node concept="1hN_iy" id="pAhsp7$L9k" role="1hN_iE">
+        <property role="1hN_iK" value="24" />
+        <property role="1hN_iM" value="0" />
+      </node>
+      <node concept="2_hHaG" id="pAhsp7$L9l" role="2_hH7S">
+        <property role="2_hHaH" value="-3." />
+        <property role="2_hHaF" value="3." />
+        <property role="2_hHaA" value="0" />
+      </node>
+    </node>
+    <node concept="3_vMOS" id="pAhsp7$LL1" role="3_vMOV">
+      <property role="FF4LG" value="15" />
+      <property role="TrG5h" value="awesome_door" />
+      <ref role="3_vMzM" node="pAhsp7$xCB" resolve="random_angle" />
+    </node>
+    <node concept="3_vMOS" id="pAhsp7$LL3" role="3_vMOV">
+      <property role="FF4LG" value="2" />
+      <property role="TrG5h" value="bipolar_weather_sensor" />
+      <ref role="3_vMzM" node="pAhsp7$L6p" resolve="weather_law" />
+    </node>
+    <node concept="3_vMOS" id="pAhsp7$LL6" role="3_vMOV">
+      <property role="FF4LG" value="20" />
+      <property role="TrG5h" value="thingy_sensor" />
+      <ref role="3_vMzM" node="pAhsp7$L9h" resolve="modelling_law" />
+    </node>
+    <node concept="11645$" id="pAhsp7_nxm" role="23qkYO">
+      <property role="11644t" value="e" />
+      <node concept="23ql5f" id="pAhsp7_nxo" role="11644v">
+        <property role="TrG5h" value="tutorial dashboard" />
+        <node concept="11TPea" id="pAhsp7_nxp" role="11TPFM">
+          <node concept="11TDZ0" id="pAhsp7_nxq" role="11TPeI">
+            <property role="TrG5h" value="Door panel" />
+            <property role="11TP3N" value="door angle" />
+            <property role="11TPe1" value="11" />
+          </node>
+        </node>
+        <node concept="11TPea" id="pAhsp7_nyd" role="11TPFM">
+          <node concept="11TDZ0" id="pAhsp7_nye" role="11TPeI">
+            <property role="TrG5h" value="Weather" />
+            <property role="11TP3N" value="weather values" />
+            <property role="11TPe1" value="6" />
+          </node>
+          <node concept="11TDZ0" id="pAhsp7_ny$" role="11TPeI">
+            <property role="TrG5h" value="Weird thingy panel" />
+            <property role="11TP3N" value="stuff, I guess?" />
+            <property role="11TPe1" value="6" />
           </node>
         </node>
       </node>

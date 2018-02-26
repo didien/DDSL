@@ -1440,24 +1440,8 @@
                     </node>
                   </node>
                 </node>
-                <node concept="3cmrfG" id="3juagqJyAr2" role="37wK5m">
-                  <property role="3cmrfH" value="500" />
-                  <node concept="17Uvod" id="3K9a83ayiBj" role="lGtFl">
-                    <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
-                    <property role="2qtEX9" value="value" />
-                    <node concept="3zFVjK" id="3K9a83ayiBk" role="3zH0cK">
-                      <node concept="3clFbS" id="3K9a83ayiBl" role="2VODD2">
-                        <node concept="3clFbF" id="3K9a83ayjGb" role="3cqZAp">
-                          <node concept="2OqwBi" id="3K9a83aykJM" role="3clFbG">
-                            <node concept="30H73N" id="3K9a83ayjGa" role="2Oq$k0" />
-                            <node concept="3TrcHB" id="3K9a83ayluE" role="2OqNvi">
-                              <ref role="3TsBF5" to="7ew6:3juagqJxLPu" resolve="resetPeriod" />
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
+                <node concept="3cmrfG" id="pAhsp7$zJb" role="37wK5m">
+                  <property role="3cmrfH" value="0" />
                 </node>
               </node>
             </node>

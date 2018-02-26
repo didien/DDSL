@@ -345,7 +345,7 @@
       <property role="IQ2ns" value="461132729757336793" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="displays" />
-      <property role="20lbJX" value="1..n" />
+      <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="5kA4vFmjO1U" resolve="IDisplay" />
     </node>
     <node concept="1TJgyi" id="pAhsp7vwjr" role="1TKVEl">
