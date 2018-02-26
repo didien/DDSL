@@ -17,6 +17,7 @@
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
       <concept id="1071666914219" name="jetbrains.mps.lang.editor.structure.ConceptEditorDeclaration" flags="ig" index="24kQdi" />
       <concept id="1140524381322" name="jetbrains.mps.lang.editor.structure.CellModel_ListWithRole" flags="ng" index="2czfm3">
+        <property id="1140524450557" name="separatorText" index="2czwfO" />
         <property id="1140524450556" name="usesBraces" index="2czwfP" />
         <child id="1140524464360" name="cellLayout" index="2czzBx" />
         <child id="1140524464359" name="emptyCellModel" index="2czzBI" />
@@ -758,45 +759,34 @@
         <node concept="VPM3Z" id="5kA4vFmjPPK" role="3F10Kt">
           <property role="VOm3f" value="false" />
         </node>
-        <node concept="3F0ifn" id="5kA4vFmjPPT" role="3EZMnx">
-          <property role="3F0ifm" value="display" />
-        </node>
-        <node concept="1iCGBv" id="5kA4vFmjPPZ" role="3EZMnx">
-          <ref role="1NtTu8" to="7ew6:5kA4vFmjO2N" resolve="sensors" />
-          <node concept="1sVBvm" id="5kA4vFmjPQ1" role="1sWHZn">
-            <node concept="3F0A7n" id="5kA4vFmjPQ9" role="2wV5jI">
-              <property role="1Intyy" value="true" />
-              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-            </node>
-          </node>
-        </node>
         <node concept="3F0ifn" id="5kA4vFmjPQi" role="3EZMnx">
-          <property role="3F0ifm" value="in a dashboard named" />
+          <property role="3F0ifm" value="setup a dashboard named" />
         </node>
         <node concept="3F0A7n" id="5kA4vFmjPQw" role="3EZMnx">
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         </node>
+        <node concept="3F0ifn" id="pAhsp7whY2" role="3EZMnx">
+          <property role="3F0ifm" value="with the following rows" />
+        </node>
         <node concept="l2Vlx" id="5kA4vFmjPPN" role="2iSdaV" />
       </node>
-      <node concept="3EZMnI" id="5kA4vFmjPR1" role="3EZMnx">
-        <node concept="VPM3Z" id="5kA4vFmjPR3" role="3F10Kt">
-          <property role="VOm3f" value="false" />
+      <node concept="3EZMnI" id="pAhsp7wt$8" role="3EZMnx">
+        <node concept="3XFhqQ" id="pAhsp7wt$F" role="3EZMnx" />
+        <node concept="l2Vlx" id="pAhsp7wt$9" role="2iSdaV" />
+        <node concept="3F2HdR" id="pAhsp7whYf" role="3EZMnx">
+          <property role="2czwfO" value="-------------" />
+          <ref role="1NtTu8" to="7ew6:pAhsp7whWO" resolve="rows" />
+          <node concept="2iRkQZ" id="pAhsp7whYi" role="2czzBx" />
+          <node concept="VPM3Z" id="pAhsp7whYj" role="3F10Kt">
+            <property role="VOm3f" value="false" />
+          </node>
+          <node concept="3F0ifn" id="pAhsp7whYt" role="2czzBI">
+            <property role="3F0ifm" value="create at least one row with one panel" />
+            <node concept="Vb9p2" id="pAhsp7whYv" role="3F10Kt">
+              <property role="Vbekb" value="ITALIC" />
+            </node>
+          </node>
         </node>
-        <node concept="3XFhqQ" id="5kA4vFmjPRl" role="3EZMnx" />
-        <node concept="3F0ifn" id="5kA4vFmjPRr" role="3EZMnx">
-          <property role="3F0ifm" value="plot readings as a classic graph" />
-        </node>
-        <node concept="l2Vlx" id="5kA4vFmjPR6" role="2iSdaV" />
-      </node>
-      <node concept="3EZMnI" id="5kA4vFmjPRv" role="3EZMnx">
-        <node concept="VPM3Z" id="5kA4vFmjPRw" role="3F10Kt">
-          <property role="VOm3f" value="false" />
-        </node>
-        <node concept="3XFhqQ" id="5kA4vFmjPRx" role="3EZMnx" />
-        <node concept="3F0ifn" id="5kA4vFmjPRy" role="3EZMnx">
-          <property role="3F0ifm" value="where x axis holds timestamps and y axis holds the readings' value" />
-        </node>
-        <node concept="l2Vlx" id="5kA4vFmjPRz" role="2iSdaV" />
       </node>
       <node concept="2iRkQZ" id="5kA4vFmjPPE" role="2iSdaV" />
     </node>
@@ -834,6 +824,64 @@
         <node concept="l2Vlx" id="pAhsp7vwm3" role="2iSdaV" />
       </node>
       <node concept="2iRkQZ" id="pAhsp7vwkL" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="pAhsp7whq3">
+    <property role="3GE5qa" value="displays" />
+    <ref role="1XX52x" to="7ew6:pAhsp7wdC6" resolve="Panel" />
+    <node concept="3EZMnI" id="pAhsp7whqw" role="2wV5jI">
+      <node concept="3EZMnI" id="pAhsp7whqB" role="3EZMnx">
+        <node concept="VPM3Z" id="pAhsp7whqD" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F0ifn" id="pAhsp7whqM" role="3EZMnx">
+          <property role="3F0ifm" value="panel name  :" />
+        </node>
+        <node concept="3F0A7n" id="pAhsp7whqS" role="3EZMnx">
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        </node>
+        <node concept="l2Vlx" id="pAhsp7whqG" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="pAhsp7whrb" role="3EZMnx">
+        <node concept="VPM3Z" id="pAhsp7whrc" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F0ifn" id="pAhsp7whrd" role="3EZMnx">
+          <property role="3F0ifm" value="yAxis label :" />
+        </node>
+        <node concept="3F0A7n" id="pAhsp7whre" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:pAhsp7whkP" resolve="yAxis" />
+        </node>
+        <node concept="l2Vlx" id="pAhsp7whrf" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="pAhsp7whrv" role="3EZMnx">
+        <node concept="VPM3Z" id="pAhsp7whrw" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F0ifn" id="pAhsp7whrx" role="3EZMnx">
+          <property role="3F0ifm" value="span (on 12):" />
+        </node>
+        <node concept="3F0A7n" id="pAhsp7whry" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:pAhsp7whp7" resolve="span" />
+        </node>
+        <node concept="l2Vlx" id="pAhsp7whrz" role="2iSdaV" />
+      </node>
+      <node concept="2iRkQZ" id="pAhsp7whqz" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="pAhsp7whWe">
+    <property role="3GE5qa" value="displays" />
+    <ref role="1XX52x" to="7ew6:pAhsp7whpc" resolve="Row" />
+    <node concept="3F2HdR" id="pAhsp7whWF" role="2wV5jI">
+      <property role="2czwfO" value="|" />
+      <ref role="1NtTu8" to="7ew6:pAhsp7whpC" resolve="panels" />
+      <node concept="2iRfu4" id="pAhsp7whWH" role="2czzBx" />
+      <node concept="3F0ifn" id="pAhsp7whWK" role="2czzBI">
+        <property role="3F0ifm" value="create at least one panel" />
+        <node concept="Vb9p2" id="pAhsp7whWM" role="3F10Kt">
+          <property role="Vbekb" value="ITALIC" />
+        </node>
+      </node>
     </node>
   </node>
 </model>

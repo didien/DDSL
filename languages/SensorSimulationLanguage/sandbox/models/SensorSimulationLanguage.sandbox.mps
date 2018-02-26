@@ -19,9 +19,8 @@
   </imports>
   <registry>
     <language id="bc16fd15-bfa2-47e7-b9c2-9f80e5b399e0" name="SensorSimulationLanguage">
-      <concept id="6135611311373893813" name="SensorSimulationLanguage.structure.ClassicGraph" flags="ng" index="23ql5f" />
-      <concept id="6135611311373893754" name="SensorSimulationLanguage.structure.IDisplay" flags="ng" index="23ql60">
-        <reference id="6135611311373893811" name="sensors" index="23ql59" />
+      <concept id="6135611311373893813" name="SensorSimulationLanguage.structure.ClassicGraph" flags="ng" index="23ql5f">
+        <child id="461132729757540148" name="rows" index="11TPFM" />
       </concept>
       <concept id="7488662984381415906" name="SensorSimulationLanguage.structure.Noise" flags="ng" index="2_hHaG">
         <property id="7488662984381415912" name="scale" index="2_hHaA" />
@@ -39,6 +38,13 @@
       <concept id="461132729757336738" name="SensorSimulationLanguage.structure.GrafanaDisplay" flags="ng" index="11645$">
         <property id="461132729757336795" name="token" index="11644t" />
         <child id="461132729757336793" name="displays" index="11644v" />
+      </concept>
+      <concept id="461132729757522438" name="SensorSimulationLanguage.structure.Panel" flags="ng" index="11TDZ0">
+        <property id="461132729757537589" name="yAxis" index="11TP3N" />
+        <property id="461132729757537863" name="span" index="11TPe1" />
+      </concept>
+      <concept id="461132729757537868" name="SensorSimulationLanguage.structure.Row" flags="ng" index="11TPea">
+        <child id="461132729757537896" name="panels" index="11TPeI" />
       </concept>
       <concept id="8574414041138603142" name="SensorSimulationLanguage.structure.ModellingConstraint" flags="ng" index="1hN_iy">
         <property id="8574414041138603156" name="bound" index="1hN_iK" />
@@ -189,9 +195,27 @@
     </node>
     <node concept="11645$" id="pAhsp7w0dC" role="23qkYO">
       <property role="11644t" value="eyJrIjoiV0dQMGNCUGVIN0Q0NFV6OG5GelRRWjE2QW53eTYwMVUiLCJuIjoiZGRzbCIsImlkIjoxfQ==" />
-      <node concept="23ql5f" id="pAhsp7w0ju" role="11644v">
-        <property role="TrG5h" value="door_dashboard" />
-        <ref role="23ql59" node="3QxC82ZIvzJ" resolve="door_sensor" />
+      <node concept="23ql5f" id="pAhsp7ycTv" role="11644v">
+        <property role="TrG5h" value="fancy dashboard" />
+        <node concept="11TPea" id="pAhsp7ycTw" role="11TPFM">
+          <node concept="11TDZ0" id="pAhsp7ycTx" role="11TPeI">
+            <property role="TrG5h" value="Door angle sensor" />
+            <property role="11TP3N" value="angle" />
+            <property role="11TPe1" value="6" />
+          </node>
+          <node concept="11TDZ0" id="pAhsp7ycTH" role="11TPeI">
+            <property role="TrG5h" value="Parking availability sensor" />
+            <property role="11TP3N" value="free spots" />
+            <property role="11TPe1" value="6" />
+          </node>
+        </node>
+        <node concept="11TPea" id="pAhsp7ycUf" role="11TPFM">
+          <node concept="11TDZ0" id="pAhsp7ycUg" role="11TPeI">
+            <property role="TrG5h" value="Occupants counter" />
+            <property role="11TP3N" value="number of persons in building" />
+            <property role="11TPe1" value="10" />
+          </node>
+        </node>
       </node>
     </node>
   </node>

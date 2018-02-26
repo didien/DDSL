@@ -118,6 +118,18 @@ public class QueriesGenerated {
   public static Object propertyMacro_GetPropertyValue_8692146239416246654(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
   }
+  public static Object propertyMacro_GetPropertyValue_461132729757941475(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+  }
+  public static Object propertyMacro_GetPropertyValue_461132729757947894(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x66645c64780da06L, 0x66645c647811535L, "yAxis"));
+  }
+  public static Object propertyMacro_GetPropertyValue_461132729757969382(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"));
+  }
+  public static Object propertyMacro_GetPropertyValue_461132729757956779(final PropertyMacroContext _context) {
+    return SPropertyOperations.getInteger(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x66645c64780da06L, 0x66645c647811647L, "span"));
+  }
   public static SNode sourceNodeQuery_7488662984381572743(final SourceSubstituteMacroNodeContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x67ed134ec2b41dbaL, 0x67ed134ec2abc2b6L, "noise"));
   }
@@ -138,6 +150,12 @@ public class QueriesGenerated {
   }
   public static Iterable<SNode> sourceNodesQuery_7769335433016520861(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x76fe702427302483L, 0x76fe70242730248eL, "constraint"));
+  }
+  public static Iterable<SNode> sourceNodesQuery_461132729757920893(final SourceSubstituteMacroNodesContext _context) {
+    return SLinkOperations.getChildren(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x66645c64781164cL, 0x66645c647811668L, "panels"));
+  }
+  public static Iterable<SNode> sourceNodesQuery_461132729757889041(final SourceSubstituteMacroNodesContext _context) {
+    return SLinkOperations.getChildren(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x552611fad64f40b5L, 0x66645c647811f34L, "rows"));
   }
   private static boolean isEmptyString(String str) {
     return str == null || str.length() == 0;

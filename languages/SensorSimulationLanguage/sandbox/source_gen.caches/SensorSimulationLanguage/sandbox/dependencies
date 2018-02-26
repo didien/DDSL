@@ -25,8 +25,6 @@
     <classNode dependClassName="java.time.LocalDateTime" />
     <classNode dependClassName="java.time.format.DateTimeFormatter" />
     <classNode dependClassName="java.util.ArrayList" />
-    <classNode dependClassName="java.util.Arrays" />
-    <classNode dependClassName="java.util.Collections" />
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.Map" />

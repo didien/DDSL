@@ -322,19 +322,19 @@
     <node concept="PrWs8" id="5kA4vFmjO3h" role="PzmwI">
       <ref role="PrY4T" node="5kA4vFmjO1U" resolve="IDisplay" />
     </node>
+    <node concept="1TJgyj" id="pAhsp7whWO" role="1TKVEi">
+      <property role="IQ2ns" value="461132729757540148" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="rows" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="pAhsp7whpc" resolve="Row" />
+    </node>
   </node>
   <node concept="PlHQZ" id="5kA4vFmjO1U">
     <property role="EcuMT" value="6135611311373893754" />
     <property role="TrG5h" value="IDisplay" />
     <node concept="PrWs8" id="5kA4vFmjO2L" role="PrDN$">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-    <node concept="1TJgyj" id="5kA4vFmjO2N" role="1TKVEi">
-      <property role="IQ2ns" value="6135611311373893811" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="sensors" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="3PPzdvo2E7J" resolve="SensorCollection" />
     </node>
   </node>
   <node concept="1TIwiD" id="pAhsp7vwiy">
@@ -352,6 +352,38 @@
       <property role="IQ2nx" value="461132729757336795" />
       <property role="TrG5h" value="token" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="pAhsp7wdC6">
+    <property role="EcuMT" value="461132729757522438" />
+    <property role="3GE5qa" value="displays" />
+    <property role="TrG5h" value="Panel" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="pAhsp7wdCy" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="pAhsp7whkP" role="1TKVEl">
+      <property role="IQ2nx" value="461132729757537589" />
+      <property role="TrG5h" value="yAxis" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="pAhsp7whp7" role="1TKVEl">
+      <property role="IQ2nx" value="461132729757537863" />
+      <property role="TrG5h" value="span" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="pAhsp7whpc">
+    <property role="EcuMT" value="461132729757537868" />
+    <property role="3GE5qa" value="displays" />
+    <property role="TrG5h" value="Row" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="pAhsp7whpC" role="1TKVEi">
+      <property role="IQ2ns" value="461132729757537896" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="panels" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="pAhsp7wdC6" resolve="Panel" />
     </node>
   </node>
 </model>
