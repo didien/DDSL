@@ -78,8 +78,8 @@
       <property role="IQ2ns" value="6135611311373901390" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="displays" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="5kA4vFmjO1U" resolve="IDisplay" />
+      <property role="20lbJX" value="0..1" />
+      <ref role="20lvS9" node="pAhsp7vwiy" resolve="GrafanaDisplay" />
     </node>
     <node concept="1TJgyi" id="3juagqJxhEC" role="1TKVEl">
       <property role="IQ2nx" value="3809527443493296808" />
@@ -335,6 +335,23 @@
       <property role="20kJfa" value="sensors" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="3PPzdvo2E7J" resolve="SensorCollection" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="pAhsp7vwiy">
+    <property role="EcuMT" value="461132729757336738" />
+    <property role="TrG5h" value="GrafanaDisplay" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="pAhsp7vwjp" role="1TKVEi">
+      <property role="IQ2ns" value="461132729757336793" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="displays" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="5kA4vFmjO1U" resolve="IDisplay" />
+    </node>
+    <node concept="1TJgyi" id="pAhsp7vwjr" role="1TKVEl">
+      <property role="IQ2nx" value="461132729757336795" />
+      <property role="TrG5h" value="token" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
 </model>

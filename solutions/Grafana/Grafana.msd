@@ -9,9 +9,7 @@
   <stubModelEntries>
     <stubModelEntry path="${module}/jackson-annotations-2.8.8.jar" />
     <stubModelEntry path="${module}/grafana-api-java-client-1.0.3.jar" />
-    <stubModelEntry path="${module}/okhttp-3.6.0.jar" />
     <stubModelEntry path="${module}/converter-jackson-2.2.0.jar" />
-    <stubModelEntry path="${module}/okio-1.11.0.jar" />
     <stubModelEntry path="${module}/jackson-core-2.8.8.jar" />
     <stubModelEntry path="${module}/jackson-databind-2.8.8.jar" />
     <stubModelEntry path="${module}/retrofit-2.2.0.jar" />

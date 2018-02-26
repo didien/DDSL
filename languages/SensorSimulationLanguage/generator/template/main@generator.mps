@@ -765,8 +765,34 @@
               </node>
               <node concept="liA8E" id="55vGwhCOQq8" role="2OqNvi">
                 <ref role="37wK5l" to="v2y1:~GrafanaConfiguration.apiKey(java.lang.String):com.appnexus.grafana.configuration.GrafanaConfiguration" resolve="apiKey" />
-                <node concept="Xl_RD" id="55vGwhCOQu1" role="37wK5m">
-                  <property role="Xl_RC" value="Bearer eyJrIjoid2hkZ3ZmMzJMVHdlQTN5REhkWGV1ME9ueFF2ZDVMREoiLCJuIjoiZGRzbCIsImlkIjoxfQ==" />
+                <node concept="3cpWs3" id="pAhsp7vLzY" role="37wK5m">
+                  <node concept="Xl_RD" id="pAhsp7vL_u" role="3uHU7B">
+                    <property role="Xl_RC" value="Bearer " />
+                  </node>
+                  <node concept="Xl_RD" id="55vGwhCOQu1" role="3uHU7w">
+                    <property role="Xl_RC" value="blablablablablakeykeykeykey" />
+                    <node concept="17Uvod" id="pAhsp7vLZn" role="lGtFl">
+                      <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
+                      <property role="2qtEX9" value="value" />
+                      <node concept="3zFVjK" id="pAhsp7vLZo" role="3zH0cK">
+                        <node concept="3clFbS" id="pAhsp7vLZp" role="2VODD2">
+                          <node concept="3clFbF" id="pAhsp7vMdd" role="3cqZAp">
+                            <node concept="2OqwBi" id="pAhsp7vNqE" role="3clFbG">
+                              <node concept="2OqwBi" id="pAhsp7vMrA" role="2Oq$k0">
+                                <node concept="30H73N" id="pAhsp7vMdc" role="2Oq$k0" />
+                                <node concept="3TrEf2" id="pAhsp7vMYE" role="2OqNvi">
+                                  <ref role="3Tt5mk" to="7ew6:5kA4vFmjPTe" resolve="displays" />
+                                </node>
+                              </node>
+                              <node concept="3TrcHB" id="pAhsp7vNLu" role="2OqNvi">
+                                <ref role="3TsBF5" to="7ew6:pAhsp7vwjr" resolve="token" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
                 </node>
               </node>
             </node>
@@ -788,16 +814,21 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="3QxC82ZJb5e" role="3cqZAp">
-          <node concept="2b32R4" id="3QxC82ZJbQY" role="lGtFl">
-            <node concept="3JmXsc" id="3QxC82ZJbR1" role="2P8S$">
-              <node concept="3clFbS" id="3QxC82ZJbR2" role="2VODD2">
-                <node concept="3clFbF" id="3QxC82ZJbR8" role="3cqZAp">
-                  <node concept="2OqwBi" id="3QxC82ZJbR3" role="3clFbG">
-                    <node concept="3Tsc0h" id="3QxC82ZJbR6" role="2OqNvi">
-                      <ref role="3TtcxE" to="7ew6:5kA4vFmjPTe" resolve="displays" />
+        <node concept="3clFbH" id="pAhsp7vGl4" role="3cqZAp">
+          <node concept="2b32R4" id="pAhsp7vHaI" role="lGtFl">
+            <node concept="3JmXsc" id="pAhsp7vHaL" role="2P8S$">
+              <node concept="3clFbS" id="pAhsp7vHaM" role="2VODD2">
+                <node concept="3clFbF" id="pAhsp7vHaS" role="3cqZAp">
+                  <node concept="2OqwBi" id="pAhsp7vJh9" role="3clFbG">
+                    <node concept="2OqwBi" id="pAhsp7vHaN" role="2Oq$k0">
+                      <node concept="30H73N" id="pAhsp7vHaR" role="2Oq$k0" />
+                      <node concept="3TrEf2" id="pAhsp7vISG" role="2OqNvi">
+                        <ref role="3Tt5mk" to="7ew6:5kA4vFmjPTe" resolve="displays" />
+                      </node>
                     </node>
-                    <node concept="30H73N" id="3QxC82ZJbR7" role="2Oq$k0" />
+                    <node concept="3Tsc0h" id="pAhsp7vJyx" role="2OqNvi">
+                      <ref role="3TtcxE" to="7ew6:pAhsp7vwjp" resolve="displays" />
+                    </node>
                   </node>
                 </node>
               </node>

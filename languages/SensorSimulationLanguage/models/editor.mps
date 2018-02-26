@@ -60,7 +60,10 @@
       <concept id="1219418625346" name="jetbrains.mps.lang.editor.structure.IStyleContainer" flags="ng" index="3F0Thp">
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
       </concept>
-      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
+      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY">
+        <property id="16410578721444372" name="customizeEmptyCell" index="2ru_X1" />
+        <child id="16410578721629643" name="emptyCellModel" index="2ruayu" />
+      </concept>
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
       <concept id="1198256887712" name="jetbrains.mps.lang.editor.structure.CellModel_Indent" flags="ng" index="3XFhqQ" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
@@ -208,15 +211,13 @@
           <property role="VOm3f" value="false" />
         </node>
         <node concept="3XFhqQ" id="5kA4vFmjPWV" role="3EZMnx" />
-        <node concept="3F2HdR" id="5kA4vFmkpfF" role="3EZMnx">
+        <node concept="3F1sOY" id="pAhsp7vwms" role="3EZMnx">
+          <property role="1$x2rV" value="no display set, but it's ok that way" />
+          <property role="2ru_X1" value="true" />
           <ref role="1NtTu8" to="7ew6:5kA4vFmjPTe" resolve="displays" />
-          <node concept="2iRkQZ" id="5kA4vFmkpfI" role="2czzBx" />
-          <node concept="VPM3Z" id="5kA4vFmkpfJ" role="3F10Kt">
-            <property role="VOm3f" value="false" />
-          </node>
-          <node concept="3F0ifn" id="5kA4vFmkpfO" role="2czzBI">
-            <property role="3F0ifm" value="no display set, but it's ok that way" />
-            <node concept="Vb9p2" id="5kA4vFmkEIv" role="3F10Kt">
+          <node concept="3F0ifn" id="pAhsp7vwmy" role="2ruayu">
+            <property role="3F0ifm" value="no dashboards set, but it's ok that way" />
+            <node concept="Vb9p2" id="pAhsp7vwm$" role="3F10Kt">
               <property role="Vbekb" value="ITALIC" />
             </node>
           </node>
@@ -798,6 +799,41 @@
         <node concept="l2Vlx" id="5kA4vFmjPRz" role="2iSdaV" />
       </node>
       <node concept="2iRkQZ" id="5kA4vFmjPPE" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="pAhsp7vwkh">
+    <ref role="1XX52x" to="7ew6:pAhsp7vwiy" resolve="GrafanaDisplay" />
+    <node concept="3EZMnI" id="pAhsp7vwkI" role="2wV5jI">
+      <node concept="3F0ifn" id="pAhsp7vwkP" role="3EZMnx">
+        <property role="3F0ifm" value="grafana dashboards :" />
+      </node>
+      <node concept="3EZMnI" id="pAhsp7vwkV" role="3EZMnx">
+        <node concept="3XFhqQ" id="pAhsp7vwlT" role="3EZMnx" />
+        <node concept="VPM3Z" id="pAhsp7vwkX" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F0ifn" id="pAhsp7vwkZ" role="3EZMnx">
+          <property role="3F0ifm" value="API token :" />
+        </node>
+        <node concept="3F0A7n" id="pAhsp7vwla" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:pAhsp7vwjr" resolve="token" />
+        </node>
+        <node concept="l2Vlx" id="pAhsp7vwl0" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="pAhsp7vwlY" role="3EZMnx">
+        <node concept="VPM3Z" id="pAhsp7vwm0" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F2HdR" id="pAhsp7vwmg" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:pAhsp7vwjp" resolve="displays" />
+          <node concept="2iRkQZ" id="pAhsp7vwmj" role="2czzBx" />
+          <node concept="VPM3Z" id="pAhsp7vwmk" role="3F10Kt">
+            <property role="VOm3f" value="false" />
+          </node>
+        </node>
+        <node concept="l2Vlx" id="pAhsp7vwm3" role="2iSdaV" />
+      </node>
+      <node concept="2iRkQZ" id="pAhsp7vwkL" role="2iSdaV" />
     </node>
   </node>
 </model>
