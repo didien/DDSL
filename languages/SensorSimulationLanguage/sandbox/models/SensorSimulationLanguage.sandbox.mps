@@ -11,6 +11,11 @@
   <imports>
     <import index="2ns9" ref="r:2ebb615b-7d7d-46a9-af25-8b8353fe1098(SensorSimulationLanguage.runtime.simulation)" />
     <import index="9nbq" ref="cc7fb470-7d0c-4aea-af2a-5d870ff3092f/java:org.influxdb(InfluxDB/)" />
+    <import index="ynw8" ref="d102dc8e-32ba-4d10-8f95-be5a142b6537/java:com.appnexus.grafana.client(Grafana/)" />
+    <import index="onjl" ref="d102dc8e-32ba-4d10-8f95-be5a142b6537/java:com.appnexus.grafana.exceptions(Grafana/)" />
+    <import index="ry35" ref="642f71f8-327a-425b-84f9-44ad58786d27/f:project#d102dc8e-32ba-4d10-8f95-be5a142b6537(jetbrains.mps.lang.project.modules/module.Grafana@project_stub)" />
+    <import index="an4w" ref="d102dc8e-32ba-4d10-8f95-be5a142b6537/java:com.appnexus.grafana.client.models(Grafana/)" />
+    <import index="v2y1" ref="d102dc8e-32ba-4d10-8f95-be5a142b6537/java:com.appnexus.grafana.configuration(Grafana/)" />
   </imports>
   <registry>
     <language id="bc16fd15-bfa2-47e7-b9c2-9f80e5b399e0" name="SensorSimulationLanguage">

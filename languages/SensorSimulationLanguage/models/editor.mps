@@ -44,6 +44,7 @@
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
         <property id="1139852716018" name="noTargetText" index="1$x2rV" />
         <property id="1140017977771" name="readOnly" index="1Intyy" />
+        <property id="1140114345053" name="allowEmptyText" index="1O74Pk" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
@@ -100,6 +101,28 @@
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         </node>
         <node concept="l2Vlx" id="75cVuPqSan1" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="pAhsp7uh5_" role="3EZMnx">
+        <node concept="l2Vlx" id="pAhsp7uh5A" role="2iSdaV" />
+        <node concept="3F0ifn" id="pAhsp7uh1z" role="3EZMnx">
+          <property role="3F0ifm" value="influxDB host :" />
+        </node>
+        <node concept="3F0A7n" id="pAhsp7uh6v" role="3EZMnx">
+          <property role="1$x2rV" value="http://localhost:8086" />
+          <property role="1O74Pk" value="true" />
+          <ref role="1NtTu8" to="7ew6:pAhsp7uh0Z" resolve="influxdb" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="pAhsp7uPop" role="3EZMnx">
+        <node concept="l2Vlx" id="pAhsp7uPoq" role="2iSdaV" />
+        <node concept="3F0ifn" id="pAhsp7uPor" role="3EZMnx">
+          <property role="3F0ifm" value="grafana host  :" />
+        </node>
+        <node concept="3F0A7n" id="pAhsp7uPos" role="3EZMnx">
+          <property role="1$x2rV" value="http://localhost:3000" />
+          <property role="1O74Pk" value="true" />
+          <ref role="1NtTu8" to="7ew6:pAhsp7uh13" resolve="grafana" />
+        </node>
       </node>
       <node concept="35HoNQ" id="3juagqJxE68" role="3EZMnx" />
       <node concept="3EZMnI" id="3juagqJxlBz" role="3EZMnx">

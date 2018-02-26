@@ -91,6 +91,7 @@
       </concept>
       <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
       <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
+      <concept id="1225271369338" name="jetbrains.mps.baseLanguage.structure.IsEmptyOperation" flags="nn" index="17RlXB" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
@@ -151,6 +152,11 @@
       <concept id="1144231330558" name="jetbrains.mps.baseLanguage.structure.ForStatement" flags="nn" index="1Dw8fO">
         <child id="1144231399730" name="condition" index="1Dwp0S" />
         <child id="1144231408325" name="iteration" index="1Dwrff" />
+      </concept>
+      <concept id="1163668896201" name="jetbrains.mps.baseLanguage.structure.TernaryOperatorExpression" flags="nn" index="3K4zz7">
+        <child id="1163668914799" name="condition" index="3K4Cdx" />
+        <child id="1163668922816" name="ifTrue" index="3K4E3e" />
+        <child id="1163668934364" name="ifFalse" index="3K4GZi" />
       </concept>
       <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
         <property id="6329021646629104958" name="text" index="3SKdUp" />
@@ -317,6 +323,36 @@
             <node concept="17QB3L" id="3QxC82ZJ39o" role="1tU5fm" />
             <node concept="Xl_RD" id="3QxC82ZJ3W3" role="33vP2m">
               <property role="Xl_RC" value="http://127.0.0.1:3000" />
+              <node concept="17Uvod" id="pAhsp7uPqd" role="lGtFl">
+                <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
+                <property role="2qtEX9" value="value" />
+                <node concept="3zFVjK" id="pAhsp7uPqg" role="3zH0cK">
+                  <node concept="3clFbS" id="pAhsp7uPqh" role="2VODD2">
+                    <node concept="3clFbF" id="pAhsp7uPqn" role="3cqZAp">
+                      <node concept="3K4zz7" id="pAhsp7v8gD" role="3clFbG">
+                        <node concept="2OqwBi" id="pAhsp7v9BZ" role="3K4GZi">
+                          <node concept="30H73N" id="pAhsp7v8Xl" role="2Oq$k0" />
+                          <node concept="3TrcHB" id="pAhsp7va8M" role="2OqNvi">
+                            <ref role="3TsBF5" to="7ew6:pAhsp7uh13" resolve="grafana" />
+                          </node>
+                        </node>
+                        <node concept="2OqwBi" id="pAhsp7v6tv" role="3K4Cdx">
+                          <node concept="2OqwBi" id="pAhsp7uPqi" role="2Oq$k0">
+                            <node concept="3TrcHB" id="pAhsp7uPql" role="2OqNvi">
+                              <ref role="3TsBF5" to="7ew6:pAhsp7uh13" resolve="grafana" />
+                            </node>
+                            <node concept="30H73N" id="pAhsp7uPqm" role="2Oq$k0" />
+                          </node>
+                          <node concept="17RlXB" id="pAhsp7v78$" role="2OqNvi" />
+                        </node>
+                        <node concept="Xl_RD" id="pAhsp7v8Mb" role="3K4E3e">
+                          <property role="Xl_RC" value="http://127.0.0.1:3000" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
             </node>
           </node>
         </node>
@@ -326,6 +362,36 @@
             <node concept="17QB3L" id="3QxC82ZJ4Ma" role="1tU5fm" />
             <node concept="Xl_RD" id="3QxC82ZJ5AI" role="33vP2m">
               <property role="Xl_RC" value="http://127.0.0.1:8086" />
+              <node concept="17Uvod" id="pAhsp7uQnY" role="lGtFl">
+                <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
+                <property role="2qtEX9" value="value" />
+                <node concept="3zFVjK" id="pAhsp7uQo1" role="3zH0cK">
+                  <node concept="3clFbS" id="pAhsp7uQo2" role="2VODD2">
+                    <node concept="3clFbF" id="pAhsp7vaGa" role="3cqZAp">
+                      <node concept="3K4zz7" id="pAhsp7vaGb" role="3clFbG">
+                        <node concept="2OqwBi" id="pAhsp7vaGc" role="3K4GZi">
+                          <node concept="30H73N" id="pAhsp7vaGd" role="2Oq$k0" />
+                          <node concept="3TrcHB" id="pAhsp7vbtu" role="2OqNvi">
+                            <ref role="3TsBF5" to="7ew6:pAhsp7uh0Z" resolve="influxdb" />
+                          </node>
+                        </node>
+                        <node concept="2OqwBi" id="pAhsp7vaGf" role="3K4Cdx">
+                          <node concept="2OqwBi" id="pAhsp7vaGg" role="2Oq$k0">
+                            <node concept="30H73N" id="pAhsp7vaGi" role="2Oq$k0" />
+                            <node concept="3TrcHB" id="pAhsp7vcEa" role="2OqNvi">
+                              <ref role="3TsBF5" to="7ew6:pAhsp7uh0Z" resolve="influxdb" />
+                            </node>
+                          </node>
+                          <node concept="17RlXB" id="pAhsp7vaGj" role="2OqNvi" />
+                        </node>
+                        <node concept="Xl_RD" id="pAhsp7vaGk" role="3K4E3e">
+                          <property role="Xl_RC" value="http://127.0.0.1:8086" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
             </node>
           </node>
         </node>

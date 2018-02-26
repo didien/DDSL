@@ -13,6 +13,12 @@ import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
 
 @Generated
 public class QueriesGenerated {
+  public static Object propertyMacro_GetPropertyValue_461132729757161104(final PropertyMacroContext _context) {
+    return (isEmptyString(SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x3d758cd7d80aa1e7L, 0x66645c647791043L, "grafana"))) ? "http://127.0.0.1:3000" : SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x3d758cd7d80aa1e7L, 0x66645c647791043L, "grafana")));
+  }
+  public static Object propertyMacro_GetPropertyValue_461132729757165057(final PropertyMacroContext _context) {
+    return (isEmptyString(SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x3d758cd7d80aa1e7L, 0x66645c64779103fL, "influxdb"))) ? "http://127.0.0.1:8086" : SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x3d758cd7d80aa1e7L, 0x66645c64779103fL, "influxdb")));
+  }
   public static Object propertyMacro_GetPropertyValue_3573328641050537016(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x3d758cd7d80aa1e7L, 0x34de2906af851aa8L, "startDate"));
   }
@@ -129,5 +135,8 @@ public class QueriesGenerated {
   }
   public static Iterable<SNode> sourceNodesQuery_7769335433016520861(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x76fe702427302483L, 0x76fe70242730248eL, "constraint"));
+  }
+  private static boolean isEmptyString(String str) {
+    return str == null || str.length() == 0;
   }
 }

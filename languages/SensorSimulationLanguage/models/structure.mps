@@ -91,6 +91,16 @@
       <property role="TrG5h" value="endDate" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1TJgyi" id="pAhsp7uh0Z" role="1TKVEl">
+      <property role="IQ2nx" value="461132729757012031" />
+      <property role="TrG5h" value="influxdb" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="pAhsp7uh13" role="1TKVEl">
+      <property role="IQ2nx" value="461132729757012035" />
+      <property role="TrG5h" value="grafana" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3PPzdvo2E7J">
     <property role="EcuMT" value="4428600667259183599" />

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <solution name="Grafana" uuid="d102dc8e-32ba-4d10-8f95-be5a142b6537" moduleVersion="0" compileInMPS="true">
   <models>
-    <modelRoot contentPath="${module}" type="default">
-      <sourceRoot location="models" />
-    </modelRoot>
+    <modelRoot contentPath="${module}" type="default" />
     <modelRoot contentPath="${module}" type="java_classes">
       <sourceRoot location="grafana-api-java-client-1.0.3.jar" />
     </modelRoot>
