@@ -79,6 +79,13 @@
       <property role="20lbJX" value="0..1" />
       <ref role="20lvS9" node="pAhsp7vwiy" resolve="GrafanaDisplay" />
     </node>
+    <node concept="1TJgyj" id="1nZ6g$XTBx$" role="1TKVEi">
+      <property role="IQ2ns" value="1585013121341618276" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="replays" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="1nZ6g$XRv_S" resolve="IReplay" />
+    </node>
     <node concept="1TJgyi" id="3juagqJxhEC" role="1TKVEl">
       <property role="IQ2nx" value="3809527443493296808" />
       <property role="TrG5h" value="startDate" />

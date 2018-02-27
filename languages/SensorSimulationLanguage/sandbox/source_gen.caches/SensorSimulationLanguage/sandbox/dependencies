@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
+  <dependency className="SensorSimulationLanguage.sandbox.SimpleTest" file="SimpleTest.java">
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IDataSource" />
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.Sensor" />
+    <classNode dependClassName="com.appnexus.grafana.client.GrafanaClient" />
+    <classNode dependClassName="com.appnexus.grafana.configuration.GrafanaConfiguration" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.time.LocalDateTime" />
+    <classNode dependClassName="java.time.format.DateTimeFormatter" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="org.influxdb.InfluxDB" />
+    <classNode dependClassName="org.influxdb.InfluxDBFactory" />
+    <classNode dependClassName="org.influxdb.dto.BatchPoints" />
+  </dependency>
   <dependency className="SensorSimulationLanguage.sandbox.Simulation" file="Simulation.java">
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IDataSource" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.MarkovLaw" />

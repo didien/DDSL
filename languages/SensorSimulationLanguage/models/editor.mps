@@ -200,6 +200,28 @@
         <node concept="l2Vlx" id="75cVuPqSfdP" role="2iSdaV" />
       </node>
       <node concept="35HoNQ" id="5kA4vFmjPUU" role="3EZMnx" />
+      <node concept="3F0ifn" id="1nZ6g$XTBzr" role="3EZMnx">
+        <property role="3F0ifm" value="replays:" />
+      </node>
+      <node concept="3EZMnI" id="1nZ6g$XTB_e" role="3EZMnx">
+        <node concept="VPM3Z" id="1nZ6g$XTB_g" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3XFhqQ" id="1nZ6g$XTBBv" role="3EZMnx" />
+        <node concept="3F2HdR" id="1nZ6g$XTBCt" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:1nZ6g$XTBx$" resolve="replays" />
+          <node concept="2iRkQZ" id="1nZ6g$XTBCw" role="2czzBx" />
+          <node concept="VPM3Z" id="1nZ6g$XTBCx" role="3F10Kt" />
+          <node concept="3F0ifn" id="1nZ6g$XTX8x" role="2czzBI">
+            <property role="3F0ifm" value="no replay defined, but it's ok that way" />
+            <node concept="Vb9p2" id="1nZ6g$XTX_$" role="3F10Kt">
+              <property role="Vbekb" value="ITALIC" />
+            </node>
+          </node>
+        </node>
+        <node concept="l2Vlx" id="1nZ6g$XTB_j" role="2iSdaV" />
+      </node>
+      <node concept="35HoNQ" id="1nZ6g$XTX67" role="3EZMnx" />
       <node concept="3F0ifn" id="5kA4vFmjPUj" role="3EZMnx">
         <property role="3F0ifm" value="grafana displays:" />
       </node>
