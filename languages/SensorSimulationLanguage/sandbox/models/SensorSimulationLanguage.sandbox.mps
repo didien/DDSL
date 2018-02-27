@@ -34,6 +34,7 @@
         <property id="1585013121341061524" name="filepath" index="C8I2t" />
         <property id="6236754835289917988" name="sensorNames" index="3aaEPu" />
       </concept>
+      <concept id="1585013121341061529" name="SensorSimulationLanguage.structure.JSON" flags="ng" index="C8I2g" />
       <concept id="8164161828203569728" name="SensorSimulationLanguage.structure.IDataSource" flags="ng" index="FF4YH">
         <property id="3809527443493428574" name="resetPeriod" index="2rmjho" />
         <property id="8164161828203569736" name="updatePeriod" index="FF4Y_" />
@@ -393,6 +394,9 @@
       <property role="1EOrNO" value="1" />
       <property role="1EOuJz" value="2" />
       <property role="1EOrNL" value="3" />
+    </node>
+    <node concept="C8I2g" id="1XfQ9HmY0mr" role="C6m5H">
+      <property role="C8I2t" value="E:/jsontest.json" />
     </node>
   </node>
 </model>

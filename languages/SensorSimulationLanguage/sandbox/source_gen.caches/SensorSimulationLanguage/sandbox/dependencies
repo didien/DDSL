@@ -4,6 +4,7 @@
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.CSV" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IDataSource" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IReplay" />
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.JSON" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.ReplayRecord" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.Sensor" />
     <classNode dependClassName="com.appnexus.grafana.client.GrafanaClient" />
