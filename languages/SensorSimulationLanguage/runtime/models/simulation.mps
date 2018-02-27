@@ -3431,7 +3431,20 @@
         </node>
       </node>
     </node>
-    <node concept="2tJIrI" id="5qdpREsFbfm" role="jymVt" />
+    <node concept="3clFb_" id="5qdpREsHDxn" role="jymVt">
+      <property role="1EzhhJ" value="true" />
+      <property role="2aFKle" value="false" />
+      <property role="TrG5h" value="setNoiseGenerator" />
+      <node concept="3clFbS" id="5qdpREsHDxq" role="3clF47" />
+      <node concept="3Tm1VV" id="5qdpREsHDxr" role="1B3o_S" />
+      <node concept="3cqZAl" id="5qdpREsHDx4" role="3clF45" />
+      <node concept="37vLTG" id="5qdpREsHDxV" role="3clF46">
+        <property role="TrG5h" value="generator" />
+        <node concept="3uibUv" id="5qdpREsHDxU" role="1tU5fm">
+          <ref role="3uigEE" node="6vH4OV2FyHj" resolve="NoiseGenerator" />
+        </node>
+      </node>
+    </node>
     <node concept="3Tm1VV" id="5qdpREsDlwL" role="1B3o_S" />
   </node>
   <node concept="312cEu" id="5qdpREsDlxB">

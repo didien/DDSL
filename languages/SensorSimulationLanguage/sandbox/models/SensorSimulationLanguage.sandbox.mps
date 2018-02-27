@@ -30,6 +30,10 @@
       <concept id="7488662984381963706" name="SensorSimulationLanguage.structure.INoisable" flags="ng" index="2_mgVO">
         <child id="7488662984381416118" name="noise" index="2_hH7S" />
       </concept>
+      <concept id="1585013121341061496" name="SensorSimulationLanguage.structure.IReplay" flags="ng" index="C8I1L">
+        <property id="1585013121341061524" name="filepath" index="C8I2t" />
+        <property id="6236754835289917988" name="sensorNames" index="3aaEPu" />
+      </concept>
       <concept id="8164161828203569728" name="SensorSimulationLanguage.structure.IDataSource" flags="ng" index="FF4YH">
         <property id="3809527443493428574" name="resetPeriod" index="2rmjho" />
         <property id="8164161828203569736" name="updatePeriod" index="FF4Y_" />
@@ -62,6 +66,11 @@
       <concept id="8318320461538017341" name="SensorSimulationLanguage.structure.MarkovStates" flags="ng" index="1uDHLu">
         <child id="8318320461538037627" name="transitions" index="1uDxco" />
       </concept>
+      <concept id="4428600667259184162" name="SensorSimulationLanguage.structure.CSV" flags="ng" index="3_vMzP">
+        <property id="6307644076365249583" name="valueColumn" index="1EOrNL" />
+        <property id="6307644076365249578" name="nameColumn" index="1EOrNO" />
+        <property id="6307644076365228861" name="timeColumn" index="1EOuJz" />
+      </concept>
       <concept id="4428600667259184161" name="SensorSimulationLanguage.structure.Random" flags="ng" index="3_vMzQ">
         <property id="4428600667259184174" name="max" index="3_vMzT" />
         <property id="4428600667259184172" name="min" index="3_vMzV" />
@@ -72,6 +81,7 @@
         <property id="461132729757012035" name="grafana" index="117Pm5" />
         <property id="461132729757012031" name="influxdb" index="117PnT" />
         <child id="6135611311373901390" name="displays" index="23qkYO" />
+        <child id="1585013121341618276" name="replays" index="C6m5H" />
         <child id="4428600667259183596" name="sensors" index="3_vMOV" />
         <child id="4428600667259183594" name="dataSources" index="3_vMOX" />
       </concept>
@@ -356,6 +366,18 @@
             <property role="11TPe1" value="6" />
           </node>
         </node>
+      </node>
+    </node>
+    <node concept="3_vMzP" id="5qdpREsI1HI" role="C6m5H">
+      <property role="C8I2t" value="lkj" />
+      <property role="3aaEPu" value="mlk" />
+      <property role="1EOrNO" value="1" />
+      <property role="1EOuJz" value="2" />
+      <property role="1EOrNL" value="3" />
+      <node concept="2_hHaG" id="5qdpREsIgmc" role="2_hH7S">
+        <property role="2_hHaH" value="0." />
+        <property role="2_hHaF" value="10." />
+        <property role="2_hHaA" value="0" />
       </node>
     </node>
   </node>
