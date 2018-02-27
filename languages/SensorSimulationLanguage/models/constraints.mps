@@ -242,6 +242,7 @@
     <ref role="1M2myG" to="7ew6:7dKB6cHP$0X" resolve="MarkovStates" />
   </node>
   <node concept="1M2fIO" id="5u9gdSXmhph">
+    <property role="3GE5qa" value="replays" />
     <ref role="1M2myG" to="7ew6:3PPzdvo2Egy" resolve="CSV" />
     <node concept="EnEH3" id="5u9gdSXmhpH" role="1MhHOB">
       <ref role="EomxK" to="7ew6:5u9gdSXmfKE" resolve="nameColumn" />
