@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="SensorSimulationLanguage.sandbox.SimpleTest" file="SimpleTest.java">
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.CSV" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IDataSource" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IReplay" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.ReplayRecord" />
@@ -65,6 +66,7 @@
     <classNode dependClassName="org.influxdb.dto.Point" />
   </dependency>
   <dependency className="SensorSimulationLanguage.sandbox.TutorialSimulation" file="TutorialSimulation.java">
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.CSV" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IDataSource" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IReplay" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.MarkovLaw" />

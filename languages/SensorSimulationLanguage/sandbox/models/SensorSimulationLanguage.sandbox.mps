@@ -385,6 +385,15 @@
     <property role="TrG5h" value="SimpleTest" />
     <property role="2rmNeI" value="27-02-18 16:00" />
     <property role="2rmNeG" value="27-02-18 17:00" />
+    <property role="117PnT" value="http://192.168.99.100:8086" />
+    <property role="117Pm5" value="http://192.168.99.100:3000" />
+    <node concept="3_vMzP" id="1XfQ9HmStpl" role="C6m5H">
+      <property role="C8I2t" value="E:/csvtest.csv" />
+      <property role="3aaEPu" value="bike" />
+      <property role="1EOrNO" value="1" />
+      <property role="1EOuJz" value="2" />
+      <property role="1EOrNL" value="3" />
+    </node>
   </node>
 </model>
 
