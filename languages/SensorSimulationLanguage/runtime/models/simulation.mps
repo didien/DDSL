@@ -17,6 +17,7 @@
     <import index="y62k" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javafx.util(JDK/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
     <import index="wy2b" ref="ab012b2a-d7fa-40ca-817f-fa9ddb7cfb35/java:com.google.gson(Gson/)" />
+    <import index="9nbq" ref="cc7fb470-7d0c-4aea-af2a-5d870ff3092f/java:org.influxdb(InfluxDB/)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -576,44 +577,6 @@
                 </node>
               </node>
             </node>
-            <node concept="3clFbF" id="6vH4OV2BIpp" role="3cqZAp">
-              <node concept="2OqwBi" id="6vH4OV2BIpm" role="3clFbG">
-                <node concept="10M0yZ" id="6vH4OV2BIpn" role="2Oq$k0">
-                  <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-                  <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
-                </node>
-                <node concept="liA8E" id="6vH4OV2BIpo" role="2OqNvi">
-                  <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
-                  <node concept="2OqwBi" id="6vH4OV2BIEH" role="37wK5m">
-                    <node concept="37vLTw" id="6vH4OV2BI_d" role="2Oq$k0">
-                      <ref role="3cqZAo" node="3juagqJyddW" resolve="dataSource" />
-                    </node>
-                    <node concept="2OwXpG" id="6vH4OV2ClEP" role="2OqNvi">
-                      <ref role="2Oxat5" node="7rYs2gBaBxJ" resolve="lawName" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbF" id="6ZqfKAE2foB" role="3cqZAp">
-              <node concept="2OqwBi" id="6ZqfKAE2fo$" role="3clFbG">
-                <node concept="10M0yZ" id="6ZqfKAE2fo_" role="2Oq$k0">
-                  <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-                  <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
-                </node>
-                <node concept="liA8E" id="6ZqfKAE2foA" role="2OqNvi">
-                  <ref role="37wK5l" to="guwi:~PrintStream.println(long):void" resolve="println" />
-                  <node concept="2OqwBi" id="6vH4OV2AMVw" role="37wK5m">
-                    <node concept="37vLTw" id="6vH4OV2AMEK" role="2Oq$k0">
-                      <ref role="3cqZAo" node="36n0RtVz$9O" resolve="timeToRefresh" />
-                    </node>
-                    <node concept="liA8E" id="6vH4OV2ANd6" role="2OqNvi">
-                      <ref role="37wK5l" to="28m1:~Duration.getSeconds():long" resolve="getSeconds" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
           </node>
           <node concept="2dkUwp" id="36n0RtV$Vnl" role="3clFbw">
             <node concept="2OqwBi" id="36n0RtVzPci" role="3uHU7B">
@@ -735,11 +698,11 @@
         <node concept="3clFbF" id="5dO5_UbgGqD" role="3cqZAp">
           <node concept="2OqwBi" id="5dO5_UbgH8b" role="3clFbG">
             <node concept="37vLTw" id="5dO5_UbgGqB" role="2Oq$k0">
-              <ref role="3cqZAo" node="5dO5_UbgyWu" resolve="batchPoint" />
+              <ref role="3cqZAo" node="5dO5_UbgyWu" resolve="influxDbClient" />
             </node>
-            <node concept="liA8E" id="5dO5_UbgHLl" role="2OqNvi">
-              <ref role="37wK5l" to="wthj:~BatchPoints.point(org.influxdb.dto.Point):org.influxdb.dto.BatchPoints" resolve="point" />
-              <node concept="37vLTw" id="5dO5_UbgHMt" role="37wK5m">
+            <node concept="liA8E" id="5qdpREsEPU4" role="2OqNvi">
+              <ref role="37wK5l" to="9nbq:~InfluxDB.write(org.influxdb.dto.Point):void" resolve="write" />
+              <node concept="37vLTw" id="5qdpREsEPV2" role="37wK5m">
                 <ref role="3cqZAo" node="5dO5_UbgkRP" resolve="point" />
               </node>
             </node>
@@ -809,9 +772,9 @@
         <ref role="3uigEE" to="28m1:~LocalDateTime" resolve="LocalDateTime" />
       </node>
       <node concept="37vLTG" id="5dO5_UbgyWu" role="3clF46">
-        <property role="TrG5h" value="batchPoint" />
-        <node concept="3uibUv" id="5dO5_UbgyWt" role="1tU5fm">
-          <ref role="3uigEE" to="wthj:~BatchPoints" resolve="BatchPoints" />
+        <property role="TrG5h" value="influxDbClient" />
+        <node concept="3uibUv" id="5qdpREsEOw$" role="1tU5fm">
+          <ref role="3uigEE" to="9nbq:~InfluxDB" resolve="InfluxDB" />
         </node>
       </node>
     </node>
@@ -3316,13 +3279,8 @@
           <ref role="3uigEE" node="5qdpREsDlxB" resolve="ReplayRecord" />
         </node>
       </node>
-      <node concept="37vLTG" id="5qdpREsDlKs" role="3clF46">
-        <property role="TrG5h" value="noiseGenerator" />
-        <node concept="3uibUv" id="5qdpREsDlKr" role="1tU5fm">
-          <ref role="3uigEE" node="6vH4OV2FyHj" resolve="NoiseGenerator" />
-        </node>
-      </node>
     </node>
+    <node concept="2tJIrI" id="5qdpREsFbfm" role="jymVt" />
     <node concept="3Tm1VV" id="5qdpREsDlwL" role="1B3o_S" />
   </node>
   <node concept="312cEu" id="5qdpREsDlxB">
