@@ -3382,6 +3382,43 @@
                 <property role="3SKdUp" value="JsonParser.parse(text)" />
               </node>
             </node>
+            <node concept="3cpWs8" id="1XfQ9HmVzi6" role="3cqZAp">
+              <node concept="3cpWsn" id="1XfQ9HmVzi7" role="3cpWs9">
+                <property role="TrG5h" value="parser" />
+                <node concept="3uibUv" id="1XfQ9HmVzi8" role="1tU5fm">
+                  <ref role="3uigEE" to="wy2b:~JsonParser" resolve="JsonParser" />
+                </node>
+                <node concept="2ShNRf" id="1XfQ9HmVz$C" role="33vP2m">
+                  <node concept="HV5vD" id="1XfQ9HmV$Th" role="2ShVmc">
+                    <ref role="HV5vE" to="wy2b:~JsonParser" resolve="JsonParser" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3cpWs8" id="1XfQ9HmV_gK" role="3cqZAp">
+              <node concept="3cpWsn" id="1XfQ9HmV_gL" role="3cpWs9">
+                <property role="TrG5h" value="object" />
+                <node concept="3uibUv" id="1XfQ9HmV_gM" role="1tU5fm">
+                  <ref role="3uigEE" to="wy2b:~JsonObject" resolve="JsonObject" />
+                </node>
+                <node concept="2OqwBi" id="1XfQ9HmVA9A" role="33vP2m">
+                  <node concept="2OqwBi" id="1XfQ9HmV_IR" role="2Oq$k0">
+                    <node concept="37vLTw" id="1XfQ9HmV_DF" role="2Oq$k0">
+                      <ref role="3cqZAo" node="1XfQ9HmVzi7" resolve="parser" />
+                    </node>
+                    <node concept="liA8E" id="1XfQ9HmV_Vn" role="2OqNvi">
+                      <ref role="37wK5l" to="wy2b:~JsonParser.parse(java.lang.String):com.google.gson.JsonElement" resolve="parse" />
+                      <node concept="37vLTw" id="1XfQ9HmVA1f" role="37wK5m">
+                        <ref role="3cqZAo" node="1nZ6g$XT8PH" resolve="text" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="1XfQ9HmVBaP" role="2OqNvi">
+                    <ref role="37wK5l" to="wy2b:~JsonElement.getAsJsonObject():com.google.gson.JsonObject" resolve="getAsJsonObject" />
+                  </node>
+                </node>
+              </node>
+            </node>
             <node concept="3clFbH" id="1nZ6g$XUaIL" role="3cqZAp" />
             <node concept="3clFbH" id="1nZ6g$XTDxF" role="3cqZAp" />
           </node>
