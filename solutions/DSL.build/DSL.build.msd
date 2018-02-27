@@ -11,6 +11,7 @@
     <dependency reexport="false">d102dc8e-32ba-4d10-8f95-be5a142b6537(Grafana)</dependency>
     <dependency reexport="false">cc7fb470-7d0c-4aea-af2a-5d870ff3092f(InfluxDB)</dependency>
     <dependency reexport="false">f94783b1-6c83-46e2-a40e-86c1cdf7b0d4(exp4j)</dependency>
+    <dependency reexport="false">ab012b2a-d7fa-40ca-817f-fa9ddb7cfb35(Gson)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:798100da-4f0a-421a-b991-71f8c50ce5d2:jetbrains.mps.build" version="0" />
@@ -20,6 +21,7 @@
   <dependencyVersions>
     <module reference="230be329-be80-48bb-98dd-3f32656ec686(DSL.build)" version="0" />
     <module reference="d102dc8e-32ba-4d10-8f95-be5a142b6537(Grafana)" version="0" />
+    <module reference="ab012b2a-d7fa-40ca-817f-fa9ddb7cfb35(Gson)" version="0" />
     <module reference="cc7fb470-7d0c-4aea-af2a-5d870ff3092f(InfluxDB)" version="0" />
     <module reference="f94783b1-6c83-46e2-a40e-86c1cdf7b0d4(exp4j)" version="0" />
     <module reference="422c2909-59d6-41a9-b318-40e6256b250f(jetbrains.mps.ide.build)" version="0" />

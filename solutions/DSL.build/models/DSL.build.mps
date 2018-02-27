@@ -583,6 +583,19 @@
               </node>
             </node>
           </node>
+          <node concept="28jJK3" id="5qdpREsD$9e" role="39821P">
+            <node concept="55IIr" id="5qdpREsD$9f" role="28jJRO">
+              <node concept="2Ry0Ak" id="5qdpREsD$9g" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="5qdpREsD$cE" role="2Ry0An">
+                  <property role="2Ry0Am" value="Gson" />
+                  <node concept="2Ry0Ak" id="5qdpREsD$dP" role="2Ry0An">
+                    <property role="2Ry0Am" value="gson-2.8.2.jar" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
         <node concept="3_J27D" id="3zhZ_DuRINB" role="Nbhlr">
           <node concept="3Mxwew" id="3zhZ_DuRINC" role="3MwsjC">
@@ -827,7 +840,7 @@
         </node>
       </node>
       <node concept="1E1JtA" id="3zhZ_DuRIMF" role="2G$12L">
-        <property role="BnDLt" value="true" />
+        <property role="BnDLt" value="false" />
         <property role="TrG5h" value="SensorSimulationLanguage.runtime" />
         <property role="3LESm3" value="7b38f0f5-2f16-4dc5-9809-d131d36eb0bf" />
         <property role="2GAjPV" value="false" />
@@ -1166,8 +1179,11 @@
             </node>
             <node concept="398BVA" id="3zhZ_DuRIQt" role="28jJRO">
               <ref role="398BVh" node="3zhZ_DuRIPM" resolve="mps_home" />
-              <node concept="2Ry0Ak" id="3zhZ_DuRIQu" role="iGT6I">
-                <property role="2Ry0Am" value="mps.sh" />
+              <node concept="2Ry0Ak" id="3zhZ_DuS1SP" role="iGT6I">
+                <property role="2Ry0Am" value="bin" />
+                <node concept="2Ry0Ak" id="3zhZ_DuS1SU" role="2Ry0An">
+                  <property role="2Ry0Am" value="mps.sh" />
+                </node>
               </node>
             </node>
           </node>
@@ -1522,7 +1538,10 @@
             <node concept="398BVA" id="3zhZ_DuRITe" role="28jJRO">
               <ref role="398BVh" node="3zhZ_DuRIPM" resolve="mps_home" />
               <node concept="2Ry0Ak" id="3zhZ_DuRITf" role="iGT6I">
-                <property role="2Ry0Am" value="mps.sh" />
+                <property role="2Ry0Am" value="bin" />
+                <node concept="2Ry0Ak" id="3zhZ_DuS1SZ" role="2Ry0An">
+                  <property role="2Ry0Am" value="mps.sh" />
+                </node>
               </node>
             </node>
           </node>
