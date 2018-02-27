@@ -2,9 +2,13 @@
 <dependenciesRoot>
   <dependency className="SensorSimulationLanguage.sandbox.SimpleTest" file="SimpleTest.java">
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IDataSource" />
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IReplay" />
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.ReplayRecord" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.Sensor" />
     <classNode dependClassName="com.appnexus.grafana.client.GrafanaClient" />
     <classNode dependClassName="com.appnexus.grafana.configuration.GrafanaConfiguration" />
+    <classNode dependClassName="java.lang.Long" />
+    <classNode dependClassName="java.lang.NumberFormatException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.time.LocalDateTime" />
@@ -13,18 +17,22 @@
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.concurrent.TimeUnit" />
+    <classNode dependClassName="java.util.function.Consumer" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="org.influxdb.InfluxDB" />
     <classNode dependClassName="org.influxdb.InfluxDBFactory" />
-    <classNode dependClassName="org.influxdb.dto.BatchPoints" />
+    <classNode dependClassName="org.influxdb.dto.Point" />
   </dependency>
   <dependency className="SensorSimulationLanguage.sandbox.Simulation" file="Simulation.java">
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IDataSource" />
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IReplay" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.MarkovLaw" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.MarkovState" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.ModellingLaw" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.NoiseGenerator" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.RandomLaw" />
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.ReplayRecord" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.Sensor" />
     <classNode dependClassName="com.appnexus.grafana.client.GrafanaClient" />
     <classNode dependClassName="com.appnexus.grafana.client.models.Dashboard" />
@@ -37,6 +45,8 @@
     <classNode dependClassName="com.appnexus.grafana.client.models.GrafanaDashboard" />
     <classNode dependClassName="com.appnexus.grafana.configuration.GrafanaConfiguration" />
     <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Long" />
+    <classNode dependClassName="java.lang.NumberFormatException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.math.BigDecimal" />
@@ -46,19 +56,23 @@
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.concurrent.TimeUnit" />
+    <classNode dependClassName="java.util.function.Consumer" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
     <classNode dependClassName="org.influxdb.InfluxDB" />
     <classNode dependClassName="org.influxdb.InfluxDBFactory" />
-    <classNode dependClassName="org.influxdb.dto.BatchPoints" />
+    <classNode dependClassName="org.influxdb.dto.Point" />
   </dependency>
   <dependency className="SensorSimulationLanguage.sandbox.TutorialSimulation" file="TutorialSimulation.java">
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IDataSource" />
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.IReplay" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.MarkovLaw" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.MarkovState" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.ModellingLaw" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.NoiseGenerator" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.RandomLaw" />
+    <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.ReplayRecord" />
     <classNode dependClassName="SensorSimulationLanguage.runtime.simulation.Sensor" />
     <classNode dependClassName="com.appnexus.grafana.client.GrafanaClient" />
     <classNode dependClassName="com.appnexus.grafana.client.models.Dashboard" />
@@ -71,6 +85,8 @@
     <classNode dependClassName="com.appnexus.grafana.client.models.GrafanaDashboard" />
     <classNode dependClassName="com.appnexus.grafana.configuration.GrafanaConfiguration" />
     <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.Long" />
+    <classNode dependClassName="java.lang.NumberFormatException" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.math.BigDecimal" />
@@ -80,11 +96,13 @@
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.concurrent.TimeUnit" />
+    <classNode dependClassName="java.util.function.Consumer" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
     <classNode dependClassName="org.influxdb.InfluxDB" />
     <classNode dependClassName="org.influxdb.InfluxDBFactory" />
-    <classNode dependClassName="org.influxdb.dto.BatchPoints" />
+    <classNode dependClassName="org.influxdb.dto.Point" />
   </dependency>
 </dependenciesRoot>
 

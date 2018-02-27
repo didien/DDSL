@@ -19,6 +19,8 @@
     <import index="ynw8" ref="d102dc8e-32ba-4d10-8f95-be5a142b6537/java:com.appnexus.grafana.client(Grafana/)" />
     <import index="an4w" ref="d102dc8e-32ba-4d10-8f95-be5a142b6537/java:com.appnexus.grafana.client.models(Grafana/)" />
     <import index="v2y1" ref="d102dc8e-32ba-4d10-8f95-be5a142b6537/java:com.appnexus.grafana.configuration(Grafana/)" />
+    <import index="5zyv" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util.concurrent(JDK/)" />
+    <import index="7fo8" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.time.chrono(JDK/)" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
@@ -141,6 +143,9 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
+      <concept id="1144226303539" name="jetbrains.mps.baseLanguage.structure.ForeachStatement" flags="nn" index="1DcWWT">
+        <child id="1144226360166" name="iterable" index="1DdaDG" />
+      </concept>
       <concept id="1144230876926" name="jetbrains.mps.baseLanguage.structure.AbstractForStatement" flags="nn" index="1DupvO">
         <child id="1144230900587" name="variable" index="1Duv9x" />
       </concept>
@@ -233,6 +238,13 @@
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
+      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
+        <property id="709746936026609031" name="linkId" index="3V$3ak" />
+        <property id="709746936026609029" name="linkRole" index="3V$3am" />
+      </concept>
+      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
+        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
+      </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
       <concept id="540871147943773365" name="jetbrains.mps.baseLanguage.collections.structure.SingleArgumentSequenceOperation" flags="nn" index="25WWJ4">
@@ -290,6 +302,18 @@
       <ref role="30HIoZ" to="7ew6:5kA4vFmjO2P" resolve="ClassicGraph" />
       <node concept="j$656" id="3QxC82ZIv$d" role="1lVwrX">
         <ref role="v9R2y" node="3QxC82ZIv$a" resolve="reduce_ClassicGraph" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="5qdpREsEvBX" role="3acgRq">
+      <ref role="30HIoZ" to="7ew6:3PPzdvo2Egy" resolve="CSV" />
+      <node concept="j$656" id="5qdpREsEvBY" role="1lVwrX">
+        <ref role="v9R2y" node="5qdpREsEvBV" resolve="reduce_CSV" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="5qdpREsEvEv" role="3acgRq">
+      <ref role="30HIoZ" to="7ew6:1nZ6g$XRvAp" resolve="JSON" />
+      <node concept="j$656" id="5qdpREsEvEw" role="1lVwrX">
+        <ref role="v9R2y" node="5qdpREsEvEt" resolve="reduce_JSON" />
       </node>
     </node>
   </node>
@@ -523,6 +547,19 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="5qdpREsGcaA" role="3cqZAp">
+          <node concept="2OqwBi" id="5qdpREsGdjG" role="3clFbG">
+            <node concept="37vLTw" id="5qdpREsGca$" role="2Oq$k0">
+              <ref role="3cqZAo" node="5dO5_UbeVkk" resolve="influxDB" />
+            </node>
+            <node concept="liA8E" id="5qdpREsGdY9" role="2OqNvi">
+              <ref role="37wK5l" to="9nbq:~InfluxDB.setDatabase(java.lang.String):org.influxdb.InfluxDB" resolve="setDatabase" />
+              <node concept="37vLTw" id="5qdpREsGek0" role="37wK5m">
+                <ref role="3cqZAo" node="7ywHfeC9OPw" resolve="databaseName" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3cpWs8" id="5dO5_Ubf471" role="3cqZAp">
           <node concept="3cpWsn" id="5dO5_Ubf474" role="3cpWs9">
             <property role="TrG5h" value="rpName" />
@@ -560,51 +597,88 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="5dO5_Ubgc$B" role="3cqZAp" />
-        <node concept="3cpWs8" id="5dO5_Ubg7GG" role="3cqZAp">
-          <node concept="3cpWsn" id="5dO5_Ubg7GH" role="3cpWs9">
-            <property role="TrG5h" value="batchPoints" />
-            <node concept="3uibUv" id="5dO5_Ubg7GI" role="1tU5fm">
-              <ref role="3uigEE" to="wthj:~BatchPoints" resolve="BatchPoints" />
+        <node concept="3clFbF" id="5qdpREsG$Ew" role="3cqZAp">
+          <node concept="2OqwBi" id="5qdpREsG_zS" role="3clFbG">
+            <node concept="37vLTw" id="5qdpREsG$Eu" role="2Oq$k0">
+              <ref role="3cqZAo" node="5dO5_UbeVkk" resolve="influxDB" />
             </node>
-            <node concept="2OqwBi" id="5dO5_UbggvK" role="33vP2m">
-              <node concept="2OqwBi" id="5dO5_UbgdMg" role="2Oq$k0">
-                <node concept="2OqwBi" id="5dO5_Ubga_q" role="2Oq$k0">
-                  <node concept="2OqwBi" id="5dO5_Ubg8NN" role="2Oq$k0">
-                    <node concept="2YIFZM" id="5dO5_Ubg8Ap" role="2Oq$k0">
-                      <ref role="37wK5l" to="wthj:~BatchPoints.database(java.lang.String):org.influxdb.dto.BatchPoints$Builder" resolve="database" />
-                      <ref role="1Pybhc" to="wthj:~BatchPoints" resolve="BatchPoints" />
-                      <node concept="37vLTw" id="7ywHfeC9R0Q" role="37wK5m">
-                        <ref role="3cqZAo" node="7ywHfeC9OPw" resolve="databaseName" />
-                      </node>
-                    </node>
-                    <node concept="liA8E" id="5dO5_Ubg90t" role="2OqNvi">
-                      <ref role="37wK5l" to="wthj:~BatchPoints$Builder.tag(java.lang.String,java.lang.String):org.influxdb.dto.BatchPoints$Builder" resolve="tag" />
-                      <node concept="Xl_RD" id="5dO5_Ubg9ec" role="37wK5m">
-                        <property role="Xl_RC" value="async" />
-                      </node>
-                      <node concept="Xl_RD" id="5dO5_Ubga79" role="37wK5m">
-                        <property role="Xl_RC" value="true" />
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="liA8E" id="5dO5_Ubgbub" role="2OqNvi">
-                    <ref role="37wK5l" to="wthj:~BatchPoints$Builder.retentionPolicy(java.lang.String):org.influxdb.dto.BatchPoints$Builder" resolve="retentionPolicy" />
-                    <node concept="37vLTw" id="5dO5_Ubgdrc" role="37wK5m">
-                      <ref role="3cqZAo" node="5dO5_Ubf474" resolve="rpName" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="liA8E" id="5dO5_Ubgf16" role="2OqNvi">
-                  <ref role="37wK5l" to="wthj:~BatchPoints$Builder.consistency(org.influxdb.InfluxDB$ConsistencyLevel):org.influxdb.dto.BatchPoints$Builder" resolve="consistency" />
-                  <node concept="Rm8GO" id="5dO5_UbgfXc" role="37wK5m">
-                    <ref role="Rm8GQ" to="9nbq:~InfluxDB$ConsistencyLevel.ALL" resolve="ALL" />
-                    <ref role="1Px2BO" to="9nbq:~InfluxDB$ConsistencyLevel" resolve="InfluxDB.ConsistencyLevel" />
-                  </node>
-                </node>
+            <node concept="liA8E" id="5qdpREsGAtl" role="2OqNvi">
+              <ref role="37wK5l" to="9nbq:~InfluxDB.setRetentionPolicy(java.lang.String):org.influxdb.InfluxDB" resolve="setRetentionPolicy" />
+              <node concept="37vLTw" id="5qdpREsGAEz" role="37wK5m">
+                <ref role="3cqZAo" node="5dO5_Ubf474" resolve="rpName" />
               </node>
-              <node concept="liA8E" id="5dO5_Ubgi6I" role="2OqNvi">
-                <ref role="37wK5l" to="wthj:~BatchPoints$Builder.build():org.influxdb.dto.BatchPoints" resolve="build" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="5qdpREsEB7a" role="3cqZAp">
+          <node concept="2OqwBi" id="5qdpREsEBdc" role="3clFbG">
+            <node concept="37vLTw" id="5qdpREsEB79" role="2Oq$k0">
+              <ref role="3cqZAo" node="5dO5_UbeVkk" resolve="influxDB" />
+            </node>
+            <node concept="liA8E" id="5qdpREsEBoi" role="2OqNvi">
+              <ref role="37wK5l" to="9nbq:~InfluxDB.enableBatch(int,int,java.util.concurrent.TimeUnit):org.influxdb.InfluxDB" resolve="enableBatch" />
+              <node concept="3cmrfG" id="5qdpREsGT_I" role="37wK5m">
+                <property role="3cmrfH" value="2000" />
+              </node>
+              <node concept="3cmrfG" id="5qdpREsGV5C" role="37wK5m">
+                <property role="3cmrfH" value="60" />
+              </node>
+              <node concept="Rm8GO" id="5qdpREsEDBI" role="37wK5m">
+                <ref role="1Px2BO" to="5zyv:~TimeUnit" resolve="TimeUnit" />
+                <ref role="Rm8GQ" to="5zyv:~TimeUnit.SECONDS" resolve="SECONDS" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="5dO5_Ubgc$B" role="3cqZAp" />
+        <node concept="1X3_iC" id="5qdpREsEETD" role="lGtFl">
+          <property role="3V$3am" value="statement" />
+          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
+          <node concept="3cpWs8" id="5dO5_Ubg7GG" role="8Wnug">
+            <node concept="3cpWsn" id="5dO5_Ubg7GH" role="3cpWs9">
+              <property role="TrG5h" value="batchPoints" />
+              <node concept="3uibUv" id="5dO5_Ubg7GI" role="1tU5fm">
+                <ref role="3uigEE" to="wthj:~BatchPoints" resolve="BatchPoints" />
+              </node>
+              <node concept="2OqwBi" id="5dO5_UbggvK" role="33vP2m">
+                <node concept="2OqwBi" id="5dO5_UbgdMg" role="2Oq$k0">
+                  <node concept="2OqwBi" id="5dO5_Ubga_q" role="2Oq$k0">
+                    <node concept="2OqwBi" id="5dO5_Ubg8NN" role="2Oq$k0">
+                      <node concept="2YIFZM" id="5dO5_Ubg8Ap" role="2Oq$k0">
+                        <ref role="37wK5l" to="wthj:~BatchPoints.database(java.lang.String):org.influxdb.dto.BatchPoints$Builder" resolve="database" />
+                        <ref role="1Pybhc" to="wthj:~BatchPoints" resolve="BatchPoints" />
+                        <node concept="37vLTw" id="7ywHfeC9R0Q" role="37wK5m">
+                          <ref role="3cqZAo" node="7ywHfeC9OPw" resolve="databaseName" />
+                        </node>
+                      </node>
+                      <node concept="liA8E" id="5dO5_Ubg90t" role="2OqNvi">
+                        <ref role="37wK5l" to="wthj:~BatchPoints$Builder.tag(java.lang.String,java.lang.String):org.influxdb.dto.BatchPoints$Builder" resolve="tag" />
+                        <node concept="Xl_RD" id="5dO5_Ubg9ec" role="37wK5m">
+                          <property role="Xl_RC" value="async" />
+                        </node>
+                        <node concept="Xl_RD" id="5dO5_Ubga79" role="37wK5m">
+                          <property role="Xl_RC" value="true" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="5dO5_Ubgbub" role="2OqNvi">
+                      <ref role="37wK5l" to="wthj:~BatchPoints$Builder.retentionPolicy(java.lang.String):org.influxdb.dto.BatchPoints$Builder" resolve="retentionPolicy" />
+                      <node concept="37vLTw" id="5dO5_Ubgdrc" role="37wK5m">
+                        <ref role="3cqZAo" node="5dO5_Ubf474" resolve="rpName" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="5dO5_Ubgf16" role="2OqNvi">
+                    <ref role="37wK5l" to="wthj:~BatchPoints$Builder.consistency(org.influxdb.InfluxDB$ConsistencyLevel):org.influxdb.dto.BatchPoints$Builder" resolve="consistency" />
+                    <node concept="Rm8GO" id="5dO5_UbgfXc" role="37wK5m">
+                      <ref role="Rm8GQ" to="9nbq:~InfluxDB$ConsistencyLevel.ALL" resolve="ALL" />
+                      <ref role="1Px2BO" to="9nbq:~InfluxDB$ConsistencyLevel" resolve="InfluxDB.ConsistencyLevel" />
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="5dO5_Ubgi6I" role="2OqNvi">
+                  <ref role="37wK5l" to="wthj:~BatchPoints$Builder.build():org.influxdb.dto.BatchPoints" resolve="build" />
+                </node>
               </node>
             </node>
           </node>
@@ -835,6 +909,205 @@
             <property role="3SKdUp" value="End Grafana dashboards configuration -------------------------------" />
           </node>
         </node>
+        <node concept="3clFbH" id="5qdpREsEmmM" role="3cqZAp" />
+        <node concept="3SKdUt" id="5qdpREsEnlT" role="3cqZAp">
+          <node concept="3SKdUq" id="5qdpREsEnlV" role="3SKWNk">
+            <property role="3SKdUp" value="Begin replay execution ---------------------------------------------" />
+          </node>
+        </node>
+        <node concept="3cpWs8" id="5qdpREsEt7Z" role="3cqZAp">
+          <node concept="3cpWsn" id="5qdpREsEt80" role="3cpWs9">
+            <property role="TrG5h" value="replayers" />
+            <node concept="3uibUv" id="5qdpREsEt7X" role="1tU5fm">
+              <ref role="3uigEE" to="33ny:~ArrayList" resolve="ArrayList" />
+              <node concept="3uibUv" id="5qdpREsEu3V" role="11_B2D">
+                <ref role="3uigEE" to="2ns9:5qdpREsDlwK" resolve="IReplay" />
+              </node>
+            </node>
+            <node concept="2ShNRf" id="5qdpREsEu63" role="33vP2m">
+              <node concept="1pGfFk" id="5qdpREsEvcw" role="2ShVmc">
+                <ref role="37wK5l" to="33ny:~ArrayList.&lt;init&gt;()" resolve="ArrayList" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="5qdpREsEpGF" role="3cqZAp">
+          <node concept="2b32R4" id="5qdpREsEqAt" role="lGtFl">
+            <node concept="3JmXsc" id="5qdpREsEqAw" role="2P8S$">
+              <node concept="3clFbS" id="5qdpREsEqAx" role="2VODD2">
+                <node concept="3clFbF" id="5qdpREsEqAB" role="3cqZAp">
+                  <node concept="2OqwBi" id="5qdpREsEqAy" role="3clFbG">
+                    <node concept="3Tsc0h" id="5qdpREsEqA_" role="2OqNvi">
+                      <ref role="3TtcxE" to="7ew6:1nZ6g$XTBx$" resolve="replays" />
+                    </node>
+                    <node concept="30H73N" id="5qdpREsEqAA" role="2Oq$k0" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1DcWWT" id="5qdpREsEzOE" role="3cqZAp">
+          <node concept="3clFbS" id="5qdpREsEzOG" role="2LFqv$">
+            <node concept="3clFbF" id="5qdpREsEQSP" role="3cqZAp">
+              <node concept="2OqwBi" id="5qdpREsERWC" role="3clFbG">
+                <node concept="2OqwBi" id="5qdpREsER9R" role="2Oq$k0">
+                  <node concept="37vLTw" id="5qdpREsEQSN" role="2Oq$k0">
+                    <ref role="3cqZAo" node="5qdpREsEzOH" resolve="replayer" />
+                  </node>
+                  <node concept="liA8E" id="5qdpREsFS2A" role="2OqNvi">
+                    <ref role="37wK5l" to="2ns9:5qdpREsDlJS" resolve="getReadings" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="5qdpREsETdH" role="2OqNvi">
+                  <ref role="37wK5l" to="wyt6:~Iterable.forEach(java.util.function.Consumer):void" resolve="forEach" />
+                  <node concept="1bVj0M" id="5qdpREsEU6h" role="37wK5m">
+                    <node concept="3clFbS" id="5qdpREsEU6i" role="1bW5cS">
+                      <node concept="SfApY" id="5qdpREsF4hQ" role="3cqZAp">
+                        <node concept="3clFbS" id="5qdpREsF4hR" role="SfCbr">
+                          <node concept="3cpWs8" id="5dO5_UbgkRO" role="3cqZAp">
+                            <node concept="3cpWsn" id="5dO5_UbgkRP" role="3cpWs9">
+                              <property role="TrG5h" value="point" />
+                              <node concept="3uibUv" id="5dO5_UbgkRQ" role="1tU5fm">
+                                <ref role="3uigEE" to="wthj:~Point" resolve="Point" />
+                              </node>
+                              <node concept="2OqwBi" id="5dO5_UbfAs4" role="33vP2m">
+                                <node concept="2OqwBi" id="5dO5_Ubfsg1" role="2Oq$k0">
+                                  <node concept="2OqwBi" id="5dO5_Ubfmx7" role="2Oq$k0">
+                                    <node concept="2YIFZM" id="5dO5_UbfluI" role="2Oq$k0">
+                                      <ref role="1Pybhc" to="wthj:~Point" resolve="Point" />
+                                      <ref role="37wK5l" to="wthj:~Point.measurement(java.lang.String):org.influxdb.dto.Point$Builder" resolve="measurement" />
+                                      <node concept="2OqwBi" id="5qdpREsEXk6" role="37wK5m">
+                                        <node concept="37vLTw" id="5qdpREsEX7A" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="5qdpREsEW$h" resolve="record" />
+                                        </node>
+                                        <node concept="liA8E" id="5qdpREsEXwo" role="2OqNvi">
+                                          <ref role="37wK5l" to="2ns9:5qdpREsDlFZ" resolve="getName" />
+                                        </node>
+                                      </node>
+                                    </node>
+                                    <node concept="liA8E" id="5dO5_UbfnHR" role="2OqNvi">
+                                      <ref role="37wK5l" to="wthj:~Point$Builder.time(long,java.util.concurrent.TimeUnit):org.influxdb.dto.Point$Builder" resolve="time" />
+                                      <node concept="2YIFZM" id="5qdpREsF3F6" role="37wK5m">
+                                        <ref role="37wK5l" to="wyt6:~Long.parseLong(java.lang.String):long" resolve="parseLong" />
+                                        <ref role="1Pybhc" to="wyt6:~Long" resolve="Long" />
+                                        <node concept="2OqwBi" id="5qdpREsF3YK" role="37wK5m">
+                                          <node concept="37vLTw" id="5qdpREsF3Ok" role="2Oq$k0">
+                                            <ref role="3cqZAo" node="5qdpREsEW$h" resolve="record" />
+                                          </node>
+                                          <node concept="liA8E" id="5qdpREsF4aX" role="2OqNvi">
+                                            <ref role="37wK5l" to="2ns9:5qdpREsDlGb" resolve="getTimestamp" />
+                                          </node>
+                                        </node>
+                                      </node>
+                                      <node concept="Rm8GO" id="5dO5_Ubf_Fz" role="37wK5m">
+                                        <ref role="1Px2BO" to="5zyv:~TimeUnit" resolve="TimeUnit" />
+                                        <ref role="Rm8GQ" to="5zyv:~TimeUnit.SECONDS" resolve="SECONDS" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="5dO5_UbftMd" role="2OqNvi">
+                                    <ref role="37wK5l" to="wthj:~Point$Builder.addField(java.lang.String,java.lang.String):org.influxdb.dto.Point$Builder" resolve="addField" />
+                                    <node concept="Xl_RD" id="5dO5_Ubfv_0" role="37wK5m">
+                                      <property role="Xl_RC" value="value" />
+                                    </node>
+                                    <node concept="2OqwBi" id="5qdpREsF0Ki" role="37wK5m">
+                                      <node concept="37vLTw" id="5qdpREsF0y2" role="2Oq$k0">
+                                        <ref role="3cqZAo" node="5qdpREsEW$h" resolve="record" />
+                                      </node>
+                                      <node concept="liA8E" id="5qdpREsF1zg" role="2OqNvi">
+                                        <ref role="37wK5l" to="2ns9:5qdpREsDlG5" resolve="getValue" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="liA8E" id="5dO5_UbfDIE" role="2OqNvi">
+                                  <ref role="37wK5l" to="wthj:~Point$Builder.build():org.influxdb.dto.Point" resolve="build" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3clFbF" id="5qdpREsEUcM" role="3cqZAp">
+                            <node concept="2OqwBi" id="5qdpREsEUkJ" role="3clFbG">
+                              <node concept="37vLTw" id="5qdpREsEUcL" role="2Oq$k0">
+                                <ref role="3cqZAo" node="5dO5_UbeVkk" resolve="influxDB" />
+                              </node>
+                              <node concept="liA8E" id="5qdpREsEUxD" role="2OqNvi">
+                                <ref role="37wK5l" to="9nbq:~InfluxDB.write(org.influxdb.dto.Point):void" resolve="write" />
+                                <node concept="37vLTw" id="5qdpREsF2aq" role="37wK5m">
+                                  <ref role="3cqZAo" node="5dO5_UbgkRP" resolve="point" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="TDmWw" id="5qdpREsF4hX" role="TEbGg">
+                          <node concept="3clFbS" id="5qdpREsF4i0" role="TDEfX">
+                            <node concept="3clFbF" id="5qdpREsF5n8" role="3cqZAp">
+                              <node concept="2OqwBi" id="5qdpREsF5$C" role="3clFbG">
+                                <node concept="10M0yZ" id="5qdpREsF5$D" role="2Oq$k0">
+                                  <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
+                                  <ref role="3cqZAo" to="wyt6:~System.err" resolve="err" />
+                                </node>
+                                <node concept="liA8E" id="5qdpREsF5$E" role="2OqNvi">
+                                  <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
+                                  <node concept="3cpWs3" id="5qdpREsF8hQ" role="37wK5m">
+                                    <node concept="Xl_RD" id="5qdpREsF8il" role="3uHU7w">
+                                      <property role="Xl_RC" value=" from a replay is invalid" />
+                                    </node>
+                                    <node concept="3cpWs3" id="5qdpREsF76l" role="3uHU7B">
+                                      <node concept="Xl_RD" id="5qdpREsF5FX" role="3uHU7B">
+                                        <property role="Xl_RC" value="Timestamp " />
+                                      </node>
+                                      <node concept="2OqwBi" id="5qdpREsF7CJ" role="3uHU7w">
+                                        <node concept="37vLTw" id="5qdpREsF7eh" role="2Oq$k0">
+                                          <ref role="3cqZAo" node="5qdpREsEW$h" resolve="record" />
+                                        </node>
+                                        <node concept="liA8E" id="5qdpREsF7Pg" role="2OqNvi">
+                                          <ref role="37wK5l" to="2ns9:5qdpREsDlGb" resolve="getTimestamp" />
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="3cpWsn" id="5qdpREsF4i1" role="TDEfY">
+                            <property role="TrG5h" value="e" />
+                            <node concept="3uibUv" id="5qdpREsF4hW" role="1tU5fm">
+                              <ref role="3uigEE" to="wyt6:~NumberFormatException" resolve="NumberFormatException" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="37vLTG" id="5qdpREsEW$h" role="1bW2Oz">
+                      <property role="TrG5h" value="record" />
+                      <node concept="3uibUv" id="5qdpREsEWGA" role="1tU5fm">
+                        <ref role="3uigEE" to="2ns9:5qdpREsDlxB" resolve="ReplayRecord" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3cpWsn" id="5qdpREsEzOH" role="1Duv9x">
+            <property role="TrG5h" value="replayer" />
+            <node concept="3uibUv" id="5qdpREsE$SS" role="1tU5fm">
+              <ref role="3uigEE" to="2ns9:5qdpREsDlwK" resolve="IReplay" />
+            </node>
+          </node>
+          <node concept="37vLTw" id="5qdpREsE_h9" role="1DdaDG">
+            <ref role="3cqZAo" node="5qdpREsEt80" resolve="replayers" />
+          </node>
+        </node>
+        <node concept="3SKdUt" id="5qdpREsEoMv" role="3cqZAp">
+          <node concept="3SKdUq" id="5qdpREsEofC" role="3SKWNk">
+            <property role="3SKdUp" value="End replay execution -----------------------------------------------" />
+          </node>
+        </node>
         <node concept="3clFbH" id="7rYs2gB851p" role="3cqZAp" />
         <node concept="3SKdUt" id="7rYs2gB86jB" role="3cqZAp">
           <node concept="3SKdUq" id="7rYs2gB86jD" role="3SKWNk">
@@ -861,8 +1134,8 @@
                               </node>
                               <node concept="liA8E" id="36n0RtVA_JF" role="2OqNvi">
                                 <ref role="37wK5l" to="2ns9:3juagqJydtv" resolve="readValue" />
-                                <node concept="37vLTw" id="5dO5_Ubh2Q$" role="37wK5m">
-                                  <ref role="3cqZAo" node="5dO5_Ubg7GH" resolve="batchPoints" />
+                                <node concept="37vLTw" id="5qdpREsEQsW" role="37wK5m">
+                                  <ref role="3cqZAo" node="5dO5_UbeVkk" resolve="influxDB" />
                                 </node>
                               </node>
                             </node>
@@ -889,19 +1162,6 @@
                 </node>
               </node>
             </node>
-            <node concept="3clFbF" id="5dO5_UbgrXK" role="3cqZAp">
-              <node concept="2OqwBi" id="5dO5_UbgsJU" role="3clFbG">
-                <node concept="37vLTw" id="5dO5_UbgrXI" role="2Oq$k0">
-                  <ref role="3cqZAo" node="5dO5_UbeVkk" resolve="influxDB" />
-                </node>
-                <node concept="liA8E" id="5dO5_UbgtyW" role="2OqNvi">
-                  <ref role="37wK5l" to="9nbq:~InfluxDB.write(org.influxdb.dto.BatchPoints):void" resolve="write" />
-                  <node concept="37vLTw" id="5dO5_UbgtGN" role="37wK5m">
-                    <ref role="3cqZAo" node="5dO5_Ubg7GH" resolve="batchPoints" />
-                  </node>
-                </node>
-              </node>
-            </node>
           </node>
           <node concept="3fqX7Q" id="6ZqfKAE0GFi" role="2$JKZa">
             <node concept="2OqwBi" id="6ZqfKAE0GFk" role="3fr31v">
@@ -917,6 +1177,22 @@
         <node concept="3SKdUt" id="7rYs2gB87_V" role="3cqZAp">
           <node concept="3SKdUq" id="7rYs2gB87_X" role="3SKWNk">
             <property role="3SKdUp" value="End execution ------------------------------------------------------" />
+          </node>
+        </node>
+        <node concept="3clFbH" id="5qdpREsEG5k" role="3cqZAp" />
+        <node concept="3SKdUt" id="5qdpREsEH8f" role="3cqZAp">
+          <node concept="3SKdUq" id="5qdpREsEH8h" role="3SKWNk">
+            <property role="3SKdUp" value="Clean up -----------------------------------------------------------" />
+          </node>
+        </node>
+        <node concept="3clFbF" id="5qdpREsEJ1S" role="3cqZAp">
+          <node concept="2OqwBi" id="5qdpREsEJPW" role="3clFbG">
+            <node concept="37vLTw" id="5qdpREsEJ1Q" role="2Oq$k0">
+              <ref role="3cqZAo" node="5dO5_UbeVkk" resolve="influxDB" />
+            </node>
+            <node concept="liA8E" id="5qdpREsEKDz" role="2OqNvi">
+              <ref role="37wK5l" to="9nbq:~InfluxDB.close():void" resolve="close" />
+            </node>
           </node>
         </node>
       </node>
@@ -2607,6 +2883,54 @@
           </node>
         </node>
         <node concept="raruj" id="3QxC82ZIEfR" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="5qdpREsEvBV">
+    <property role="TrG5h" value="reduce_CSV" />
+    <property role="3GE5qa" value="replays" />
+    <ref role="3gUMe" to="7ew6:3PPzdvo2Egy" resolve="CSV" />
+    <node concept="3clFbS" id="5qdpREsEvCH" role="13RCb5">
+      <node concept="3cpWs8" id="5qdpREsEvCR" role="3cqZAp">
+        <node concept="3cpWsn" id="5qdpREsEvCS" role="3cpWs9">
+          <property role="TrG5h" value="replayers" />
+          <node concept="3uibUv" id="5qdpREsEvCP" role="1tU5fm">
+            <ref role="3uigEE" to="33ny:~ArrayList" resolve="ArrayList" />
+            <node concept="3uibUv" id="5qdpREsEvD4" role="11_B2D">
+              <ref role="3uigEE" to="2ns9:5qdpREsDlwK" resolve="IReplay" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="9aQIb" id="5qdpREsEvDv" role="3cqZAp">
+        <node concept="3clFbS" id="5qdpREsEvDx" role="9aQI4">
+          <node concept="3clFbH" id="5qdpREsEvDw" role="3cqZAp" />
+        </node>
+        <node concept="raruj" id="5qdpREsEvDD" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="5qdpREsEvEt">
+    <property role="TrG5h" value="reduce_JSON" />
+    <property role="3GE5qa" value="replays" />
+    <ref role="3gUMe" to="7ew6:1nZ6g$XRvAp" resolve="JSON" />
+    <node concept="3clFbS" id="5qdpREsEvFh" role="13RCb5">
+      <node concept="3cpWs8" id="5qdpREsEvFo" role="3cqZAp">
+        <node concept="3cpWsn" id="5qdpREsEvFp" role="3cpWs9">
+          <property role="TrG5h" value="replayers" />
+          <node concept="3uibUv" id="5qdpREsEvFq" role="1tU5fm">
+            <ref role="3uigEE" to="33ny:~ArrayList" resolve="ArrayList" />
+            <node concept="3uibUv" id="5qdpREsEvFr" role="11_B2D">
+              <ref role="3uigEE" to="2ns9:5qdpREsDlwK" resolve="IReplay" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="9aQIb" id="5qdpREsEvFJ" role="3cqZAp">
+        <node concept="3clFbS" id="5qdpREsEvFL" role="9aQI4">
+          <node concept="3clFbH" id="5qdpREsEvFK" role="3cqZAp" />
+        </node>
+        <node concept="raruj" id="5qdpREsEvFU" role="lGtFl" />
       </node>
     </node>
   </node>

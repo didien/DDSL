@@ -69,6 +69,8 @@
       <concept id="4428600667259183591" name="SensorSimulationLanguage.structure.Simulation" flags="ng" index="3_vMOK">
         <property id="3809527443493296810" name="endDate" index="2rmNeG" />
         <property id="3809527443493296808" name="startDate" index="2rmNeI" />
+        <property id="461132729757012035" name="grafana" index="117Pm5" />
+        <property id="461132729757012031" name="influxdb" index="117PnT" />
         <child id="6135611311373901390" name="displays" index="23qkYO" />
         <child id="4428600667259183596" name="sensors" index="3_vMOV" />
         <child id="4428600667259183594" name="dataSources" index="3_vMOX" />
@@ -217,8 +219,10 @@
   </node>
   <node concept="3_vMOK" id="pAhsp7$whj">
     <property role="TrG5h" value="TutorialSimulation" />
-    <property role="2rmNeI" value="26-02-18 10:00" />
-    <property role="2rmNeG" value="26-02-18 14:00" />
+    <property role="2rmNeI" value="27-02-18 15:00" />
+    <property role="2rmNeG" value="27-02-18 18:00" />
+    <property role="117PnT" value="http://influxdb.meatbox.fr" />
+    <property role="117Pm5" value="http://grafana.meatbox.fr" />
     <node concept="3_vMzQ" id="pAhsp7$xCB" role="3_vMOX">
       <property role="TrG5h" value="random_angle" />
       <property role="3_vMzV" value="0" />
@@ -316,7 +320,7 @@
     </node>
     <node concept="3_vMOS" id="pAhsp7$LL1" role="3_vMOV">
       <property role="FF4LG" value="15" />
-      <property role="TrG5h" value="awesome_door" />
+      <property role="TrG5h" value="fancy_awesome_door" />
       <ref role="3_vMzM" node="pAhsp7$xCB" resolve="random_angle" />
     </node>
     <node concept="3_vMOS" id="pAhsp7$LL3" role="3_vMOV">
@@ -330,7 +334,7 @@
       <ref role="3_vMzM" node="pAhsp7$L9h" resolve="modelling_law" />
     </node>
     <node concept="11645$" id="pAhsp7_nxm" role="23qkYO">
-      <property role="11644t" value="e" />
+      <property role="11644t" value="eyJrIjoiQWRHbTJYNUpBRHdSS0d2YVJ5SEZNNjB1YTY4OXgzVWkiLCJuIjoiZnplIiwiaWQiOjF9" />
       <node concept="23ql5f" id="pAhsp7_nxo" role="11644v">
         <property role="TrG5h" value="tutorial dashboard" />
         <node concept="11TPea" id="pAhsp7_nxp" role="11TPFM">

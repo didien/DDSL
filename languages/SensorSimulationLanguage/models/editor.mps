@@ -213,7 +213,7 @@
           <node concept="2iRkQZ" id="1nZ6g$XTBCw" role="2czzBx" />
           <node concept="VPM3Z" id="1nZ6g$XTBCx" role="3F10Kt" />
           <node concept="3F0ifn" id="1nZ6g$XTX8x" role="2czzBI">
-            <property role="3F0ifm" value="no replay defined, but it's ok that way" />
+            <property role="3F0ifm" value="no replay defined, but you can leave it so" />
             <node concept="Vb9p2" id="1nZ6g$XTX_$" role="3F10Kt">
               <property role="Vbekb" value="ITALIC" />
             </node>
@@ -503,22 +503,17 @@
     </node>
   </node>
   <node concept="24kQdi" id="5u9gdSXmgGe">
+    <property role="3GE5qa" value="replays" />
     <ref role="1XX52x" to="7ew6:3PPzdvo2Egy" resolve="CSV" />
     <node concept="3EZMnI" id="5u9gdSXmgGg" role="2wV5jI">
       <node concept="3EZMnI" id="5u9gdSXmgGn" role="3EZMnx">
         <node concept="VPM3Z" id="5u9gdSXmgGp" role="3F10Kt">
           <property role="VOm3f" value="false" />
         </node>
-        <node concept="3F0ifn" id="5u9gdSXmgGx" role="3EZMnx">
-          <property role="3F0ifm" value="replay" />
-        </node>
-        <node concept="3F0A7n" id="5u9gdSXmgGB" role="3EZMnx">
-          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-        </node>
         <node concept="3F0ifn" id="5u9gdSXmgGJ" role="3EZMnx">
-          <property role="3F0ifm" value="from CSV file" />
+          <property role="3F0ifm" value="replay from CSV file" />
         </node>
-        <node concept="2iRfu4" id="5u9gdSXmgGs" role="2iSdaV" />
+        <node concept="l2Vlx" id="5qdpREsDXI2" role="2iSdaV" />
       </node>
       <node concept="3EZMnI" id="5u9gdSXmgI6" role="3EZMnx">
         <node concept="VPM3Z" id="5u9gdSXmgI8" role="3F10Kt">
@@ -542,7 +537,8 @@
           <property role="3F0ifm" value="read sensors :" />
         </node>
         <node concept="3F0A7n" id="5u9gdSXmgKf" role="3EZMnx">
-          <ref role="1NtTu8" to="7ew6:75cVuPqSa9j" resolve="sensorFilter" />
+          <property role="1$x2rV" value="enter sensor names separated by spaces" />
+          <ref role="1NtTu8" to="7ew6:5qdpREsDWC$" resolve="sensorNames" />
         </node>
         <node concept="l2Vlx" id="5u9gdSXmgJD" role="2iSdaV" />
       </node>
@@ -887,29 +883,25 @@
     </node>
   </node>
   <node concept="24kQdi" id="1nZ6g$XRvA$">
+    <property role="3GE5qa" value="replays" />
     <ref role="1XX52x" to="7ew6:1nZ6g$XRvAp" resolve="JSON" />
     <node concept="3EZMnI" id="1nZ6g$XRvAA" role="2wV5jI">
       <node concept="3EZMnI" id="1nZ6g$XRvAH" role="3EZMnx">
         <node concept="VPM3Z" id="1nZ6g$XRvAJ" role="3F10Kt">
           <property role="VOm3f" value="false" />
         </node>
-        <node concept="3F0ifn" id="1nZ6g$XRvBr" role="3EZMnx">
-          <property role="3F0ifm" value="replay" />
-        </node>
-        <node concept="3F0A7n" id="1nZ6g$XRvBF" role="3EZMnx">
-          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-        </node>
         <node concept="3F0ifn" id="1nZ6g$XRvBN" role="3EZMnx">
-          <property role="3F0ifm" value="from JSON file" />
+          <property role="3F0ifm" value="replay from JSON file" />
         </node>
-        <node concept="2iRfu4" id="1nZ6g$XRvAM" role="2iSdaV" />
+        <node concept="l2Vlx" id="5qdpREsE5Y0" role="2iSdaV" />
       </node>
       <node concept="3EZMnI" id="1nZ6g$XRvC0" role="3EZMnx">
+        <node concept="3XFhqQ" id="5qdpREsE5XV" role="3EZMnx" />
         <node concept="VPM3Z" id="1nZ6g$XRvC2" role="3F10Kt">
           <property role="VOm3f" value="false" />
         </node>
         <node concept="3F0ifn" id="1nZ6g$XRvCk" role="3EZMnx">
-          <property role="3F0ifm" value="---&gt;path :" />
+          <property role="3F0ifm" value="path :" />
         </node>
         <node concept="3F0A7n" id="1nZ6g$XRvCq" role="3EZMnx">
           <ref role="1NtTu8" to="7ew6:1nZ6g$XRvAk" resolve="filepath" />
