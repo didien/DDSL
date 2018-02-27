@@ -132,6 +132,21 @@ public class QueriesGenerated {
   public static Object propertyMacro_GetPropertyValue_461132729757956779(final PropertyMacroContext _context) {
     return SPropertyOperations.getInteger(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x66645c64780da06L, 0x66645c647811647L, "span"));
   }
+  public static Object propertyMacro_GetPropertyValue_1585013121343061723(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x15ff19093dddf978L, 0x15ff19093dddf994L, "filepath"));
+  }
+  public static Object propertyMacro_GetPropertyValue_1585013121343070618(final PropertyMacroContext _context) {
+    return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x15ff19093dddf978L, 0x568d677a9ca7ca24L, "sensorNames"));
+  }
+  public static Object propertyMacro_GetPropertyValue_1585013121343090360(final PropertyMacroContext _context) {
+    return SPropertyOperations.getInteger(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x3d758cd7d80aa422L, 0x578940de3d58fc2aL, "nameColumn"));
+  }
+  public static Object propertyMacro_GetPropertyValue_1585013121343102797(final PropertyMacroContext _context) {
+    return SPropertyOperations.getInteger(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x3d758cd7d80aa422L, 0x578940de3d58ab3dL, "timeColumn"));
+  }
+  public static Object propertyMacro_GetPropertyValue_1585013121343108646(final PropertyMacroContext _context) {
+    return SPropertyOperations.getInteger(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x3d758cd7d80aa422L, 0x578940de3d58fc2fL, "valueColumn"));
+  }
   public static Object propertyMacro_GetPropertyValue_6236754835290891232(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xbc16fd15bfa247e7L, 0xb9c29f80e5b399e0L, 0x67ed134ec2abc1e2L, 0x67ed134ec2abc1e3L, "min"));
   }
