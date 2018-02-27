@@ -14,11 +14,10 @@ Les données générées sont envoyées sur une base de données InfluxDB, qui p
 ## Installation
 Trois approches sont possibles :
 - importer le projet dans une installation de MPS (le plus sûr)
-- utiliser l'IDE standalone fourni dans une des archives du dossier IDE (le plus simple si ça fonctionne)
+- utiliser l'IDE standalone fourni dans la section release du repo (le plus simple si ça fonctionne)
 - générer l'IDE standalone depuis MPS en ayant téléchargé [l'installation générique](https://download-cf.jetbrains.com/mps/2017.3/MPS-2017.3.5.zip) puis l'utiliser (le plus barbu)
 
-Pour des raisons évidentes de "on aimerait ne pas saturer le disque en clonant ce repo", l'installation générique n'a pas été fournie, elle est donc à télécharger et à placer dans le dossier `generic_MPS` si l'option 3 est utilisée.  
-Néanmoins, les exécutables fournis pèsent déjà assez lourd.
+Pour des raisons évidentes de "on aimerait ne pas saturer le disque en clonant ce repo", l'installation générique n'a pas été fournie, elle est donc à télécharger et à placer dans le dossier `generic_MPS` si l'option 3 est utilisée.
 
 ## Présentation
 Ce DSL a été réalisé avec MPS de Jetbrains et présente donc quelques particularités du point de vue utilisateur : 
