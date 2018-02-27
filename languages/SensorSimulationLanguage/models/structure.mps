@@ -145,11 +145,6 @@
     <property role="EcuMT" value="4428600667259184162" />
     <property role="TrG5h" value="CSV" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="3PPzdvo2EgC" role="1TKVEl">
-      <property role="IQ2nx" value="4428600667259184168" />
-      <property role="TrG5h" value="filepath" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
     <node concept="1TJgyi" id="75cVuPqSa9j" role="1TKVEl">
       <property role="IQ2nx" value="8164161828203569747" />
       <property role="TrG5h" value="sensorFilter" />
@@ -170,8 +165,8 @@
       <property role="TrG5h" value="valueColumn" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="PrWs8" id="75cVuPqSa9g" role="PzmwI">
-      <ref role="PrY4T" node="75cVuPqSa90" resolve="IDataSource" />
+    <node concept="PrWs8" id="1nZ6g$XRvAm" role="PzmwI">
+      <ref role="PrY4T" node="1nZ6g$XRv_S" resolve="IReplay" />
     </node>
   </node>
   <node concept="PlHQZ" id="75cVuPqSa90">
@@ -384,6 +379,26 @@
       <property role="20kJfa" value="panels" />
       <property role="20lbJX" value="1..n" />
       <ref role="20lvS9" node="pAhsp7wdC6" resolve="Panel" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="1nZ6g$XRv_S">
+    <property role="EcuMT" value="1585013121341061496" />
+    <property role="TrG5h" value="IReplay" />
+    <node concept="1TJgyi" id="1nZ6g$XRvAk" role="1TKVEl">
+      <property role="IQ2nx" value="1585013121341061524" />
+      <property role="TrG5h" value="filepath" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="PrWs8" id="1nZ6g$XRvBD" role="PrDN$">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1nZ6g$XRvAp">
+    <property role="EcuMT" value="1585013121341061529" />
+    <property role="TrG5h" value="JSON" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="1nZ6g$XRvAq" role="PzmwI">
+      <ref role="PrY4T" node="1nZ6g$XRv_S" resolve="IReplay" />
     </node>
   </node>
 </model>

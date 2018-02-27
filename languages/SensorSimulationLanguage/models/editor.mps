@@ -492,13 +492,13 @@
           <property role="VOm3f" value="false" />
         </node>
         <node concept="3F0ifn" id="5u9gdSXmgGx" role="3EZMnx">
-          <property role="3F0ifm" value="data source" />
+          <property role="3F0ifm" value="replay" />
         </node>
         <node concept="3F0A7n" id="5u9gdSXmgGB" role="3EZMnx">
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         </node>
         <node concept="3F0ifn" id="5u9gdSXmgGJ" role="3EZMnx">
-          <property role="3F0ifm" value="is CSV file" />
+          <property role="3F0ifm" value="from CSV file" />
         </node>
         <node concept="2iRfu4" id="5u9gdSXmgGs" role="2iSdaV" />
       </node>
@@ -511,7 +511,7 @@
           <property role="3F0ifm" value="path :" />
         </node>
         <node concept="3F0A7n" id="5u9gdSXmgID" role="3EZMnx">
-          <ref role="1NtTu8" to="7ew6:3PPzdvo2EgC" resolve="filepath" />
+          <ref role="1NtTu8" to="7ew6:1nZ6g$XRvAk" resolve="filepath" />
         </node>
         <node concept="l2Vlx" id="5u9gdSXmgIb" role="2iSdaV" />
       </node>
@@ -567,7 +567,6 @@
         </node>
         <node concept="l2Vlx" id="5u9gdSXmgNr" role="2iSdaV" />
       </node>
-      <node concept="3F0ifn" id="5u9gdSXmgJ7" role="3EZMnx" />
       <node concept="2iRkQZ" id="5u9gdSXmgGj" role="2iSdaV" />
     </node>
   </node>
@@ -867,6 +866,39 @@
           <property role="Vbekb" value="ITALIC" />
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="1nZ6g$XRvA$">
+    <ref role="1XX52x" to="7ew6:1nZ6g$XRvAp" resolve="JSON" />
+    <node concept="3EZMnI" id="1nZ6g$XRvAA" role="2wV5jI">
+      <node concept="3EZMnI" id="1nZ6g$XRvAH" role="3EZMnx">
+        <node concept="VPM3Z" id="1nZ6g$XRvAJ" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F0ifn" id="1nZ6g$XRvBr" role="3EZMnx">
+          <property role="3F0ifm" value="replay" />
+        </node>
+        <node concept="3F0A7n" id="1nZ6g$XRvBF" role="3EZMnx">
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        </node>
+        <node concept="3F0ifn" id="1nZ6g$XRvBN" role="3EZMnx">
+          <property role="3F0ifm" value="from JSON file" />
+        </node>
+        <node concept="2iRfu4" id="1nZ6g$XRvAM" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="1nZ6g$XRvC0" role="3EZMnx">
+        <node concept="VPM3Z" id="1nZ6g$XRvC2" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F0ifn" id="1nZ6g$XRvCk" role="3EZMnx">
+          <property role="3F0ifm" value="---&gt;path :" />
+        </node>
+        <node concept="3F0A7n" id="1nZ6g$XRvCq" role="3EZMnx">
+          <ref role="1NtTu8" to="7ew6:1nZ6g$XRvAk" resolve="filepath" />
+        </node>
+        <node concept="l2Vlx" id="1nZ6g$XRvC5" role="2iSdaV" />
+      </node>
+      <node concept="2iRkQZ" id="1nZ6g$XRvAD" role="2iSdaV" />
     </node>
   </node>
 </model>
