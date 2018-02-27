@@ -888,6 +888,12 @@
             <ref role="3bR37D" node="3zhZ_DuRIM$" resolve="exp4j" />
           </node>
         </node>
+        <node concept="1SiIV0" id="5qdpREsDPY$" role="3bR37C">
+          <node concept="3bR9La" id="5qdpREsDPY_" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="5qdpREsDPI$" resolve="Gson" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="3zhZ_DuRIML" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -1001,6 +1007,44 @@
                   <property role="2Ry0Am" value="Grafana" />
                   <node concept="2Ry0Ak" id="3zhZ_DuRIPt" role="2Ry0An">
                     <property role="2Ry0Am" value="retrofit-2.2.0.jar" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtA" id="5qdpREsDPI$" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="Gson" />
+        <property role="3LESm3" value="ab012b2a-d7fa-40ca-817f-fa9ddb7cfb35" />
+        <property role="2GAjPV" value="false" />
+        <node concept="55IIr" id="5qdpREsDPIB" role="3LF7KH">
+          <node concept="2Ry0Ak" id="5qdpREsDPQu" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="5qdpREsDPSJ" role="2Ry0An">
+              <property role="2Ry0Am" value="Gson" />
+              <node concept="2Ry0Ak" id="5qdpREsDPV0" role="2Ry0An">
+                <property role="2Ry0Am" value="Gson.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5qdpREsDPZ3" role="3bR37C">
+          <node concept="3bR9La" id="5qdpREsDPZ4" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5qdpREsDPZ9" role="3bR37C">
+          <node concept="1BurEX" id="5qdpREsDPZa" role="1SiIV1">
+            <node concept="55IIr" id="5qdpREsDPZ5" role="1BurEY">
+              <node concept="2Ry0Ak" id="5qdpREsDPZ6" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="5qdpREsDPZ7" role="2Ry0An">
+                  <property role="2Ry0Am" value="Gson" />
+                  <node concept="2Ry0Ak" id="5qdpREsDPZ8" role="2Ry0An">
+                    <property role="2Ry0Am" value="gson-2.8.2.jar" />
                   </node>
                 </node>
               </node>
