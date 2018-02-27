@@ -13,9 +13,9 @@ Les données générées sont envoyées sur une base de données InfluxDB, qui p
 
 ## Installation
 Trois approches sont possibles :
-- importer le projet dans une installation de MPS (le plus sûr)
-- utiliser l'IDE standalone fourni dans la section release du repo (le plus simple si ça fonctionne)
-- générer l'IDE standalone depuis MPS en ayant téléchargé [l'installation générique](https://download-cf.jetbrains.com/mps/2017.3/MPS-2017.3.5.zip) puis l'utiliser (le plus barbu)
+- importer le projet dans une installation de MPS (le plus sûr);
+- utiliser l'IDE standalone fourni dans la section release du repo (le plus simple si ça fonctionne);
+- générer l'IDE standalone depuis MPS en ayant téléchargé [l'installation générique](https://download-cf.jetbrains.com/mps/2017.3/MPS-2017.3.5.zip) puis l'utiliser (le plus barbu).
 
 Pour des raisons évidentes de "on aimerait ne pas saturer le disque en clonant ce repo", l'installation générique n'a pas été fournie, elle est donc à télécharger et à placer dans le dossier `generic_MPS` si l'option 3 est utilisée.
 
@@ -184,6 +184,33 @@ On va ici créer les grappes suivantes :
 
 Il n'y a rien d'autre à faire, à une génération du code et une exécution près, c'est comme si les données étaient déjà dans influxDB :heart_eyes:
 
+### Rejeu de relevés
+La troisième fonctionnalité présentée ici est le rejeu de relevés. Il s'agit de piocher des relevés dans un fichier (CSV ou Json pour le moment) pour les transmettre à influxDB. Pour faire varier les relevés rejoués, on peut ajouter un générateur de bruit aux lecteurs.
+
+Le bloc avec les lecteurs de CSV et Json par défauts (ajoutés ici) se présente de la manière suivante:
+```
+replays:
+  replay from CSV file                                   
+    path : <no filepath>                                 
+    read sensors : enter sensor names separated by spaces
+    sensor name column : <no nameColumn>                 
+    time column        : <no timeColumn>                 
+    value column       : <no valueColumn>                
+    has header : false                                   
+    <no noise>                                             
+  replay from JSON file                                  
+    path : <no filepath>
+    <no noise>
+```
+
+Pour le lecteur de Json, il n'y a qu'à entrer le chemin pointant vers le fichier à extraire et éventuellement configurer un générateur de bruit, comme dans la section précédente **Ajout de bruit**.
+
+Pour le lecteur de CSV, il y a quelques paramètre supplémentaires à fournir :
+- read sensors : la liste des noms de capteurs que l'on souhaite extraire, séparés par des virgules;
+- sensor name column, time column & value column : partant du principe que le fichier CSV comporte 3 colonnes, il faut indiquer quelle colonne correspond à quelle donnée du relevé. On commence à compter à partir de **1**;
+- has header : ce dernier paramètre spécial permet d'indiquer si le fichier CSV comporte un en-tête ou non.
+
+Là aussi, un générateur de bruit peut être spécifié.
 ### Configuration de dashboards Grafana
 Avec SSL, il est possible de définir des dashboards Grafana et leur composition. Cependant en raison d'une API limitée en fonctionnalités et d'un client Java encore plus limité, les possibilités sont pour le moment restreintes à la disposition de panels dans des lignes, et de lignes dans des dashboards.  
 Le seul type de graphique supporté est le graphique classique. Alors que la version de Grafana dans le docker-compose comporte de beaux et pratiques graphiques discrets.  
