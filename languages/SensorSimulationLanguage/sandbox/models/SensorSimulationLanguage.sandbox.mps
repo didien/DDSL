@@ -231,8 +231,6 @@
     <property role="TrG5h" value="TutorialSimulation" />
     <property role="2rmNeI" value="27-02-18 15:00" />
     <property role="2rmNeG" value="27-02-18 18:00" />
-    <property role="117PnT" value="http://influxdb.meatbox.fr" />
-    <property role="117Pm5" value="http://grafana.meatbox.fr" />
     <node concept="3_vMzQ" id="pAhsp7$xCB" role="3_vMOX">
       <property role="TrG5h" value="random_angle" />
       <property role="3_vMzV" value="0" />
@@ -344,7 +342,7 @@
       <ref role="3_vMzM" node="pAhsp7$L9h" resolve="modelling_law" />
     </node>
     <node concept="11645$" id="pAhsp7_nxm" role="23qkYO">
-      <property role="11644t" value="eyJrIjoiQWRHbTJYNUpBRHdSS0d2YVJ5SEZNNjB1YTY4OXgzVWkiLCJuIjoiZnplIiwiaWQiOjF9" />
+      <property role="11644t" value="e" />
       <node concept="23ql5f" id="pAhsp7_nxo" role="11644v">
         <property role="TrG5h" value="tutorial dashboard" />
         <node concept="11TPea" id="pAhsp7_nxp" role="11TPFM">
@@ -368,18 +366,6 @@
         </node>
       </node>
     </node>
-    <node concept="3_vMzP" id="5qdpREsI1HI" role="C6m5H">
-      <property role="C8I2t" value="lkj" />
-      <property role="3aaEPu" value="mlk" />
-      <property role="1EOrNO" value="1" />
-      <property role="1EOuJz" value="2" />
-      <property role="1EOrNL" value="3" />
-      <node concept="2_hHaG" id="5qdpREsIgmc" role="2_hH7S">
-        <property role="2_hHaH" value="0." />
-        <property role="2_hHaF" value="10." />
-        <property role="2_hHaA" value="0" />
-      </node>
-    </node>
   </node>
   <node concept="3_vMOK" id="1nZ6g$XSYgf">
     <property role="TrG5h" value="SimpleTest" />
@@ -393,6 +379,351 @@
       <property role="1EOrNO" value="1" />
       <property role="1EOuJz" value="2" />
       <property role="1EOrNL" value="3" />
+    </node>
+  </node>
+  <node concept="3_vMOK" id="5qdpREsKxal">
+    <property role="TrG5h" value="ParkingSimulation" />
+    <property role="2rmNeI" value="15-02-18 01:00" />
+    <property role="2rmNeG" value="20-02-18 23:00" />
+    <node concept="3_vMOS" id="5qdpREsKxbC" role="3_vMOV">
+      <property role="FF4LG" value="56" />
+      <property role="TrG5h" value="fancy_parking_sensor" />
+      <ref role="3_vMzM" node="5qdpREsKxao" resolve="parking_law" />
+    </node>
+    <node concept="3_vMOS" id="5qdpREsKxbR" role="3_vMOV">
+      <property role="FF4LG" value="1" />
+      <property role="TrG5h" value="parking_users_sensor" />
+      <ref role="3_vMzM" node="5qdpREsKxaR" resolve="parking_lot_law" />
+    </node>
+    <node concept="1uDEe6" id="5qdpREsKxao" role="3_vMOX">
+      <property role="TrG5h" value="parking_law" />
+      <property role="FF4Y_" value="500" />
+      <property role="FF4YA" value="300" />
+      <property role="2rmjho" value="86400" />
+      <node concept="1uDHLu" id="5qdpREsKxaq" role="1uDHLX">
+        <property role="TrG5h" value="free" />
+        <node concept="1uDxv_" id="5qdpREsKxas" role="1uDxco">
+          <property role="1uDxv1" value="0.5" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxax" role="1uDxco">
+          <property role="1uDxv1" value="0.5" />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="5qdpREsKxa$" role="1uDHLX">
+        <property role="TrG5h" value="occupied" />
+        <node concept="1uDxv_" id="5qdpREsKxa_" role="1uDxco">
+          <property role="1uDxv1" value="0.9" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxaF" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+      </node>
+    </node>
+    <node concept="1hN_iB" id="5qdpREsKxaR" role="3_vMOX">
+      <property role="TrG5h" value="parking_lot_law" />
+      <property role="FF4Y_" value="300" />
+      <property role="FF4YA" value="250" />
+      <node concept="1hN_iy" id="5qdpREsKxaT" role="1hN_iE">
+        <property role="1hN_iK" value="7" />
+        <property role="1hN_iM" value="3" />
+      </node>
+      <node concept="1hN_iy" id="5qdpREsKxb4" role="1hN_iE">
+        <property role="1hN_iK" value="18" />
+        <property role="1hN_iM" value="-x^2 + 24x" />
+      </node>
+      <node concept="1hN_iy" id="5qdpREsKxby" role="1hN_iE">
+        <property role="1hN_iK" value="24" />
+        <property role="1hN_iM" value="3" />
+      </node>
+      <node concept="2_hHaG" id="5qdpREsKxbA" role="2_hH7S">
+        <property role="2_hHaH" value="-1." />
+        <property role="2_hHaF" value="1." />
+        <property role="2_hHaA" value="0" />
+      </node>
+    </node>
+  </node>
+  <node concept="3_vMOK" id="5qdpREsKxbU">
+    <property role="TrG5h" value="WeatherSimulation" />
+    <property role="2rmNeI" value="10-02-18 01:00" />
+    <property role="2rmNeG" value="26-02-18 15:16" />
+    <property role="117PnT" value="http://influxdb.meatbox.fr" />
+    <property role="117Pm5" value="http://grafana.meatbox.fr" />
+    <node concept="1uDEe6" id="5qdpREsKxc1" role="3_vMOX">
+      <property role="TrG5h" value="weather_law" />
+      <property role="FF4Y_" value="500" />
+      <property role="FF4YA" value="350" />
+      <property role="2rmjho" value="86400" />
+      <node concept="1uDHLu" id="5qdpREsKxc2" role="1uDHLX">
+        <property role="TrG5h" value="sunny" />
+        <node concept="1uDxv_" id="5qdpREsKxc3" role="1uDxco">
+          <property role="1uDxv1" value="0.6" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxc4" role="1uDxco">
+          <property role="1uDxv1" value="0.2" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxc5" role="1uDxco">
+          <property role="1uDxv1" value="0.05" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxc6" role="1uDxco">
+          <property role="1uDxv1" value="0.15" />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="5qdpREsKxc7" role="1uDHLX">
+        <property role="TrG5h" value="cloudy" />
+        <node concept="1uDxv_" id="5qdpREsKxc8" role="1uDxco">
+          <property role="1uDxv1" value="0.2" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxc9" role="1uDxco">
+          <property role="1uDxv1" value="0.5" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxca" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxcb" role="1uDxco">
+          <property role="1uDxv1" value="0.2" />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="5qdpREsKxcc" role="1uDHLX">
+        <property role="TrG5h" value="snowy" />
+        <node concept="1uDxv_" id="5qdpREsKxcd" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxce" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxcf" role="1uDxco">
+          <property role="1uDxv1" value="0.4" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxcg" role="1uDxco">
+          <property role="1uDxv1" value="0." />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="5qdpREsKxch" role="1uDHLX">
+        <property role="TrG5h" value="rainy" />
+        <node concept="1uDxv_" id="5qdpREsKxci" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxcj" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxck" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKxcl" role="1uDxco">
+          <property role="1uDxv1" value="0.5" />
+        </node>
+      </node>
+    </node>
+    <node concept="3_vMzQ" id="5qdpREsKxdN" role="3_vMOX">
+      <property role="TrG5h" value="wind_direction_law" />
+      <property role="3_vMzV" value="-180" />
+      <property role="3_vMzT" value="180" />
+      <property role="FF4Y_" value="60" />
+      <property role="FF4YA" value="90" />
+    </node>
+    <node concept="1hN_iB" id="5qdpREsKxez" role="3_vMOX">
+      <property role="TrG5h" value="sun_exposure" />
+      <property role="FF4Y_" value="500" />
+      <property role="FF4YA" value="1700" />
+      <node concept="1hN_iy" id="5qdpREsKxe_" role="1hN_iE">
+        <property role="1hN_iK" value="9" />
+        <property role="1hN_iM" value="0" />
+      </node>
+      <node concept="1hN_iy" id="5qdpREsK$0Q" role="1hN_iE">
+        <property role="1hN_iK" value="18" />
+        <property role="1hN_iM" value="10(-0.5(x - 13.6)^2 + 9.99)" />
+      </node>
+      <node concept="1hN_iy" id="5qdpREsK$0T" role="1hN_iE">
+        <property role="1hN_iK" value="24" />
+        <property role="1hN_iM" value="0" />
+      </node>
+      <node concept="2_hHaG" id="5qdpREsK$0X" role="2_hH7S">
+        <property role="2_hHaH" value="-0.5" />
+        <property role="2_hHaF" value="0.5" />
+        <property role="2_hHaA" value="1" />
+      </node>
+    </node>
+    <node concept="3_vMOS" id="5qdpREsK$0Z" role="3_vMOV">
+      <property role="FF4LG" value="1" />
+      <property role="TrG5h" value="weather_sensor" />
+      <ref role="3_vMzM" node="5qdpREsKxc1" resolve="weather_law" />
+    </node>
+    <node concept="3_vMOS" id="5qdpREsK$11" role="3_vMOV">
+      <property role="FF4LG" value="2" />
+      <property role="TrG5h" value="wind_direction_sensor" />
+      <ref role="3_vMzM" node="5qdpREsKxdN" resolve="wind_direction_law" />
+    </node>
+    <node concept="3_vMOS" id="5qdpREsK$14" role="3_vMOV">
+      <property role="FF4LG" value="6" />
+      <property role="TrG5h" value="sun_exposure_sensor" />
+      <ref role="3_vMzM" node="5qdpREsKxez" resolve="sun_exposure" />
+    </node>
+  </node>
+  <node concept="3_vMOK" id="5qdpREsKAs6">
+    <property role="TrG5h" value="KittenSimulation" />
+    <property role="2rmNeI" value="01-02-18 01:00" />
+    <property role="2rmNeG" value="26-02-18 19:00" />
+    <property role="117Pm5" value="http://grafana.meatbox.fr" />
+    <property role="117PnT" value="http://influxdb.meatbox.fr" />
+    <node concept="1uDEe6" id="5qdpREsKAsy" role="3_vMOX">
+      <property role="TrG5h" value="kitten_activity_law" />
+      <property role="FF4Y_" value="240" />
+      <property role="FF4YA" value="180" />
+      <property role="2rmjho" value="0" />
+      <node concept="1uDHLu" id="5qdpREsKAtg" role="1uDHLX">
+        <property role="TrG5h" value="meowing" />
+        <node concept="1uDxv_" id="5qdpREsKAth" role="1uDxco">
+          <property role="1uDxv1" value="0.2" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAtu" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAtx" role="1uDxco">
+          <property role="1uDxv1" value="0.35" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAt_" role="1uDxco">
+          <property role="1uDxv1" value="0.05" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAtE" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAtK" role="1uDxco">
+          <property role="1uDxv1" value="0." />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="5qdpREsKAt4" role="1uDHLX">
+        <property role="TrG5h" value="on_keyboard" />
+        <node concept="1uDxv_" id="5qdpREsKAt5" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAtR" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAtU" role="1uDxco">
+          <property role="1uDxv1" value="0.2" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAtY" role="1uDxco">
+          <property role="1uDxv1" value="0.2" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAu3" role="1uDxco">
+          <property role="1uDxv1" value="0." />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAu9" role="1uDxco">
+          <property role="1uDxv1" value="0.2" />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="5qdpREsKAsU" role="1uDHLX">
+        <property role="TrG5h" value="random_walk" />
+        <node concept="1uDxv_" id="5qdpREsKAsV" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAug" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAuj" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAun" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAus" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKDo_" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="5qdpREsKAsM" role="1uDHLX">
+        <property role="TrG5h" value="purring" />
+        <node concept="1uDxv_" id="5qdpREsKAsN" role="1uDxco">
+          <property role="1uDxv1" value="0.15" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAuy" role="1uDxco">
+          <property role="1uDxv1" value="0.15" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAu_" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAuD" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAuI" role="1uDxco">
+          <property role="1uDxv1" value="0.2" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAuV" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="5qdpREsKAsG" role="1uDHLX">
+        <property role="TrG5h" value="eating" />
+        <node concept="1uDxv_" id="5qdpREsKAsH" role="1uDxco">
+          <property role="1uDxv1" value="0.25" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAuO" role="1uDxco">
+          <property role="1uDxv1" value="0.05" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAuR" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAv2" role="1uDxco">
+          <property role="1uDxv1" value="0.15" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAv7" role="1uDxco">
+          <property role="1uDxv1" value="0.2" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAvd" role="1uDxco">
+          <property role="1uDxv1" value="0.05" />
+        </node>
+      </node>
+      <node concept="1uDHLu" id="5qdpREsKAsz" role="1uDHLX">
+        <property role="TrG5h" value="sleeping" />
+        <node concept="1uDxv_" id="5qdpREsKAs$" role="1uDxco">
+          <property role="1uDxv1" value="0." />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAvk" role="1uDxco">
+          <property role="1uDxv1" value="0.1" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAvn" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAvr" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAvw" role="1uDxco">
+          <property role="1uDxv1" value="0." />
+        </node>
+        <node concept="1uDxv_" id="5qdpREsKAvA" role="1uDxco">
+          <property role="1uDxv1" value="0.3" />
+        </node>
+      </node>
+    </node>
+    <node concept="1hN_iB" id="5qdpREsKAys" role="3_vMOX">
+      <property role="TrG5h" value="food_consumption_law" />
+      <property role="FF4Y_" value="3600" />
+      <property role="FF4YA" value="2400" />
+      <node concept="1hN_iy" id="5qdpREsKAyu" role="1hN_iE">
+        <property role="1hN_iK" value="4" />
+        <property role="1hN_iM" value="0" />
+      </node>
+      <node concept="1hN_iy" id="5qdpREsKAzc" role="1hN_iE">
+        <property role="1hN_iK" value="24" />
+        <property role="1hN_iM" value="(0.3(x - 14.44) + 3.24) * 10" />
+      </node>
+      <node concept="2_hHaG" id="5qdpREsKAzf" role="2_hH7S">
+        <property role="2_hHaH" value="-5." />
+        <property role="2_hHaF" value="5." />
+        <property role="2_hHaA" value="0" />
+      </node>
+    </node>
+    <node concept="3_vMOS" id="5qdpREsKAzn" role="3_vMOV">
+      <property role="FF4LG" value="1" />
+      <property role="TrG5h" value="kitten_sensor" />
+      <ref role="3_vMzM" node="5qdpREsKAsy" resolve="kitten_activity_law" />
+    </node>
+    <node concept="3_vMOS" id="5qdpREsKAzp" role="3_vMOV">
+      <property role="FF4LG" value="1" />
+      <property role="TrG5h" value="food_bowl_sensor" />
+      <ref role="3_vMzM" node="5qdpREsKAys" resolve="food_consumption_law" />
     </node>
   </node>
 </model>
