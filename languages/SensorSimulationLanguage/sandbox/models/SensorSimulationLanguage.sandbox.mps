@@ -13,7 +13,6 @@
     <import index="9nbq" ref="cc7fb470-7d0c-4aea-af2a-5d870ff3092f/java:org.influxdb(InfluxDB/)" />
     <import index="ynw8" ref="d102dc8e-32ba-4d10-8f95-be5a142b6537/java:com.appnexus.grafana.client(Grafana/)" />
     <import index="onjl" ref="d102dc8e-32ba-4d10-8f95-be5a142b6537/java:com.appnexus.grafana.exceptions(Grafana/)" />
-    <import index="ry35" ref="642f71f8-327a-425b-84f9-44ad58786d27/f:project#d102dc8e-32ba-4d10-8f95-be5a142b6537(jetbrains.mps.lang.project.modules/module.Grafana@project_stub)" />
     <import index="an4w" ref="d102dc8e-32ba-4d10-8f95-be5a142b6537/java:com.appnexus.grafana.client.models(Grafana/)" />
     <import index="v2y1" ref="d102dc8e-32ba-4d10-8f95-be5a142b6537/java:com.appnexus.grafana.configuration(Grafana/)" />
   </imports>
@@ -79,8 +78,6 @@
       <concept id="4428600667259183591" name="SensorSimulationLanguage.structure.Simulation" flags="ng" index="3_vMOK">
         <property id="3809527443493296810" name="endDate" index="2rmNeG" />
         <property id="3809527443493296808" name="startDate" index="2rmNeI" />
-        <property id="461132729757012035" name="grafana" index="117Pm5" />
-        <property id="461132729757012031" name="influxdb" index="117PnT" />
         <child id="6135611311373901390" name="displays" index="23qkYO" />
         <child id="1585013121341618276" name="replays" index="C6m5H" />
         <child id="4428600667259183596" name="sensors" index="3_vMOV" />
@@ -372,8 +369,6 @@
     <property role="TrG5h" value="SimpleTest" />
     <property role="2rmNeI" value="27-02-18 16:00" />
     <property role="2rmNeG" value="27-02-18 17:00" />
-    <property role="117PnT" value="http://192.168.99.100:8086" />
-    <property role="117Pm5" value="http://192.168.99.100:3000" />
     <node concept="3_vMzP" id="1XfQ9HmStpl" role="C6m5H">
       <property role="C8I2t" value="E:/csvtest.csv" />
       <property role="3aaEPu" value="bike" />
@@ -450,8 +445,6 @@
     <property role="TrG5h" value="KittenSimulation" />
     <property role="2rmNeI" value="01-02-18 01:00" />
     <property role="2rmNeG" value="26-02-18 19:00" />
-    <property role="117Pm5" value="http://grafana.meatbox.fr" />
-    <property role="117PnT" value="http://influxdb.meatbox.fr" />
     <node concept="1uDEe6" id="5qdpREsKAsy" role="3_vMOX">
       <property role="TrG5h" value="kitten_activity_law" />
       <property role="FF4Y_" value="240" />
@@ -617,8 +610,6 @@
     <property role="TrG5h" value="WeatherSimulation" />
     <property role="2rmNeI" value="10-02-18 01:00" />
     <property role="2rmNeG" value="26-02-18 15:16" />
-    <property role="117PnT" value="http://influxdb.meatbox.fr" />
-    <property role="117Pm5" value="http://grafana.meatbox.fr" />
     <node concept="1uDEe6" id="5qdpREsKxc1" role="3_vMOX">
       <property role="TrG5h" value="weather_law" />
       <property role="FF4Y_" value="500" />

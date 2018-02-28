@@ -5,7 +5,7 @@
       <modulePath path="$PROJECT_DIR$/languages/SensorSimulationLanguage/SensorSimulationLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/SensorSimulationLanguage/runtime/SensorSimulationLanguage.runtime.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/SensorSimulationLanguage/sandbox/SensorSimulationLanguage.sandbox.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/DSL.build/DSL.build.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/DSL.build0/DSL.build.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/Grafana/Grafana.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/Gson/Gson.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/InfluxDB/InfluxDB.msd" folder="" />

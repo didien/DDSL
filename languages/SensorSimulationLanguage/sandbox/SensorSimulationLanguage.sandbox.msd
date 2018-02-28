@@ -13,7 +13,6 @@
     <dependency reexport="true">7b38f0f5-2f16-4dc5-9809-d131d36eb0bf(SensorSimulationLanguage.runtime)</dependency>
     <dependency reexport="false">cc7fb470-7d0c-4aea-af2a-5d870ff3092f(InfluxDB)</dependency>
     <dependency reexport="false">d102dc8e-32ba-4d10-8f95-be5a142b6537(Grafana)</dependency>
-    <dependency reexport="false">642f71f8-327a-425b-84f9-44ad58786d27(jetbrains.mps.lang.project.modules)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:bc16fd15-bfa2-47e7-b9c2-9f80e5b399e0:SensorSimulationLanguage" version="0" />
@@ -40,7 +39,6 @@
     <module reference="e39e4a59-8cb6-498e-860e-8fa8361c0d90(jetbrains.mps.baseLanguage.scopes)" version="0" />
     <module reference="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" version="0" />
     <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
-    <module reference="642f71f8-327a-425b-84f9-44ad58786d27(jetbrains.mps.lang.project.modules)" version="0" />
     <module reference="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" version="0" />
     <module reference="c72da2b9-7cce-4447-8389-f407dc1158b7(jetbrains.mps.lang.structure)" version="0" />
     <module reference="9ded098b-ad6a-4657-bfd9-48636cfe8bc3(jetbrains.mps.lang.traceable)" version="0" />
