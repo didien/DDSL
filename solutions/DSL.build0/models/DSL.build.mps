@@ -1280,7 +1280,10 @@
             <node concept="398BVA" id="5qdpREsKVF8" role="28jJRO">
               <ref role="398BVh" node="5qdpREsKVEt" resolve="mps_home" />
               <node concept="2Ry0Ak" id="5qdpREsKVF9" role="iGT6I">
-                <property role="2Ry0Am" value="mps.sh" />
+                <property role="2Ry0Am" value="bin" />
+                <node concept="2Ry0Ak" id="5qdpREsLEZ9" role="2Ry0An">
+                  <property role="2Ry0Am" value="mps.sh" />
+                </node>
               </node>
             </node>
           </node>
