@@ -53,6 +53,9 @@ data sources:
   
 sensor collections:        
   no collection defined !  
+
+replays:
+  no replay defined, but you can leave it so
   
 grafana displays:                        
   no dashboards set, but it's ok that way
@@ -211,6 +214,29 @@ Pour le lecteur de CSV, il y a quelques paramètre supplémentaires à fournir :
 - has header : ce dernier paramètre spécial permet d'indiquer si le fichier CSV comporte un en-tête ou non.
 
 Là aussi, un générateur de bruit peut être spécifié.
+
+**Attention** : Le timestamp pour les rejeux doit être donné en **millisecondes**
+
+#### Format CSV
+
+Les champs du CSV doivent être séparés par des virgules
+
+
+#### Format Json
+
+Le format des fichiers Json lus s'inspirent de l'exemple donné dans le sujet. Ainsi, l'objet englobant doit comporter au moins 2 champs : "bn" pour le nom du capteur, et "e" pour le tableau des relevés du capteur.
+"e" est un tableau d'objets ayant chacun un champs "t" pour le timestamp et "v" pour la valeur.
+```
+  { 
+    "bn": "my-sensor",
+    "e": [ 
+      { "v": 22.0, "t": 1519770628941},
+      { "v": 23.5, "t": 1519770628951},
+      { "v": 12.3, "t": 1519770628961}
+    ]
+  }
+```
+
 ### Configuration de dashboards Grafana
 Avec SSL, il est possible de définir des dashboards Grafana et leur composition. Cependant en raison d'une API limitée en fonctionnalités et d'un client Java encore plus limité, les possibilités sont pour le moment restreintes à la disposition de panels dans des lignes, et de lignes dans des dashboards.  
 Le seul type de graphique supporté est le graphique classique. Alors que la version de Grafana dans le docker-compose comporte de beaux et pratiques graphiques discrets.  
